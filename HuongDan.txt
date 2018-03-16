@@ -1,0 +1,18 @@
+﻿B1: restore database sql server 2014 (bằng file .bak)
+    hoặc attach  database sql server 2014 (bằng file .mdf )
+B2: Chạy chương trình (form loadData hiện lên)
+	+ Điền Server Name của sqlserver
+	+ Điền Tên database (QuanLyHocSinh)
+	+ Tích Vào ô lưu thông tin để lần sử dụng sau k cần loadDatebase nữa 
+B4: Login Hệ Thống 
+	username: kBz
+	pass:	  1
+
+-------------------------
+-------------------------
+Name: Đình Phúc
+IDE : Visual Sutdio 2015 (. Net4.5.2)
+Data: Sql server 2014
+------------------------
+------------------------
+Description: Building... 
