@@ -24,16 +24,20 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Ngày Sinh")]
         public string NgaySinh { get; set; }
 
+        [DisplayName("Họ Tên Phụ Huynh")]
+        public string HoTenPhuHuynh { get; set; }
+
         [DisplayName("SDT Phụ Huynh")]
         public string SDTphuHuynh { get; set; }
 
-        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, string _GioiTinh, string _NgaySinh, string _SDTphuHuynh)
+        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, string _GioiTinh, string _NgaySinh, string _HoTenPhuHuynh, string _SDTphuHuynh)
         {
             this.MaHS = _MaHS;
             this.HoTen = _HoTen;
             this.DiaChi = _DiaChi;
             this.GioiTinh = _GioiTinh;
             this.NgaySinh = _NgaySinh;
+            this.HoTenPhuHuynh = _HoTenPhuHuynh;
             this.SDTphuHuynh = _SDTphuHuynh;
         }
 
@@ -44,6 +48,7 @@ namespace QuanLyHocSinhTHPT.Models
             this.DiaChi = "";
             this.GioiTinh = "";
             this.NgaySinh = "";
+            this.HoTenPhuHuynh = "";
             this.SDTphuHuynh = "";
         }
     }

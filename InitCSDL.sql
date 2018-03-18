@@ -47,9 +47,8 @@ CREATE TABLE HocSinh(
 	NgaySinh date NULL,
 	DiaChi nvarchar(200) NULL,
 	GioiTinh bit NULL,
-	Sdt VARCHAR(15),
-	TenBo nvarchar(100) NULL,
-	TenMe nvarchar(100) NULL,
+	SDTphuHuynh VARCHAR(15),
+	HoTenPhuHuynh nvarchar(100) NULL
 	MaLop VARCHAR(9) FOREIGN KEY(MaLop) REFERENCES dbo.Lop(Malop),
 )  
 GO

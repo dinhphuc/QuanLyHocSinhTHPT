@@ -92,7 +92,7 @@
             this.dtgHocSinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtgHocSinh.Location = new System.Drawing.Point(3, 16);
             this.dtgHocSinh.Name = "dtgHocSinh";
-            this.dtgHocSinh.Size = new System.Drawing.Size(732, 493);
+            this.dtgHocSinh.Size = new System.Drawing.Size(752, 493);
             this.dtgHocSinh.TabIndex = 0;
             // 
             // button3
@@ -145,7 +145,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox5.Location = new System.Drawing.Point(0, 515);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(738, 78);
+            this.groupBox5.Size = new System.Drawing.Size(758, 78);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             // 
@@ -155,7 +155,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(738, 509);
+            this.groupBox4.Size = new System.Drawing.Size(758, 509);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh Sách Học Sinh";
@@ -252,7 +252,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.groupBox5);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
             this.splitContainer1.Size = new System.Drawing.Size(1148, 593);
-            this.splitContainer1.SplitterDistance = 406;
+            this.splitContainer1.SplitterDistance = 386;
             this.splitContainer1.TabIndex = 1;
             // 
             // groupBox1
@@ -263,7 +263,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 593);
+            this.groupBox1.Size = new System.Drawing.Size(386, 593);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -285,23 +285,24 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(211, 58);
+            this.btnDelete.Location = new System.Drawing.Point(47, 63);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(68, 63);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Thêm";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(137, 58);
+            this.btnUpdate.Location = new System.Drawing.Point(137, 63);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 63);
             this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Delete";
+            this.btnUpdate.Text = "Sửa";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -309,7 +310,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(63, 58);
+            this.button1.Location = new System.Drawing.Point(227, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 63);
             this.button1.TabIndex = 3;

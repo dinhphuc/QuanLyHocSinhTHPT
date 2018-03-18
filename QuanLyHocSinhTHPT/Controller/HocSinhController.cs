@@ -13,13 +13,13 @@ namespace QuanLyHocSinhTHPT.Controller
 {
     public class HocSinhController
     {
-        public static List<GiaoVien> getAllDataHS()
+        public static List<HocSinh> getAllDataHS()
         {
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<GiaoVien>("SELECT *FROM dbo.HocSinh").ToList();
+                return db.Query<HocSinh>("SELECT *FROM dbo.HocSinh").ToList();
             }
         }
 
