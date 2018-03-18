@@ -35,10 +35,13 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
             dt.Columns["Sdt"].ColumnName = "Số Điện Thoại";
             dt.Columns["DiaChi"].ColumnName = "Địa Chỉ";
             dt.Columns["MaMon"].ColumnName = "Môn Giảng Dạy";
+            int i = 0;
             foreach (DataGridViewColumn col in dtgrGV.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                dtgrGV.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                i++;
             }
             try { dtgrGV.CurrentCell = dtgrGV[CurCl, CurR]; } catch { }
             // lblTongSL.Text = GetTongSobanGhi("select * from GiaoVien").ToString();

@@ -457,6 +457,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "UserControlHocSinh";
             this.Size = new System.Drawing.Size(1148, 593);
+            this.Load += new System.EventHandler(this.UserControlHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHocSinh)).EndInit();
             this.groupBox5.ResumeLayout(false);
