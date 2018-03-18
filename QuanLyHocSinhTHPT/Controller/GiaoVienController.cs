@@ -11,7 +11,7 @@ using Dapper;
 
 namespace QuanLyHocSinhTHPT.Controller
 {
-    internal class GiaoVienController
+    public class GiaoVienController
     {
         public static List<GiaoVien> getAllDataGV()
         {
@@ -128,7 +128,7 @@ namespace QuanLyHocSinhTHPT.Controller
             string errMS = "";
             if (_MaGV == "") { errMS = "Trống mã giáo viên"; }
             if (_HoTen == "") { errMS += "\nTrống họ tên"; }
-            if (_QueQuan == null) { errMS += "\nTrống quê quán"; }
+            if (_QueQuan == "") { errMS += "\nTrống quê quán"; }
             if (_NgaySinh.Year > DateTime.Now.Year) { errMS += "\nLỗi ngày sinh"; }
             if (_Sdt.Length > 15 || _Sdt.Length == 0) { errMS += "\nLỗi số điện thoại"; }
             if (errMS != "")

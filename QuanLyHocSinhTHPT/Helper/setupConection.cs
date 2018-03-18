@@ -14,7 +14,7 @@ namespace QuanLyHocSinhTHPT.Helper
 
         public static class ConnectionString
         {
-            public static string Connection = "Data Source=Phucnd\\PhucND;Initial Catalog=;Integrated Security=True";
+            public static string Connection = "Data Source=phucnd\\phucnd;Initial Catalog=QuanLyHSGVTHPT;Integrated Security=True";
         }
     }
 }

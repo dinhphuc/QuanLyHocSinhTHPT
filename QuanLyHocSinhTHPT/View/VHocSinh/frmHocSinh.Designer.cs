@@ -124,7 +124,6 @@
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.LargeImage")));
             this.btnSua.Name = "btnSua";
-            
             // 
             // ribbonPageGroup1
             // 
@@ -138,7 +137,7 @@
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
-            
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -209,7 +208,6 @@
             this.SobanGhi.Name = "SobanGhi";
             this.SobanGhi.Size = new System.Drawing.Size(49, 21);
             this.SobanGhi.TabIndex = 4;
-            
             // 
             // btnLast
             // 
@@ -257,7 +255,6 @@
             this.dtgrv.Name = "dtgrv";
             this.dtgrv.Size = new System.Drawing.Size(897, 305);
             this.dtgrv.TabIndex = 6;
-           
             // 
             // ribbonStatusBar1
             // 

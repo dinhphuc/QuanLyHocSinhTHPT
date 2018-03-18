@@ -104,5 +104,9 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
 
         */
         #endregion
+
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+        }
     }
 }

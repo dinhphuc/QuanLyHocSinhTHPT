@@ -18,19 +18,9 @@ namespace QuanLyHocSinhTHPT.View.Main
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        private void disableAll()
-        {
-            btnQuanLyGiaoVien.Enabled = false;
-            btnQuanLyHoc.Enabled = false;
-            btnQuanLyHS.Enabled = false;
-            btnQuanLyLopHoc.Enabled = false;
-            btnQuanLyMonHoc.Enabled = false;
-        }
-
         public frmMain()
         {
             InitializeComponent();
-            disableAll();
         }
 
         private TaiKhoan nd;
@@ -44,12 +34,6 @@ namespace QuanLyHocSinhTHPT.View.Main
             if (nd != null)
             {
                 btnLogin.Enabled = false;
-                lblNguoiDung.Caption = nd.TenTaiKhoan;
-                btnQuanLyGiaoVien.Enabled = true;
-                btnQuanLyHoc.Enabled = true;
-                btnQuanLyHS.Enabled = true;
-                btnQuanLyLopHoc.Enabled = true;
-                btnQuanLyMonHoc.Enabled = true;
             }
         }
 
@@ -107,6 +91,16 @@ namespace QuanLyHocSinhTHPT.View.Main
             this.Hide();
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void btnLogin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+        private void btnGiaoVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            VGiaoVien.UserControlGiaoVien usGV = new VGiaoVien.UserControlGiaoVien();
+            pl_main.Controls.Add(usGV);
         }
     }
 }

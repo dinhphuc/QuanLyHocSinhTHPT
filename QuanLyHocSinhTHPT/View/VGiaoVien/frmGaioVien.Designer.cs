@@ -110,7 +110,6 @@
             this.sobanGhi.Name = "sobanGhi";
             this.sobanGhi.Size = new System.Drawing.Size(49, 21);
             this.sobanGhi.TabIndex = 4;
-            
             // 
             // btnLast
             // 
@@ -168,7 +167,6 @@
             this.dtgrv.Name = "dtgrv";
             this.dtgrv.Size = new System.Drawing.Size(897, 305);
             this.dtgrv.TabIndex = 2;
-           
             // 
             // ribbonStatusBar1
             // 
@@ -203,7 +201,7 @@
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
-            
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnSua
             // 

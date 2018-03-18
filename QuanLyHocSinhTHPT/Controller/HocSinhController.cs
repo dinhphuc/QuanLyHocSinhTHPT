@@ -7,84 +7,139 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace QuanLyHocSinhTHPT.Controller
 {
-    internal class HocSinhController
+    public class HocSinhController
     {
-        #region
-        /*
-
-        public HocSinh GetData(string id)
+        public static List<GiaoVien> getAllDataHS()
         {
-            string sql = string.Format("select * from HocSinh where MaHS='{0}'", id);
-            DataTable dt = sqlHelper.Query(sql);
-            List<DataRow> list = dt.AsEnumerable().ToList();
-            if (list.Count > 0)
+            using (var db = setupConection.ConnectionFactory())
             {
-                HocSinh hs = new HocSinh();
-                hs.MaHS = list[0].ItemArray[0].ToString();
-                hs.HoTen = list[0].ItemArray[1].ToString();
-                hs.QueQuan = list[0].ItemArray[2].ToString();
-                hs.GioiTinh = list[0].ItemArray[3].ToString();
-                hs.NgaySinh = list[0].ItemArray[4].ToString();
-                hs.TenBo = list[0].ItemArray[5].ToString();
-                hs.TenMe = list[0].ItemArray[6].ToString();
-                hs.MaLop = list[0].ItemArray[7].ToString();
-                return hs;
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<GiaoVien>("SELECT *FROM dbo.HocSinh").ToList();
             }
-            return null;
-        }
-        public bool ThemHS(string _MaHS,string _HoTen, string _QueQuan,
-            int _GioiTinh, string _NgaySinh, string _TenBo,
-            string _TenMe, string _MaLop)
-        {
-            string query = string.Format("INSERT INTO HocSinh values ('{0}',N'{1}', N'{2}',{3},'{4}',N'{5}',N'{6}','{7}')",
-                _MaHS, _HoTen, _QueQuan, _GioiTinh, _NgaySinh, _TenBo, _TenMe, _MaLop);
-            if(sqlHelper.NonQuery(query))
-                 return true;  else return false;
         }
 
-        public bool SuaHS(string _MaHS, string _HoTen, string _QueQuan,
-            int _GioiTinh, string _NgaySinh, string _TenBo,
-            string _TenMe, string _MaLop)
+        public static void ShowData()
         {
-            string query = string.Format("update HocSinh set MaHS='{0}',HoTen=N'{1}',QueQuan= N'{2}',GioiTinh={3},NgaySinh='{4}',TenBo=N'{5}',TenMe=N'{6}',MaLop='{7}' where MaHS='{8}'",
-                _MaHS, _HoTen, _QueQuan, _GioiTinh, _NgaySinh, _TenBo, _TenMe, _MaLop, _MaHS);
-            if (sqlHelper.NonQuery(query))
-                return true;
-            else return false;
         }
 
-        public bool Xoa(string _MaHS)
+        public static bool ThemHS(string _MaHS, string _HoTen, string _QueQuan,
+            bool _GioiTinh, DateTime _NgaySinh, string _SDTphuHuynh)
         {
-            string query = string.Format("delete from HocSinh  Where MaHS ='{0}'", _MaHS);
-            if (sqlHelper.NonQuery(query))
-                return true;
-            else return false;
-        }
-        public bool CheckErr(string _MaHS, string _HoTen, string _QueQuan,
-            int _GioiTinh, string _NgaySinh, string _TenBo,
-            string _TenMe)
-        {
-            DateTime dt;
-            if (_MaHS == "") { MessageBox.Show("Trống Mã SV", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
-            if (_HoTen == "") { MessageBox.Show("Trống Họ Tên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
-            if (_TenBo == "") { MessageBox.Show("Trống Họ Tên bố", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
-            if (_TenMe == "") { MessageBox.Show("Trống Họ Tên mẹ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
-            if (_NgaySinh == "") { MessageBox.Show("Trống Ngày Sinh", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
-            else
+            if (checkInputHS(_MaHS, _HoTen, _QueQuan, _NgaySinh, _SDTphuHuynh))
             {
-                if (!DateTime.TryParse(_NgaySinh, out dt))
+                using (var db = setupConection.ConnectionFactory())
                 {
-                    MessageBox.Show("Lỗi Ngày Sinh", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
+                    try
+                    {
+                        if (db.State == ConnectionState.Closed)
+                            db.Open();
+                        using (var transaction = db.BeginTransaction())
+                        {
+                            int Insert_HS = db.Execute("Name proceduce",
+                                new
+                                {
+                                    //para
+                                },
+                                commandType: CommandType.StoredProcedure,
+                                transaction: transaction);
+                            transaction.Commit();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
+                    }
                 }
+                return true;
             }
-            if (_QueQuan == "") { MessageBox.Show("Trống quê quán", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
+            return false;
+        }
+
+        public static bool SuaHS(string _MaHS, string _HoTen, string _QueQuan,
+            bool _GioiTinh, DateTime _NgaySinh, string _SDTphuHuynh)
+        {
+            if (checkInputHS(_MaHS, _HoTen, _QueQuan, _NgaySinh, _SDTphuHuynh))
+            {
+                using (var db = setupConection.ConnectionFactory())
+                {
+                    try
+                    {
+                        if (db.State == ConnectionState.Closed)
+                            db.Open();
+                        using (var transaction = db.BeginTransaction())
+                        {
+                            int Edit_HS = db.Execute("Name proceduce",
+                                new
+                                {
+                                    //para
+                                },
+                                commandType: CommandType.StoredProcedure,
+                                transaction: transaction);
+                            transaction.Commit();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public static bool XoaHS(string _MaHS)
+        {
+            if (_MaHS != "")
+            {
+                using (var db = setupConection.ConnectionFactory())
+                {
+                    try
+                    {
+                        if (db.State == ConnectionState.Closed)
+                            db.Open();
+                        using (var transaction = db.BeginTransaction())
+                        {
+                            int Xoa_HS = db.Execute("Name proceduce",
+                                new
+                                {
+                                    //para
+                                },
+                                commandType: CommandType.StoredProcedure,
+                                transaction: transaction);
+                            transaction.Commit();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public static bool checkInputHS(string _MaHS, string _HoTen, string _QueQuan,
+             DateTime _NgaySinh, string _SDTphuHuynh)
+        {
+            string errMS = "";
+            if (_MaHS == "") { errMS = "Trống mã học sinh"; }
+            if (_HoTen == "") { errMS += "\nTrống họ tên"; }
+            if (_QueQuan == "") { errMS += "\nTrống quê quán"; }
+            if (_NgaySinh.Year > DateTime.Now.Year) { errMS += "\nLỗi ngày sinh"; }
+            if (_SDTphuHuynh.Length > 15 || _SDTphuHuynh.Length == 0) { errMS += "\nLỗi số điện thoại"; }
+            if (errMS != "")
+            {
+                MessageBox.Show(errMS, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return true;
         }
-
-        */
-        #endregion
     }
 }

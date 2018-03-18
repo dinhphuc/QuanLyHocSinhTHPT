@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyHocSinhTHPT.Models
 {
-    internal class ChuNhiem
+    public class ChuNhiem
     {
         [DisplayName("Mã Giáo Viên")]
         public string MaGV { get; set; }
@@ -17,5 +17,19 @@ namespace QuanLyHocSinhTHPT.Models
 
         [DisplayName("Năm Học")]
         public string NamHoc { get; set; }
+
+        public ChuNhiem()
+        {
+            MaGV = "";
+            MaLop = "";
+            NamHoc = "";
+        }
+
+        public ChuNhiem(string _MaGV, string _MaLop, string _NamHoc)
+        {
+            MaGV = _MaGV;
+            MaLop = _MaLop;
+            NamHoc = _NamHoc;
+        }
     }
 }
