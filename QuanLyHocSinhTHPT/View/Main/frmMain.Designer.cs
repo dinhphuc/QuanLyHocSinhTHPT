@@ -65,13 +65,12 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.pl_tool = new DevExpress.XtraEditors.PanelControl();
-            this.pl_main = new DevExpress.XtraEditors.PanelControl();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pl_tool)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pl_main)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPhanQuyen
@@ -120,10 +119,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 736);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 718);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1326, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1334, 23);
             // 
             // ribbon
             // 
@@ -154,7 +153,7 @@
             this.menuHethong,
             this.menuQuanLy,
             this.menuTroGiup});
-            this.ribbon.Size = new System.Drawing.Size(1326, 143);
+            this.ribbon.Size = new System.Drawing.Size(1334, 147);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnLogin
@@ -362,32 +361,23 @@
             this.panelControl2.Size = new System.Drawing.Size(1014, 530);
             this.panelControl2.TabIndex = 3;
             // 
-            // pl_tool
+            // defaultLookAndFeel1
             // 
-            this.pl_tool.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pl_tool.Location = new System.Drawing.Point(0, 143);
-            this.pl_tool.Name = "pl_tool";
-            this.pl_tool.Size = new System.Drawing.Size(178, 593);
-            this.pl_tool.TabIndex = 3;
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013";
             // 
-            // pl_main
+            // xtraTabbedMdiManager1
             // 
-            this.pl_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_main.Location = new System.Drawing.Point(178, 143);
-            this.pl_main.Name = "pl_main";
-            this.pl_main.Size = new System.Drawing.Size(1148, 593);
-            this.pl_main.TabIndex = 4;
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 767);
-            this.Controls.Add(this.pl_main);
-            this.Controls.Add(this.pl_tool);
+            this.ClientSize = new System.Drawing.Size(1334, 741);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -397,8 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pl_tool)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pl_main)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,7 +430,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.PanelControl pl_tool;
-        private DevExpress.XtraEditors.PanelControl pl_main;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

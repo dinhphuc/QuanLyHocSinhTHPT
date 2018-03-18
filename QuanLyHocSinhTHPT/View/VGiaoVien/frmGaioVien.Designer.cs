@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGaioVien));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblTongSL = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(3, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(891, 47);
+            this.groupBox2.Size = new System.Drawing.Size(899, 47);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -151,9 +152,9 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 398);
+            this.groupBox1.Location = new System.Drawing.Point(0, 406);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(897, 50);
+            this.groupBox1.Size = new System.Drawing.Size(905, 50);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -162,18 +163,26 @@
             this.dtgrv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgrv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgrv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrv.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgrv.Location = new System.Drawing.Point(0, 143);
+            this.dtgrv.Location = new System.Drawing.Point(0, 147);
             this.dtgrv.Name = "dtgrv";
-            this.dtgrv.Size = new System.Drawing.Size(897, 305);
+            this.dtgrv.Size = new System.Drawing.Size(905, 309);
             this.dtgrv.TabIndex = 2;
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 448);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 456);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(897, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(905, 23);
             // 
             // ribbonControl1
             // 
@@ -191,7 +200,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3});
-            this.ribbonControl1.Size = new System.Drawing.Size(897, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(905, 147);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnThem
@@ -286,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 479);
+            this.ClientSize = new System.Drawing.Size(905, 479);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgrv);
             this.Controls.Add(this.ribbonStatusBar1);

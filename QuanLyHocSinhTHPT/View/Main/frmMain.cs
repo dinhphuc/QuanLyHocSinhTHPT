@@ -97,18 +97,33 @@ namespace QuanLyHocSinhTHPT.View.Main
         {
         }
 
+        private bool ExitsForm(Form form)
+        {
+            foreach (var child in MdiChildren)
+            {
+                if (child.Name == form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void btnGiaoVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            pl_main.Controls.Clear();
-            VGiaoVien.UserControlGiaoVien usGV = new VGiaoVien.UserControlGiaoVien();
-            pl_main.Controls.Add(usGV);
+            var formGV = new VGiaoVien.frmMainGiaoVien();
+            if (ExitsForm(formGV)) return;
+            formGV.MdiParent = this;
+            formGV.Show();
         }
 
         private void btnHocSinh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            pl_main.Controls.Clear();
-            VHocSinh.UserControlHocSinh usHS = new VHocSinh.UserControlHocSinh();
-            pl_main.Controls.Add(usHS);
+            var formHS = new VHocSinh.frmMainHocSinh();
+            if (ExitsForm(formHS)) return;
+            formHS.MdiParent = this;
+            formHS.Show();
         }
     }
 }

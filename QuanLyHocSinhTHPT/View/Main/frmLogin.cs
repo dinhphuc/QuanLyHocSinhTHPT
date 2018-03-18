@@ -23,26 +23,26 @@ namespace QuanLyHocSinhTHPT.View.Main
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string sql = string.Format("select TaiKhoan from Account where TaiKhoan='{0}' and MatKhau='{1}'", txtUseName.Text, txtPassWord.Text);
+            string sql = string.Format("select TaiKhoan from Account where TaiKhoan='{0}' and MatKhau='{1}'", txtUserName.Text, txtPassWord.Text);
             DataTable dt = sqlHelper.Query(sql);
 
             if (dt.Rows.Count == 1)
             {
-                SingletonData.Getlates().nguoidung = new TaiKhoan() { TenTaiKhoan = txtUseName.Text };
+                SingletonData.Getlates().nguoidung = new TaiKhoan() { TenTaiKhoan = txtUserName.Text };
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ///////////////////////
 
                 if (ckLuu.Checked)
                 {
-                    file.ghifileLG(padFile, txtUseName.Text.Trim(),
-                txtPassWord.Text.Trim());
-                    lblsuccess.Text = "✓ success";
+                    //file.ghifileLG(padFile, txtUseName.Text.Trim(),
+                    // txtPassWord.Text.Trim());
+                    // lblsuccess.Text = "✓ success";
                     ckLuu.Enabled = false;
                     btnDangNhap.Enabled = true;
                 }
                 else
                 {
-                    lblsuccess.Text = "X error";
+                    // lblsuccess.Text = "X error";
                 }
                 this.Close();
             }
@@ -61,7 +61,7 @@ namespace QuanLyHocSinhTHPT.View.Main
             {
                 TaiKhoan ac = new TaiKhoan();
                 ac = file.docFileLG(padFile);
-                txtUseName.Text = ac.TenTaiKhoan;
+                txtUserName.Text = ac.TenTaiKhoan;
                 txtPassWord.Text = ac.Matkhau;
             }
             catch

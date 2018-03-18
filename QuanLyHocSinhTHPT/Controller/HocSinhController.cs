@@ -17,9 +17,10 @@ namespace QuanLyHocSinhTHPT.Controller
         {
             using (var db = setupConection.ConnectionFactory())
             {
+                string s = "SELECT MaHS,HoTen,NgaySinh,DiaChi,GioiTinh,sdt,TenPhuHuynh,SDTphuHuynh,TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.Malop = HocSinh.MaLop";
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<HocSinh>("SELECT *FROM dbo.HocSinh").ToList();
+                return db.Query<HocSinh>(s).ToList();
             }
         }
 

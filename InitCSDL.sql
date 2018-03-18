@@ -10,6 +10,8 @@
 9. Tài Khoản (Mã Học Sinh or (mã Giáo Viên) , Thời Gian đăng nhập, Quyền, Log, Avt)
 10.
 */
+DROP DATABASE QuanLyHSGVTHPT
+
 
 CREATE DATABASE QuanLyHSGVTHPT
 GO
@@ -48,7 +50,7 @@ CREATE TABLE HocSinh(
 	DiaChi nvarchar(200) NULL,
 	GioiTinh bit NULL,
 	SDTphuHuynh VARCHAR(15),
-	HoTenPhuHuynh nvarchar(100) NULL
+	HoTenPhuHuynh nvarchar(100) NULL,
 	MaLop VARCHAR(9) FOREIGN KEY(MaLop) REFERENCES dbo.Lop(Malop),
 )  
 GO

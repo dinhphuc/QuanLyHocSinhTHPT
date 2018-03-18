@@ -1,26 +1,37 @@
-﻿using System;
+﻿using QuanLyHocSinhTHPT.Controller;
+using QuanLyHocSinhTHPT.Helper;
+using QuanLyHocSinhTHPT.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyHocSinhTHPT.Models;
-using QuanLyHocSinhTHPT.Controller;
-using QuanLyHocSinhTHPT.Helper;
 
 namespace QuanLyHocSinhTHPT.View.VHocSinh
 {
-    public partial class UserControlHocSinh : UserControl
+    public partial class frmMainHocSinh : Form
     {
-        public UserControlHocSinh()
+        public frmMainHocSinh()
         {
             InitializeComponent();
         }
 
         private List<HocSinh> lstHS;
+        private int CurCl = 0, CurR = 0;
+        private string IDmember;
+
+        private void frmMainHocSinh_Load(object sender, EventArgs e)
+        {
+            Hienthi();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+        }
 
         public void Hienthi()
         {
@@ -33,9 +44,10 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
             dt.Columns["NgaySinh"].ColumnName = "Ngày Sinh";
             dt.Columns["DiaChi"].ColumnName = "Địa Chỉ";
             dt.Columns["GioiTinh"].ColumnName = "Giới Tính (Nữ ✓/nam)";
-            dt.Columns["HoTenPhuHuynh"].ColumnName = "Tên Phụ Huynh";
+            dt.Columns["Sdt"].ColumnName = "SĐT";
+            dt.Columns["TenPhuHuynh"].ColumnName = "Tên Phụ Huynh";
             dt.Columns["SDTphuHuynh"].ColumnName = "SDT Phụ Huynh";
-            dt.Columns["MaLop"].ColumnName = "Mã Lớp";
+            dt.Columns["TenLop"].ColumnName = "Mã Lớp";
             int i = 0;
             foreach (DataGridViewColumn col in dtgHocSinh.Columns)
             {
@@ -48,19 +60,6 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
 
             //lblTongSL.Text = GetTongSobanGhi("select * from HocSinh").ToString();
             dtgHocSinh.Refresh();
-        }
-
-        private int CurCl = 0, CurR = 0;
-        private string _Query = "select * from HocSinh";
-        private string IDmember;
-
-        private void UserControlHocSinh_Load(object sender, EventArgs e)
-        {
-            Hienthi();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
         }
     }
 }

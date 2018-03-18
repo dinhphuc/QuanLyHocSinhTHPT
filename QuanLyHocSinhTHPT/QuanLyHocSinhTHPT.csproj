@@ -56,6 +56,7 @@
       <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -151,17 +152,17 @@
     <Compile Include="View\Support\frmBanQuyen.Designer.cs">
       <DependentUpon>frmBanQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\VGiaoVien\UserControlGiaoVien.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="View\VGiaoVien\frmMainGiaoVien.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\VGiaoVien\UserControlGiaoVien.Designer.cs">
-      <DependentUpon>UserControlGiaoVien.cs</DependentUpon>
+    <Compile Include="View\VGiaoVien\frmMainGiaoVien.Designer.cs">
+      <DependentUpon>frmMainGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\VHocSinh\UserControlHocSinh.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="View\VHocSinh\frmMainHocSinh.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\VHocSinh\UserControlHocSinh.Designer.cs">
-      <DependentUpon>UserControlHocSinh.cs</DependentUpon>
+    <Compile Include="View\VHocSinh\frmMainHocSinh.Designer.cs">
+      <DependentUpon>frmMainHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="View\VHoc\frmHoc.cs">
       <SubType>Form</SubType>
@@ -252,11 +253,11 @@
     <EmbeddedResource Include="View\Support\frmBanQuyen.resx">
       <DependentUpon>frmBanQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\VGiaoVien\UserControlGiaoVien.resx">
-      <DependentUpon>UserControlGiaoVien.cs</DependentUpon>
+    <EmbeddedResource Include="View\VGiaoVien\frmMainGiaoVien.resx">
+      <DependentUpon>frmMainGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\VHocSinh\UserControlHocSinh.resx">
-      <DependentUpon>UserControlHocSinh.cs</DependentUpon>
+    <EmbeddedResource Include="View\VHocSinh\frmMainHocSinh.resx">
+      <DependentUpon>frmMainHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VHoc\frmHoc.resx">
       <DependentUpon>frmHoc.cs</DependentUpon>

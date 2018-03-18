@@ -1,25 +1,27 @@
-﻿using System;
+﻿using QuanLyHocSinhTHPT.Controller;
+using QuanLyHocSinhTHPT.Helper;
+using QuanLyHocSinhTHPT.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyHocSinhTHPT.Models;
-using QuanLyHocSinhTHPT.Controller;
-using QuanLyHocSinhTHPT.Helper;
 
 namespace QuanLyHocSinhTHPT.View.VGiaoVien
 {
-    public partial class UserControlGiaoVien : UserControl
+    public partial class frmMainGiaoVien : Form
     {
-        public UserControlGiaoVien()
+        public frmMainGiaoVien()
         {
             InitializeComponent();
         }
 
+        private int CurCl = 0, CurR = 0;
+        private string IDmember;
         private List<GiaoVien> lstGV;
 
         public void Hienthi()
@@ -48,28 +50,13 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
             dtgrGV.Refresh();
         }
 
-        private int CurCl = 0, CurR = 0;
-        private string _Query = "select * from GiaoVien";
-        private string IDmember;
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+        }
 
-        private void UserControlGiaoVien_Load(object sender, EventArgs e)
+        private void frmMainGiaoVien_Load(object sender, EventArgs e)
         {
             Hienthi();
-        }
-
-        private void dtgrGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IDmember = dtgrGV.CurrentRow.Cells[0].Value.ToString();
-            CurCl = dtgrGV.CurrentCell.ColumnIndex;
-            CurR = dtgrGV.CurrentCell.RowIndex;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
         }
     }
 }

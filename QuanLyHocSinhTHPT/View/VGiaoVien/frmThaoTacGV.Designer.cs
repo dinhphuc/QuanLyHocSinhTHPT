@@ -86,7 +86,7 @@
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(649, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(657, 147);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -95,7 +95,6 @@
             this.bbiSave.Id = 2;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
-          
             // 
             // bbiSaveAndClose
             // 
@@ -103,7 +102,6 @@
             this.bbiSaveAndClose.Id = 3;
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
             this.bbiSaveAndClose.Name = "bbiSaveAndClose";
-            
             // 
             // bbiSaveAndNew
             // 
@@ -132,7 +130,6 @@
             this.bbiClose.Id = 7;
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
-            
             // 
             // ribbonPageCategory1
             // 
@@ -164,7 +161,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.picAvta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 143);
+            this.panel1.Location = new System.Drawing.Point(0, 147);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 315);
             this.panel1.TabIndex = 2;
@@ -232,9 +229,9 @@
             this.panel2.Controls.Add(this.txtMaGV);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 143);
+            this.panel2.Location = new System.Drawing.Point(200, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(449, 315);
+            this.panel2.Size = new System.Drawing.Size(457, 315);
             this.panel2.TabIndex = 3;
             // 
             // txtSDT
@@ -352,7 +349,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(649, 458);
+            this.ClientSize = new System.Drawing.Size(657, 462);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainRibbonControl);

@@ -21,28 +21,32 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Giới tính")]
         public string GioiTinh { get; set; }
 
+        [DisplayName("SDT")]
+        public string Sdt { get; set; }
+
         [DisplayName("Ngày Sinh")]
         public string NgaySinh { get; set; }
 
         [DisplayName("Họ Tên Phụ Huynh")]
-        public string HoTenPhuHuynh { get; set; }
+        public string TenPhuHuynh { get; set; }
 
         [DisplayName("SDT Phụ Huynh")]
         public string SDTphuHuynh { get; set; }
 
-        [DisplayName("Mã Lớp")]
-        public string MaLop { get; set; }
+        [DisplayName("Tên Lớp")]
+        public string TenLop { get; set; }
 
-        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, string _GioiTinh, string _NgaySinh, string _HoTenPhuHuynh, string _SDTphuHuynh, string _MaLop)
+        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, string _GioiTinh, string _Sdt, string _NgaySinh, string _TenPhuHuynh, string _SDTphuHuynh, string _TenLop)
         {
             this.MaHS = _MaHS;
             this.HoTen = _HoTen;
             this.DiaChi = _DiaChi;
             this.GioiTinh = _GioiTinh;
             this.NgaySinh = _NgaySinh;
-            this.HoTenPhuHuynh = _HoTenPhuHuynh;
+            this.TenPhuHuynh = _TenPhuHuynh;
             this.SDTphuHuynh = _SDTphuHuynh;
-            this.MaLop = _MaLop;
+            this.TenLop = _TenLop;
+            this.Sdt = _Sdt;
         }
 
         public HocSinh()
@@ -52,9 +56,10 @@ namespace QuanLyHocSinhTHPT.Models
             this.DiaChi = "";
             this.GioiTinh = "";
             this.NgaySinh = "";
-            this.HoTenPhuHuynh = "";
+            this.TenPhuHuynh = "";
             this.SDTphuHuynh = "";
-            this.MaLop = "";
+            this.TenLop = "";
+            this.Sdt = "";
         }
     }
 }
