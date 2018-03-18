@@ -845,3 +845,4 @@ D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\es\
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\ja\DevExpress.Diagram.v17.2.Core.resources.dll
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\ru\DevExpress.Diagram.v17.2.Core.resources.dll
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VGiaoVien.UserControlGiaoVien.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHocSinh.UserControlHocSinh.resources

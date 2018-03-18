@@ -157,6 +157,12 @@
     <Compile Include="View\VGiaoVien\UserControlGiaoVien.Designer.cs">
       <DependentUpon>UserControlGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VHocSinh\UserControlHocSinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\VHocSinh\UserControlHocSinh.Designer.cs">
+      <DependentUpon>UserControlHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VHoc\frmHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\VGiaoVien\UserControlGiaoVien.resx">
       <DependentUpon>UserControlGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VHocSinh\UserControlHocSinh.resx">
+      <DependentUpon>UserControlHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VHoc\frmHoc.resx">
       <DependentUpon>frmHoc.cs</DependentUpon>

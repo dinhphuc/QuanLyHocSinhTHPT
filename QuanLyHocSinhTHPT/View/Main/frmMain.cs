@@ -99,8 +99,16 @@ namespace QuanLyHocSinhTHPT.View.Main
 
         private void btnGiaoVien_ItemClick(object sender, ItemClickEventArgs e)
         {
+            pl_main.Controls.Clear();
             VGiaoVien.UserControlGiaoVien usGV = new VGiaoVien.UserControlGiaoVien();
             pl_main.Controls.Add(usGV);
+        }
+
+        private void btnHocSinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pl_main.Controls.Clear();
+            VHocSinh.UserControlHocSinh usHS = new VHocSinh.UserControlHocSinh();
+            pl_main.Controls.Add(usHS);
         }
     }
 }

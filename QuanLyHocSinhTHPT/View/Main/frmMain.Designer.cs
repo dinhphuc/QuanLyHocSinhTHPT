@@ -195,6 +195,7 @@
             this.btnHocSinh.Id = 5;
             this.btnHocSinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHocSinh.ImageOptions.LargeImage")));
             this.btnHocSinh.Name = "btnHocSinh";
+            this.btnHocSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHocSinh_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -392,6 +393,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Chương trình quản lý học sinh THPT";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
