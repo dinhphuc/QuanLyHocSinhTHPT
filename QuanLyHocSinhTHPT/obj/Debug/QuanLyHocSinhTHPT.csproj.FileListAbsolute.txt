@@ -847,3 +847,5 @@ D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\ru\
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\DevExpress.BonusSkins.v17.2.dll
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VGiaoVien.frmMainGiaoVien.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHocSinh.frmMainHocSinh.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VLop.frmMainLop.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmMainMonHoc.resources

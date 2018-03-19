@@ -29,10 +29,11 @@ namespace QuanLyHocSinhTHPT.Controller
         }
 
         public static bool ThemHS(string _MaHS, string _HoTen, string _DiaChi,
-            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh)
+            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh, string _MaLop)
         {
             if (checkInputHS(_MaHS, _HoTen, _DiaChi, _NgaySinh, _Sdt, _HoTenphuHuynh, _SDTphuHuynh))
             {
+                int Insert_HS = -1;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -41,13 +42,21 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Insert_HS = db.Execute("Name proceduce",
-                                new
-                                {
-                                    //para
-                                },
-                                commandType: CommandType.StoredProcedure,
-                                transaction: transaction);
+                            Insert_HS = db.Execute("sp_InsHocSinh",
+                               new
+                               {
+                                   MaHS = _MaHS,
+                                   HoTen = _HoTen,
+                                   NgaySinh = _NgaySinh,
+                                   DiaChi = _DiaChi,
+                                   GioiTinh = _GioiTinh,
+                                   Sdt = _Sdt,
+                                   TenPhuHuynh = _HoTenphuHuynh,
+                                   SDTPhuHuynh = _SDTphuHuynh,
+                                   MaLop = _MaLop
+                               },
+                               commandType: CommandType.StoredProcedure,
+                               transaction: transaction);
                             transaction.Commit();
                         }
                     }
@@ -56,7 +65,8 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                return true;
+                if (Insert_HS == 1) return true;
+                else return false;
             }
             return false;
         }

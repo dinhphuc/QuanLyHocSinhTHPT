@@ -97,7 +97,7 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
             dt.Columns["HoTen"].ColumnName = "Họ Tên";
             dt.Columns["NgaySinh"].ColumnName = "Ngày Sinh";
             dt.Columns["DiaChi"].ColumnName = "Địa Chỉ";
-            dt.Columns["GioiTinh"].ColumnName = "Giới Tính (Nữ ✓/nam)";
+            dt.Columns["GioiTinh"].ColumnName = "Giới Tính (Nữ/nam ✓)";
             dt.Columns["Sdt"].ColumnName = "SĐT";
             dt.Columns["TenPhuHuynh"].ColumnName = "Tên Phụ Huynh";
             dt.Columns["SDTphuHuynh"].ColumnName = "SDT Phụ Huynh";
@@ -111,8 +111,6 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
                 i++;
             }
             try { dtgHocSinh.CurrentCell = dtgHocSinh[CurCl, CurR]; } catch { }
-
-            //lblTongSL.Text = GetTongSobanGhi("select * from HocSinh").ToString();
             dtgHocSinh.Refresh();
         }
     }

@@ -28,7 +28,6 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
             }
             txtID.Text = _MaHS;
             txtTen.Text = _HoTen;
-            txtMaLop.Text = _TenLop;
             txtDiaChi.Text = _DiaChi;
             if (_GioiTinh)
             {
@@ -206,24 +205,28 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            //foreach (HocSinh hs in lstHS)
-            //{
-            //    if (hs.MaHS == txtID.Text.Trim().ToLower())
-            //    {
-            //    }
-            //    else
-            //    {
-            //    }
-            //}
+            foreach (HocSinh hs in lstHS)
+            {
+                if (hs.MaHS == txtID.Text.Trim().ToUpper())
+                {
+                    lblID.Text = "Đã tồn tại";
+                }
+                else
+                {
+                    lblID.Text = "";
+                }
+            }
         }
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ComboboxItem item = new ComboboxItem();
+            item = (ComboboxItem)cbClass.SelectedItem;
             bool gt = true;
             if (radNam.Checked == true)
             { gt = true; }
             else gt = false;
-            if (HocSinhController.ThemHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim()))
+            if (HocSinhController.ThemHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim(), item.Value.ToString()))
             {
                 MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

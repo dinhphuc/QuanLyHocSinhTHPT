@@ -47,8 +47,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +61,7 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erPr)).BeginInit();
             this.panel2.SuspendLayout();
@@ -148,7 +147,7 @@
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(911, 147);
+            this.mainRibbonControl.Size = new System.Drawing.Size(916, 147);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // defaultLookAndFeel1
@@ -162,7 +161,7 @@
             // lblmalopac
             // 
             this.lblmalopac.AutoSize = true;
-            this.lblmalopac.Location = new System.Drawing.Point(498, 191);
+            this.lblmalopac.Location = new System.Drawing.Point(498, 160);
             this.lblmalopac.Name = "lblmalopac";
             this.lblmalopac.Size = new System.Drawing.Size(41, 13);
             this.lblmalopac.TabIndex = 9;
@@ -171,7 +170,7 @@
             // cbClass
             // 
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(588, 183);
+            this.cbClass.Location = new System.Drawing.Point(588, 152);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(121, 21);
             this.cbClass.TabIndex = 10;
@@ -209,26 +208,10 @@
             this.txtTen.Size = new System.Drawing.Size(270, 21);
             this.txtTen.TabIndex = 1;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Mã Lớp:";
-            // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Location = new System.Drawing.Point(118, 109);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(270, 21);
-            this.txtMaLop.TabIndex = 2;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 187);
+            this.label4.Location = new System.Drawing.Point(27, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 15;
@@ -237,7 +220,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(498, 45);
+            this.label5.Location = new System.Drawing.Point(28, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 17;
@@ -246,7 +229,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(498, 75);
+            this.label6.Location = new System.Drawing.Point(498, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 18;
@@ -254,7 +237,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(118, 183);
+            this.txtDiaChi.Location = new System.Drawing.Point(118, 149);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(270, 21);
             this.txtDiaChi.TabIndex = 4;
@@ -262,7 +245,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(498, 114);
+            this.label7.Location = new System.Drawing.Point(498, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 16;
@@ -270,7 +253,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(588, 71);
+            this.txtSDT.Location = new System.Drawing.Point(588, 40);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(295, 21);
             this.txtSDT.TabIndex = 7;
@@ -278,7 +261,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(498, 152);
+            this.label8.Location = new System.Drawing.Point(498, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 14;
@@ -286,14 +269,14 @@
             // 
             // txtTenPhuHuynh
             // 
-            this.txtTenPhuHuynh.Location = new System.Drawing.Point(588, 110);
+            this.txtTenPhuHuynh.Location = new System.Drawing.Point(588, 79);
             this.txtTenPhuHuynh.Name = "txtTenPhuHuynh";
             this.txtTenPhuHuynh.Size = new System.Drawing.Size(295, 21);
             this.txtTenPhuHuynh.TabIndex = 8;
             // 
             // txtSDTphuHuynh
             // 
-            this.txtSDTphuHuynh.Location = new System.Drawing.Point(588, 148);
+            this.txtSDTphuHuynh.Location = new System.Drawing.Point(588, 117);
             this.txtSDTphuHuynh.Name = "txtSDTphuHuynh";
             this.txtSDTphuHuynh.Size = new System.Drawing.Size(295, 21);
             this.txtSDTphuHuynh.TabIndex = 9;
@@ -301,7 +284,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 148);
+            this.label3.Location = new System.Drawing.Point(28, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 12;
@@ -309,7 +292,7 @@
             // 
             // dateNgaySinh
             // 
-            this.dateNgaySinh.Location = new System.Drawing.Point(118, 145);
+            this.dateNgaySinh.Location = new System.Drawing.Point(118, 111);
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Size = new System.Drawing.Size(270, 21);
             this.dateNgaySinh.TabIndex = 3;
@@ -317,7 +300,7 @@
             // radNam
             // 
             this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(588, 41);
+            this.radNam.Location = new System.Drawing.Point(118, 187);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(46, 17);
             this.radNam.TabIndex = 5;
@@ -328,7 +311,7 @@
             // radNu
             // 
             this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(651, 41);
+            this.radNu.Location = new System.Drawing.Point(181, 187);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
             this.radNu.TabIndex = 6;
@@ -339,6 +322,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblID);
             this.panel2.Controls.Add(this.radNu);
             this.panel2.Controls.Add(this.radNam);
             this.panel2.Controls.Add(this.dateNgaySinh);
@@ -352,8 +336,6 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtMaLop);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtTen);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtID);
@@ -363,14 +345,23 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(911, 271);
+            this.panel2.Size = new System.Drawing.Size(916, 267);
             this.panel2.TabIndex = 6;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(395, 46);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(35, 13);
+            this.lblID.TabIndex = 19;
+            this.lblID.Text = "label9";
             // 
             // frmThaoTacHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 418);
+            this.ClientSize = new System.Drawing.Size(916, 414);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.mainRibbonControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -413,13 +404,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaLop;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbClass;
         private System.Windows.Forms.Label lblmalopac;
+        private System.Windows.Forms.Label lblID;
     }
 }

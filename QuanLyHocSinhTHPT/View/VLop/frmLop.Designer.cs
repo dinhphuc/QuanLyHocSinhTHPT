@@ -67,11 +67,10 @@
             this.dtgrv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgrv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgrv.Location = new System.Drawing.Point(0, 143);
+            this.dtgrv.Location = new System.Drawing.Point(0, 147);
             this.dtgrv.Name = "dtgrv";
-            this.dtgrv.Size = new System.Drawing.Size(907, 274);
+            this.dtgrv.Size = new System.Drawing.Size(907, 278);
             this.dtgrv.TabIndex = 10;
-           
             // 
             // ribbonControl1
             // 
@@ -89,7 +88,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3});
-            this.ribbonControl1.Size = new System.Drawing.Size(907, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(907, 147);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnThem
@@ -99,7 +98,7 @@
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
-           
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnSua
             // 
@@ -108,7 +107,6 @@
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.LargeImage")));
             this.btnSua.Name = "btnSua";
-            
             // 
             // btnXoa
             // 
@@ -178,10 +176,10 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 467);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 475);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(907, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(907, 23);
             // 
             // lblTongSL
             // 
@@ -215,7 +213,6 @@
             this.sobanGhi.Name = "sobanGhi";
             this.sobanGhi.Size = new System.Drawing.Size(49, 21);
             this.sobanGhi.TabIndex = 4;
-           
             // 
             // btnLast
             // 
@@ -274,7 +271,7 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 417);
+            this.groupBox1.Location = new System.Drawing.Point(0, 425);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(907, 50);
             this.groupBox1.TabIndex = 9;

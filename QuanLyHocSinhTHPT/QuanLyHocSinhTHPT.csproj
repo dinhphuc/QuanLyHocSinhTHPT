@@ -182,11 +182,23 @@
     <Compile Include="View\VLop\frmLop.Designer.cs">
       <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VLop\frmMainLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VLop\frmMainLop.Designer.cs">
+      <DependentUpon>frmMainLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VLop\frmThaoTacLop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\VLop\frmThaoTacLop.Designer.cs">
       <DependentUpon>frmThaoTacLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VMonHoc\frmMainMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VMonHoc\frmMainMonHoc.Designer.cs">
+      <DependentUpon>frmMainMonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="View\VMonHoc\frmMonHoc.cs">
       <SubType>Form</SubType>
@@ -268,8 +280,14 @@
     <EmbeddedResource Include="View\VLop\frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\VLop\frmMainLop.resx">
+      <DependentUpon>frmMainLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\VLop\frmThaoTacLop.resx">
       <DependentUpon>frmThaoTacLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VMonHoc\frmMainMonHoc.resx">
+      <DependentUpon>frmMainMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VMonHoc\frmMonHoc.resx">
       <DependentUpon>frmMonHoc.cs</DependentUpon>

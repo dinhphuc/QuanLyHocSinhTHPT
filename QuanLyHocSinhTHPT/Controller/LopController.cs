@@ -13,13 +13,13 @@ namespace QuanLyHocSinhTHPT.Controller
 {
     public class LopController
     {
-        public static List<GiaoVien> getAllDataClass()
+        public static List<Lop> getAllDataClass()
         {
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<GiaoVien>("SELECT *FROM dbo.Lop").ToList();
+                return db.Query<Lop>("SELECT *FROM dbo.Lop").ToList();
             }
         }
 

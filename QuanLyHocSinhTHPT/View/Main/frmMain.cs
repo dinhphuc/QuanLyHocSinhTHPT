@@ -125,5 +125,21 @@ namespace QuanLyHocSinhTHPT.View.Main
             formHS.MdiParent = this;
             formHS.Show();
         }
+
+        private void barMonHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var formMonHoc = new VMonHoc.frmMainMonHoc();
+            if (ExitsForm(formMonHoc)) return;
+            formMonHoc.MdiParent = this;
+            formMonHoc.Show();
+        }
+
+        private void barLopHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frmlopHoc = new VLop.frmMainLop();
+            if (ExitsForm(frmlopHoc)) return;
+            frmlopHoc.MdiParent = this;
+            frmlopHoc.Show();
+        }
     }
 }

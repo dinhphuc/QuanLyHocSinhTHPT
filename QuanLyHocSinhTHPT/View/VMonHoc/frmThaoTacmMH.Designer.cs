@@ -67,7 +67,7 @@
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(445, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(445, 147);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -76,7 +76,6 @@
             this.bbiSave.Id = 2;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
-          
             // 
             // bbiSaveAndClose
             // 
@@ -84,7 +83,7 @@
             this.bbiSaveAndClose.Id = 3;
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
             this.bbiSaveAndClose.Name = "bbiSaveAndClose";
-             // 
+            // 
             // bbiSaveAndNew
             // 
             this.bbiSaveAndNew.Caption = "Save And New";
@@ -185,9 +184,9 @@
             this.panel2.Controls.Add(this.txtMaMH);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 143);
+            this.panel2.Location = new System.Drawing.Point(0, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(445, 191);
+            this.panel2.Size = new System.Drawing.Size(445, 187);
             this.panel2.TabIndex = 5;
             // 
             // txtHeSo

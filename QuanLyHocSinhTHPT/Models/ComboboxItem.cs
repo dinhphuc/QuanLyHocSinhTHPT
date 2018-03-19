@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace QuanLyHocSinhTHPT.Models
 {
-    class ComboboxItem
+    public class ComboboxItem
     {
         public string Text { get; set; }
         public object Value { get; set; }
 
         public override string ToString()
         {
-            return Text;
+            return Text.ToString();
         }
     }
 }
