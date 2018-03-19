@@ -15,11 +15,12 @@ namespace QuanLyHocSinhTHPT.Controller
     {
         public static List<GiaoVien> getAllDataGV()
         {
+            string query = "SELECT MaGV,HoTen,NgaySinh,GioiTinh,Sdt,DiaChi,TenMon FROM dbo.GiaoVien INNER JOIN dbo.MonHoc ON MonHoc.MaMon = GiaoVien.MaMon";
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<GiaoVien>("SELECT *FROM dbo.GiaoVien").ToList();
+                return db.Query<GiaoVien>(query).ToList();
             }
         }
 

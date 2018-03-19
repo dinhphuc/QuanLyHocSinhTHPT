@@ -23,6 +23,14 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
         private int CurCl = 0, CurR = 0;
         private string IDmember;
         private List<GiaoVien> lstGV;
+        private string MaGV = "";
+        private string HoTen = "";
+        private DateTime NgaySinh = DateTime.Now;
+        private bool GioiTinh = true;
+        private string Sdt = "";
+        private string TenMon = "";
+        private string DiaChi = "";
+        private int i = 0;
 
         public void Hienthi()
         {
@@ -36,18 +44,43 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
             dt.Columns["GioiTinh"].ColumnName = "Giới Tính (Nữ ✓/nam)";
             dt.Columns["Sdt"].ColumnName = "Số Điện Thoại";
             dt.Columns["DiaChi"].ColumnName = "Địa Chỉ";
-            dt.Columns["MaMon"].ColumnName = "Môn Giảng Dạy";
-            int i = 0;
+            dt.Columns["TenMon"].ColumnName = "Tên môn";
+            int j = 0;
             foreach (DataGridViewColumn col in dtgrGV.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                dtgrGV.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                i++;
+                dtgrGV.Columns[j].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                j++;
             }
             try { dtgrGV.CurrentCell = dtgrGV[CurCl, CurR]; } catch { }
             // lblTongSL.Text = GetTongSobanGhi("select * from GiaoVien").ToString();
             dtgrGV.Refresh();
+        }
+
+        private void dtgrGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDmember = dtgrGV.CurrentRow.Cells[0].Value.ToString();
+            CurCl = dtgrGV.CurrentCell.ColumnIndex;
+            CurR = dtgrGV.CurrentCell.RowIndex;
+            i = CurR;
+            // show data
+            txtID.Text = MaGV = lstGV[i].MaGV;
+            txtHoTen.Text = HoTen = lstGV[i].HoTen;
+            txtMon.Text = TenMon = lstGV[i].TenMon;
+            txtDiaChi.Text = DiaChi = lstGV[i].DiaChi;
+            if (lstGV[i].GioiTinh)
+            {
+                radNam.Checked = true;
+                GioiTinh = true;
+            }
+            else
+            {
+                radNu.Checked = true;
+                GioiTinh = false;
+            }
+            dtpNgaySinh.Value = NgaySinh = lstGV[i].NgaySinh;
+            txtSDT.Text = Sdt = lstGV[i].Sdt;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)

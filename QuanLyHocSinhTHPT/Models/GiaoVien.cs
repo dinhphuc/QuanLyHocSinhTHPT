@@ -14,7 +14,7 @@ namespace QuanLyHocSinhTHPT.Models
     GioiTinh
     Sdt varc
     DiaChi n
-    MaMon VA
+    TenMon VA
 
      */
 
@@ -30,7 +30,7 @@ namespace QuanLyHocSinhTHPT.Models
         public DateTime NgaySinh { get; set; }
 
         [DisplayName("Giới Tính")]
-        public string GioiTinh { get; set; }
+        public bool GioiTinh { get; set; }
 
         [DisplayName("Số dt")]
         public string Sdt { get; set; }
@@ -39,9 +39,9 @@ namespace QuanLyHocSinhTHPT.Models
         public string DiaChi { get; set; }
 
         [DisplayName("Mã Môn")]
-        public string MaMon { get; set; }
+        public string TenMon { get; set; }
 
-        public GiaoVien(string _MaGV, string _HoTen, DateTime _NgaySinh, string _GioiTinh, string _Sdt, string _DiaChi, string _MaMon)
+        public GiaoVien(string _MaGV, string _HoTen, DateTime _NgaySinh, bool _GioiTinh, string _Sdt, string _DiaChi, string _TenMon)
         {
             this.MaGV = _MaGV;
             this.HoTen = _HoTen;
@@ -49,7 +49,7 @@ namespace QuanLyHocSinhTHPT.Models
             this.GioiTinh = _GioiTinh;
             this.Sdt = _Sdt;
             this.DiaChi = _DiaChi;
-            this.MaMon = _MaMon;
+            this.TenMon = _TenMon;
         }
 
         public GiaoVien()
@@ -57,7 +57,7 @@ namespace QuanLyHocSinhTHPT.Models
             this.MaGV = "";
             this.HoTen = "";
             this.NgaySinh = DateTime.Now;
-            this.GioiTinh = "Nam";
+            this.GioiTinh = true;
             this.Sdt = "";
             this.DiaChi = "";
         }

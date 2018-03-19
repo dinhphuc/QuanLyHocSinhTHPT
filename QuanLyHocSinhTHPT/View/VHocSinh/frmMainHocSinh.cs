@@ -23,14 +23,68 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
         private List<HocSinh> lstHS;
         private int CurCl = 0, CurR = 0;
         private string IDmember;
+        private string MaHS = "";
+        private string HoTen = "";
+        private string DiaChi = "";
+        private bool GioiTinh = false;
+        private DateTime NgaySinh = DateTime.Now;
+        private string Sdt = "";
+        private string TenPhuHuynh = "";
+        private string SDTphuHuynh = "";
+        private string TenLop = "";
 
         private void frmMainHocSinh_Load(object sender, EventArgs e)
         {
             Hienthi();
         }
 
+        private int i = 0;
+
+        private void dtgHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDmember = dtgHocSinh.CurrentRow.Cells[0].Value.ToString();
+            CurCl = dtgHocSinh.CurrentCell.ColumnIndex;
+            CurR = dtgHocSinh.CurrentCell.RowIndex;
+            i = CurR;
+            // show data
+            txtID.Text = MaHS = lstHS[i].MaHS;
+            txtTen.Text = HoTen = lstHS[i].HoTen;
+            txtMaLop.Text = TenLop = lstHS[i].TenLop;
+            txtDiaChi.Text = DiaChi = lstHS[i].DiaChi;
+            if (lstHS[i].GioiTinh)
+            {
+                radNam.Checked = true;
+                GioiTinh = true;
+            }
+            else
+            {
+                radNu.Checked = true;
+                GioiTinh = false;
+            }
+            dateNgaySinh.Value = NgaySinh = lstHS[i].NgaySinh;
+            txtSDT.Text = Sdt = lstHS[i].Sdt;
+            txtTenPhuHuynh.Text = TenPhuHuynh = lstHS[i].TenPhuHuynh;
+            txtSDTphuHuynh.Text = SDTphuHuynh = lstHS[i].SDTphuHuynh;
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            frmThaoTacHS frmThem = new frmThaoTacHS(null, null, null, true, null, DateTime.Now, null, null, null, 1);
+            frmThem.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (IDmember == null)
+            {
+                MessageBox.Show("No Select!!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                frmThaoTacHS frmSua = new frmThaoTacHS(MaHS, HoTen, DiaChi, GioiTinh, Sdt, NgaySinh, TenPhuHuynh, SDTphuHuynh, TenLop, 2);
+                frmSua.ShowDialog();
+            }
         }
 
         public void Hienthi()

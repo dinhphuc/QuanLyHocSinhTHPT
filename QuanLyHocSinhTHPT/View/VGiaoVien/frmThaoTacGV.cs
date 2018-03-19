@@ -107,5 +107,14 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
         }
         */
         #endregion
+
+        public frmThaoTacGV(string _MaGV, string _HoTen, DateTime _NgaySinh, string _GioiTinh, string _Sdt, string _DiaChi, string _MaMon)
+        {
+            InitializeComponent();
+        }
+
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+        }
     }
 }

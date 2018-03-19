@@ -19,13 +19,13 @@ namespace QuanLyHocSinhTHPT.Models
         public string DiaChi { get; set; }
 
         [DisplayName("Giới tính")]
-        public string GioiTinh { get; set; }
+        public bool GioiTinh { get; set; }
 
         [DisplayName("SDT")]
         public string Sdt { get; set; }
 
         [DisplayName("Ngày Sinh")]
-        public string NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
 
         [DisplayName("Họ Tên Phụ Huynh")]
         public string TenPhuHuynh { get; set; }
@@ -36,7 +36,7 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Tên Lớp")]
         public string TenLop { get; set; }
 
-        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, string _GioiTinh, string _Sdt, string _NgaySinh, string _TenPhuHuynh, string _SDTphuHuynh, string _TenLop)
+        public HocSinh(string _MaHS, string _HoTen, string _DiaChi, bool _GioiTinh, string _Sdt, DateTime _NgaySinh, string _TenPhuHuynh, string _SDTphuHuynh, string _TenLop)
         {
             this.MaHS = _MaHS;
             this.HoTen = _HoTen;
@@ -54,8 +54,8 @@ namespace QuanLyHocSinhTHPT.Models
             this.MaHS = "";
             this.HoTen = "";
             this.DiaChi = "";
-            this.GioiTinh = "";
-            this.NgaySinh = "";
+            this.GioiTinh = true;
+            this.NgaySinh = DateTime.Now;
             this.TenPhuHuynh = "";
             this.SDTphuHuynh = "";
             this.TenLop = "";

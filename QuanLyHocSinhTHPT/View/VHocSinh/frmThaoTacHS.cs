@@ -1,4 +1,5 @@
-﻿using QuanLyHocSinhTHPT.Controller;
+﻿using Dapper;
+using QuanLyHocSinhTHPT.Controller;
 using QuanLyHocSinhTHPT.Helper;
 using QuanLyHocSinhTHPT.Models;
 using System;
@@ -15,6 +16,55 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
 {
     public partial class frmThaoTacHS : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private List<HocSinh> lstHS;
+
+        public frmThaoTacHS(string _MaHS, string _HoTen, string _DiaChi, bool _GioiTinh, string _Sdt, DateTime _NgaySinh, string _TenPhuHuynh, string _SDTphuHuynh, string _TenLop, int state)
+        {
+            InitializeComponent();
+            lstHS = HocSinhController.getAllDataHS();
+            if (state == 2)
+            {
+                txtID.Enabled = false;
+            }
+            txtID.Text = _MaHS;
+            txtTen.Text = _HoTen;
+            txtMaLop.Text = _TenLop;
+            txtDiaChi.Text = _DiaChi;
+            if (_GioiTinh)
+            {
+                radNam.Checked = true;
+            }
+            else
+            {
+                radNu.Checked = true;
+            }
+            dateNgaySinh.Value = _NgaySinh;
+            txtSDT.Text = _Sdt;
+            txtTenPhuHuynh.Text = _TenPhuHuynh;
+            txtSDTphuHuynh.Text = _SDTphuHuynh;
+
+            ///Thao tac ma lop
+            ///1. Get all ma lop
+            ///
+            using (var db = setupConection.ConnectionFactory())
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                List<Lop> list = db.Query<Lop>("SELECT MaLop,TenLop FROM dbo.Lop").ToList();
+                for (int i = 0; i < list.Count; i++)
+                {
+                    ComboboxItem item = new ComboboxItem();
+                    item.Text = list[i].TenLop.ToString();
+                    item.Value = list[i].MaLop.ToString();
+                    cbClass.Items.Add(item);
+                    if (_TenLop == list[i].TenLop)
+                    {
+                        cbClass.SelectedIndex = i;
+                    }
+                }
+            }
+        }
+
         #region
         /*
         string _ID = null;
@@ -153,5 +203,34 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
 
 */
         #endregion
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            //foreach (HocSinh hs in lstHS)
+            //{
+            //    if (hs.MaHS == txtID.Text.Trim().ToLower())
+            //    {
+            //    }
+            //    else
+            //    {
+            //    }
+            //}
+        }
+
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bool gt = true;
+            if (radNam.Checked == true)
+            { gt = true; }
+            else gt = false;
+            if (HocSinhController.ThemHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim()))
+            {
+                MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

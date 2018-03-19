@@ -28,10 +28,10 @@ namespace QuanLyHocSinhTHPT.Controller
         {
         }
 
-        public static bool ThemHS(string _MaHS, string _HoTen, string _QueQuan,
-            bool _GioiTinh, DateTime _NgaySinh, string _SDTphuHuynh)
+        public static bool ThemHS(string _MaHS, string _HoTen, string _DiaChi,
+            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh)
         {
-            if (checkInputHS(_MaHS, _HoTen, _QueQuan, _NgaySinh, _SDTphuHuynh))
+            if (checkInputHS(_MaHS, _HoTen, _DiaChi, _NgaySinh, _Sdt, _HoTenphuHuynh, _SDTphuHuynh))
             {
                 using (var db = setupConection.ConnectionFactory())
                 {
@@ -61,10 +61,10 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public static bool SuaHS(string _MaHS, string _HoTen, string _QueQuan,
-            bool _GioiTinh, DateTime _NgaySinh, string _SDTphuHuynh)
+        public static bool SuaHS(string _MaHS, string _HoTen, string _DiaChi,
+            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh)
         {
-            if (checkInputHS(_MaHS, _HoTen, _QueQuan, _NgaySinh, _SDTphuHuynh))
+            if (checkInputHS(_MaHS, _HoTen, _DiaChi, _NgaySinh, _Sdt, _HoTenphuHuynh, _SDTphuHuynh))
             {
                 using (var db = setupConection.ConnectionFactory())
                 {
@@ -126,13 +126,15 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public static bool checkInputHS(string _MaHS, string _HoTen, string _QueQuan,
-             DateTime _NgaySinh, string _SDTphuHuynh)
+        public static bool checkInputHS(string _MaHS, string _HoTen, string _DiaChi,
+             DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh)
         {
             string errMS = "";
             if (_MaHS == "") { errMS = "Trống mã học sinh"; }
             if (_HoTen == "") { errMS += "\nTrống họ tên"; }
-            if (_QueQuan == "") { errMS += "\nTrống quê quán"; }
+            if (_DiaChi == "") { errMS += "\nTrống quê quán"; }
+            if (_Sdt == "") { errMS += "\nTrống số điện thoại"; }
+            if (_HoTenphuHuynh == "") { errMS += "\nTrống họ tên phụ huynh"; }
             if (_NgaySinh.Year > DateTime.Now.Year) { errMS += "\nLỗi ngày sinh"; }
             if (_SDTphuHuynh.Length > 15 || _SDTphuHuynh.Length == 0) { errMS += "\nLỗi số điện thoại"; }
             if (errMS != "")
