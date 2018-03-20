@@ -20,7 +20,7 @@ namespace QuanLyHocSinhTHPT.Controller
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<MonHoc>("SELECT *FROM dbo.MonHoc").ToList();
+                return db.Query<MonHoc>("SELECT * FROM dbo.MonHoc").ToList();
             }
         }
 

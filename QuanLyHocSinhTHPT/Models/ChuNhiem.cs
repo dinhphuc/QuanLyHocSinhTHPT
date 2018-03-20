@@ -15,21 +15,31 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Mã Lớp")]
         public string MaLop { get; set; }
 
+        [DisplayName("Tên Giáo Viên")]
+        public string HoTen { get; set; }
+
+        [DisplayName("Tên Lớp")]
+        public string TenLop { get; set; }
+
         [DisplayName("Năm Học")]
-        public string NamHoc { get; set; }
+        public string NiemKhoa { get; set; }
 
         public ChuNhiem()
         {
             MaGV = "";
             MaLop = "";
-            NamHoc = "";
+            NiemKhoa = "";
+            HoTen = "";
+            TenLop = "";
         }
 
-        public ChuNhiem(string _MaGV, string _MaLop, string _NamHoc)
+        public ChuNhiem(string _MaGV, string _MaLop, string _HoTen, string _TenLop, string _NiemKhoa)
         {
             MaGV = _MaGV;
             MaLop = _MaLop;
-            NamHoc = _NamHoc;
+            NiemKhoa = _NiemKhoa;
+            HoTen = _HoTen;
+            TenLop = _TenLop;
         }
     }
 }

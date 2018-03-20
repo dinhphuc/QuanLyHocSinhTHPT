@@ -13,13 +13,14 @@ namespace QuanLyHocSinhTHPT.Controller
 {
     public class ChuNhiemController
     {
-        public static List<GiaoVien> getAllDataChuNhiem()
+        public static List<ChuNhiem> getAllDataChuNhiem()
         {
+            string s = "SELECT ChuNhiem.MaGV,ChuNhiem.MaLop,NiemKhoa,TenLop,dbo.GiaoVien.HoTen FROM (dbo.ChuNhiem INNER JOIN dbo.Lop ON Lop.Malop = ChuNhiem.MaLop)INNER JOIN dbo.GiaoVien ON GiaoVien.MaGV = ChuNhiem.MaGV";
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<GiaoVien>("SELECT *FROM dbo.GiaoVien").ToList();
+                return db.Query<ChuNhiem>(s).ToList();
             }
         }
 

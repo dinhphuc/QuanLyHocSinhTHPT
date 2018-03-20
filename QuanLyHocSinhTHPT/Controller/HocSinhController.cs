@@ -72,10 +72,11 @@ namespace QuanLyHocSinhTHPT.Controller
         }
 
         public static bool SuaHS(string _MaHS, string _HoTen, string _DiaChi,
-            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh)
+            bool _GioiTinh, DateTime _NgaySinh, string _Sdt, string _HoTenphuHuynh, string _SDTphuHuynh, string _MaLop)
         {
             if (checkInputHS(_MaHS, _HoTen, _DiaChi, _NgaySinh, _Sdt, _HoTenphuHuynh, _SDTphuHuynh))
             {
+                int Edit_HS = -1;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -84,10 +85,18 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Edit_HS = db.Execute("Name proceduce",
+                            Edit_HS = db.Execute("sp_UpdateHocSinh",
                                 new
                                 {
-                                    //para
+                                    MaHS = _MaHS,
+                                    HoTen = _HoTen,
+                                    NgaySinh = _NgaySinh,
+                                    DiaChi = _DiaChi,
+                                    GioiTinh = _GioiTinh,
+                                    Sdt = _Sdt,
+                                    TenPhuHuynh = _HoTenphuHuynh,
+                                    SDTPhuHuynh = _SDTphuHuynh,
+                                    MaLop = _MaLop
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -99,7 +108,8 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                return true;
+                if (Edit_HS == 1) return true;
+                else return false;
             }
             return false;
         }

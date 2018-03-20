@@ -14,6 +14,8 @@ using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Helpers;
 using QuanLyHocSinhTHPT.Controller;
 using QuanLyHocSinhTHPT.Models;
+using QuanLyHocSinhTHPT.Helper;
+using Dapper;
 
 namespace QuanLyHocSinhTHPT.View.VGiaoVien
 {
@@ -107,14 +109,85 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
         }
         */
         #endregion
+        private int _state;
+        private List<GiaoVien> lstGV;
 
-        public frmThaoTacGV(string _MaGV, string _HoTen, DateTime _NgaySinh, string _GioiTinh, string _Sdt, string _DiaChi, string _MaMon)
+        public frmThaoTacGV(string _MaGV, string _HoTen, DateTime _NgaySinh, bool _GioiTinh, string _Sdt, string _DiaChi, string _MaMon, int state)
         {
             InitializeComponent();
+            _state = state;
+            lstGV = GiaoVienController.getAllDataGV();
+            if (state == 2)
+            {
+                txtID.Enabled = false;
+            }
+            txtID.Text = _MaGV;
+            txtHoTen.Text = _HoTen;
+            txtDiaChi.Text = _DiaChi;
+            if (_GioiTinh)
+            {
+                radNam.Checked = true;
+            }
+            else
+            {
+                radNu.Checked = true;
+            }
+            dtpNgaySinh.Value = _NgaySinh;
+            txtSDT.Text = _Sdt;
+
+            ///Thao tac MÃ Môn
+            ///1. Get all ma lop
+            ///
+            using (var db = setupConection.ConnectionFactory())
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                List<MonHoc> list = db.Query<MonHoc>("SELECT MaMon,TenMon FROM dbo.MonHoc").ToList();
+                for (int i = 0; i < list.Count; i++)
+                {
+                    ComboboxItem item = new ComboboxItem();
+                    item.Text = list[i].TenMon.ToString();
+                    item.Value = list[i].MaMon.ToString();
+                    cbMon.Items.Add(item);
+                    if (_MaMon == list[i].TenMon)
+                    {
+                        cbMon.SelectedIndex = i;
+                    }
+                }
+            }
         }
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ComboboxItem item = new ComboboxItem();
+            item = (ComboboxItem)cbMon.SelectedItem;
+            bool gt = true;
+            if (radNam.Checked == true)
+            { gt = true; }
+            else gt = false;
+
+            if (_state == 1)
+            {
+                if (GiaoVienController.ThemGV(txtID.Text.Trim().ToUpper(), txtHoTen.Text.Trim(), dtpNgaySinh.Value, gt, txtSDT.Text.Trim(), txtDiaChi.Text.Trim(), item.Value.ToString()))
+                {
+                    MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (_state == 2)
+            {
+                if (GiaoVienController.SuaGV(txtID.Text.Trim().ToUpper(), txtHoTen.Text.Trim(), dtpNgaySinh.Value, gt, txtSDT.Text.Trim(), txtDiaChi.Text.Trim(), item.Value.ToString()))
+                {
+                    MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

@@ -12,8 +12,14 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Mã HS")]
         public string MaHS { get; set; }
 
+        [DisplayName("Tên HS")]
+        public string HoTen { get; set; }
+
         [DisplayName("Mã Môn Học")]
         public string MaMH { get; set; }
+
+        [DisplayName("Tên Môn Học")]
+        public string TenMon { get; set; }
 
         [DisplayName("Điểm miệng")]
         public double DiemMieng { get; set; }
@@ -33,6 +39,7 @@ namespace QuanLyHocSinhTHPT.Models
             this.MaHS = _MaHS;
             this.DiemMieng = _DiemMieng;
             this.Diem15p = _Diem15p;
+            this.Diem1h = _Diem1h;
             this.DiemHK = _DiemHK;
         }
 

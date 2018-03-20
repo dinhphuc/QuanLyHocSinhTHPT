@@ -116,6 +116,7 @@ BEGIN
 	          )
 END
 GO
+
 CREATE PROC sp_UpdatePhongHoc(
 	@MaPhong VARCHAR(9) ,
 	@SoPhong NVARCHAR(20),
@@ -152,8 +153,8 @@ CREATE PROC sp_InsGiaoVien(
 AS
 BEGIN
 	DECLARE @CheckID INT
-	SELECT  @CheckID = COUNT(*) FROM dbo.MonHoc WHERE MaMon=@MaMon
-	IF(@CheckID=1)
+	SELECT  @CheckID = COUNT(*) FROM dbo.GiaoVien WHERE MaGV=@MaGV
+	IF(@CheckID=0)
 		INSERT INTO dbo.GiaoVien
 		        ( MaGV ,
 		          HoTen ,
@@ -169,6 +170,7 @@ BEGIN
 				@NgaySinh,
 				@GioiTinh,
 				@Sdt,
+				@DiaChi,
 				@MaMon
 		        )
 
@@ -217,7 +219,7 @@ CREATE PROC sp_InsHocSinh(
 AS
 BEGIN
 	DECLARE @CheckID INT
-	SELECT  @CheckID = COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
 	IF(@CheckID=0)
 		INSERT INTO dbo.HocSinh
 		        ( MaHS ,
@@ -243,7 +245,7 @@ BEGIN
 )
 END
 GO
-CREATE PROC sp_UpdateHocSinh(
+ALTER PROC sp_UpdateHocSinh(
 	@MaHS VARCHAR(9) ,
 	@HoTen nvarchar(100) ,
 	@NgaySinh date ,
@@ -260,10 +262,11 @@ BEGIN
 	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
 	IF(@CheckID=1)
 	UPDATE dbo.HocSinh
-	SET MaHS=@MaHS,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,Sdt=@sdt,TenPhuHuynh=@TenPhuHuynh,SDTPhuHuynh=@SDTPhuHuynh
+	SET MaHS=@MaHS,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,Sdt=@sdt,TenPhuHuynh=@TenPhuHuynh,SDTPhuHuynh=@SDTPhuHuynh,MaLop=@MaLop
 	WHERE MaHS=@MaHS
 END
 GO
+
 
 CREATE PROC sp_DelHocSinh(@MaHS varchar(9))
 AS

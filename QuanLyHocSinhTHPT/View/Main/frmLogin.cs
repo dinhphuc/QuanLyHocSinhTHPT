@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyHocSinhTHPT.Helper;
 using QuanLyHocSinhTHPT.Models;
+using Dapper;
+using QuanLyHocSinhTHPT.Controller;
 
 namespace QuanLyHocSinhTHPT.View.Main
 {
@@ -20,38 +22,6 @@ namespace QuanLyHocSinhTHPT.View.Main
         }
 
         private string padFile = "LgData.bin";
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            string sql = string.Format("select TaiKhoan from Account where TaiKhoan='{0}' and MatKhau='{1}'", txtUserName.Text, txtPassWord.Text);
-            DataTable dt = sqlHelper.Query(sql);
-
-            if (dt.Rows.Count == 1)
-            {
-                SingletonData.Getlates().nguoidung = new TaiKhoan() { TenTaiKhoan = txtUserName.Text };
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ///////////////////////
-
-                if (ckLuu.Checked)
-                {
-                    //file.ghifileLG(padFile, txtUseName.Text.Trim(),
-                    // txtPassWord.Text.Trim());
-                    // lblsuccess.Text = "✓ success";
-                    ckLuu.Enabled = false;
-                    btnDangNhap.Enabled = true;
-                }
-                else
-                {
-                    // lblsuccess.Text = "X error";
-                }
-                this.Close();
-            }
-            else
-            {
-                SingletonData.Getlates().nguoidung = null;
-                MessageBox.Show("Đăng nhập thất bại. Xem lại tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -72,6 +42,45 @@ namespace QuanLyHocSinhTHPT.View.Main
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
+        }
+
+        private List<TaiKhoan> lstTK;
+
+        private void btnDangNhap_Click_1(object sender, EventArgs e)
+        {
+            lstTK = TaiKhoanController.getAllDataTaiKhoan();
+            try
+            {
+                foreach (TaiKhoan tk in lstTK)
+                {
+                    if (tk.TenTaiKhoan == txtUserName.Text.Trim() && tk.Matkhau == txtPassWord.Text.Trim())
+                    {
+                        SingletonData.Getlates().nguoidung = new TaiKhoan() { TenTaiKhoan = txtUserName.Text };
+                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (ckLuu.Checked)
+                        {
+                            file.ghifileLG(padFile, txtUserName.Text.Trim(),
+                            txtPassWord.Text.Trim());
+                            lblLuu.Text = "✓ success";
+                            ckLuu.Enabled = false;
+                            btnDangNhap.Enabled = true;
+                        }
+                        else
+                        {
+                            lblLuu.Text = "X error";
+                        }
+                        this.Close();
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            SingletonData.Getlates().nguoidung = null;
+            MessageBox.Show("Đăng nhập thất bại. Xem lại tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

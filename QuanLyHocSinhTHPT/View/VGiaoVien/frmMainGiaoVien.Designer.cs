@@ -33,14 +33,13 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMon = new System.Windows.Forms.TextBox();
@@ -49,13 +48,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.radNu = new System.Windows.Forms.RadioButton();
-            this.radNam = new System.Windows.Forms.RadioButton();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrGV)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,101 +127,68 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin giáo viên";
             // 
-            // splitContainer1
+            // radNu
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(163, 214);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(39, 17);
+            this.radNu.TabIndex = 28;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1.Panel1
+            // radNam
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(100, 214);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(47, 17);
+            this.radNam.TabIndex = 27;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1.Panel2
+            // txtSDT
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox5);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
-            this.splitContainer1.Size = new System.Drawing.Size(1350, 554);
-            this.splitContainer1.SplitterDistance = 381;
-            this.splitContainer1.TabIndex = 3;
+            this.txtSDT.Location = new System.Drawing.Point(100, 240);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(210, 20);
+            this.txtSDT.TabIndex = 29;
             // 
-            // groupBox1
+            // txtDiaChi
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 554);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.txtDiaChi.Location = new System.Drawing.Point(100, 184);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(210, 20);
+            this.txtDiaChi.TabIndex = 26;
             // 
-            // groupBox3
+            // label6
             // 
-            this.groupBox3.Controls.Add(this.btnInsert);
-            this.groupBox3.Controls.Add(this.btnUpdate);
-            this.groupBox3.Controls.Add(this.btnDel);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.textBox8);
-            this.groupBox3.Location = new System.Drawing.Point(13, 326);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(336, 184);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thao tác dữ Liệu";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "SDT:";
             // 
-            // btnInsert
+            // label5
             // 
-            this.btnInsert.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(34, 72);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(68, 63);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Thêm";
-            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInsert.UseVisualStyleBackColor = false;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 218);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Giới Tính:";
             // 
-            // btnUpdate
+            // label4
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(133, 72);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(68, 63);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnDel
-            // 
-            this.btnDel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(241, 73);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(68, 63);
-            this.btnDel.TabIndex = 4;
-            this.btnDel.Text = "Delete";
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDel.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(238, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(6, 31);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(226, 20);
-            this.textBox8.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Địa chỉ:";
             // 
             // dtpNgaySinh
             // 
@@ -282,68 +254,141 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "ID:";
             // 
-            // radNu
+            // splitContainer1
             // 
-            this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(163, 214);
-            this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(39, 17);
-            this.radNu.TabIndex = 28;
-            this.radNu.TabStop = true;
-            this.radNu.Text = "Nữ";
-            this.radNu.UseVisualStyleBackColor = true;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // radNam
+            // splitContainer1.Panel1
             // 
-            this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(100, 214);
-            this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(47, 17);
-            this.radNam.TabIndex = 27;
-            this.radNam.TabStop = true;
-            this.radNam.Text = "Nam";
-            this.radNam.UseVisualStyleBackColor = true;
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             // 
-            // txtSDT
+            // splitContainer1.Panel2
             // 
-            this.txtSDT.Location = new System.Drawing.Point(100, 240);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(210, 20);
-            this.txtSDT.TabIndex = 29;
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox5);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
+            this.splitContainer1.Size = new System.Drawing.Size(1350, 554);
+            this.splitContainer1.SplitterDistance = 381;
+            this.splitContainer1.TabIndex = 3;
             // 
-            // txtDiaChi
+            // groupBox1
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(100, 184);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(210, 20);
-            this.txtDiaChi.TabIndex = 26;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(381, 554);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
             // 
-            // label6
+            // groupBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 244);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "SDT:";
+            this.groupBox3.Controls.Add(this.simpleButton1);
+            this.groupBox3.Controls.Add(this.btnInsert);
+            this.groupBox3.Controls.Add(this.btnUpdate);
+            this.groupBox3.Controls.Add(this.btnDel);
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Location = new System.Drawing.Point(13, 326);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(336, 222);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thao tác dữ Liệu";
             // 
-            // label5
+            // simpleButton1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 218);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Giới Tính:";
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(108, 152);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(112, 49);
+            this.simpleButton1.TabIndex = 5;
+            this.simpleButton1.Text = "Xuất ra File";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // label4
+            // btnInsert
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Địa chỉ:";
+            this.btnInsert.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
+            this.btnInsert.Location = new System.Drawing.Point(34, 66);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(68, 63);
+            this.btnInsert.TabIndex = 2;
+            this.btnInsert.Text = "Thêm";
+            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(133, 66);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(68, 63);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
+            this.btnDel.Location = new System.Drawing.Point(241, 67);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(68, 63);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "Delete";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDel.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(238, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(6, 31);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(226, 20);
+            this.textBox8.TabIndex = 0;
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "Export";
+            this.barButtonItem12.Id = 10;
+            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Export";
+            this.barButtonItem1.Id = 10;
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Export";
+            this.barButtonItem2.Id = 10;
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Export";
+            this.barButtonItem3.Id = 10;
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // frmMainGiaoVien
             // 
@@ -398,5 +443,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

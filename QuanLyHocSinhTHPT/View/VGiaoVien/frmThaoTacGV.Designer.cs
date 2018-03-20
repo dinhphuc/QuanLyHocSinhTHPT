@@ -40,8 +40,6 @@
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMon = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -49,10 +47,12 @@
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbMon = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,22 +155,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Ngày sinh:";
             // 
-            // txtMon
-            // 
-            this.txtMon.Location = new System.Drawing.Point(135, 231);
-            this.txtMon.Name = "txtMon";
-            this.txtMon.Size = new System.Drawing.Size(210, 21);
-            this.txtMon.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 235);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Mã Môn:";
-            // 
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(135, 205);
@@ -206,7 +190,7 @@
             // radNu
             // 
             this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(627, 207);
+            this.radNu.Location = new System.Drawing.Point(626, 188);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
             this.radNu.TabIndex = 6;
@@ -217,7 +201,7 @@
             // radNam
             // 
             this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(564, 207);
+            this.radNam.Location = new System.Drawing.Point(563, 188);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(46, 17);
             this.radNam.TabIndex = 5;
@@ -227,22 +211,15 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(564, 233);
+            this.txtSDT.Location = new System.Drawing.Point(563, 218);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(210, 21);
             this.txtSDT.TabIndex = 7;
             // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(564, 177);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(210, 21);
-            this.txtDiaChi.TabIndex = 4;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(474, 237);
+            this.label6.Location = new System.Drawing.Point(473, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 23;
@@ -251,20 +228,44 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(474, 211);
+            this.label5.Location = new System.Drawing.Point(473, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "Giới Tính:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(473, 255);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 13);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Mã Môn:";
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(135, 232);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(210, 21);
+            this.txtDiaChi.TabIndex = 29;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(474, 181);
+            this.label4.Location = new System.Drawing.Point(45, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 25;
+            this.label4.TabIndex = 30;
             this.label4.Text = "Địa chỉ:";
+            // 
+            // cbMon
+            // 
+            this.cbMon.FormattingEnabled = true;
+            this.cbMon.Location = new System.Drawing.Point(563, 256);
+            this.cbMon.Name = "cbMon";
+            this.cbMon.Size = new System.Drawing.Size(121, 21);
+            this.cbMon.TabIndex = 31;
             // 
             // frmThaoTacGV
             // 
@@ -272,17 +273,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(876, 368);
+            this.Controls.Add(this.cbMon);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
             this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtMon);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtID);
@@ -311,8 +312,6 @@
         private DevExpress.XtraBars.BarButtonItem bbiClose;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMon;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
@@ -320,9 +319,11 @@
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbMon;
     }
 }

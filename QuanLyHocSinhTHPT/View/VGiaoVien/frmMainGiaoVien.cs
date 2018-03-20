@@ -85,6 +85,33 @@ namespace QuanLyHocSinhTHPT.View.VGiaoVien
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            frmThaoTacGV frmThem = new frmThaoTacGV(null, null, DateTime.Now, true, null, null, null, 1);
+            frmThem.ShowDialog();
+            Hienthi();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            file.ExportToExcel(dtgrGV);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (IDmember == null)
+            {
+                MessageBox.Show("No Select!!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                frmThaoTacGV frmSua = new frmThaoTacGV(MaGV, HoTen, NgaySinh, GioiTinh, Sdt, DiaChi, TenMon, 2);
+                frmSua.ShowDialog();
+                Hienthi();
+            }
         }
 
         private void frmMainGiaoVien_Load(object sender, EventArgs e)

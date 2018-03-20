@@ -50,6 +50,7 @@ namespace QuanLyHocSinhTHPT.Helper
 
         public static TaiKhoan docFileLG(string pad)
         {
+            TaiKhoan ac = new TaiKhoan(); ;
             if (File.Exists(pad))
             {
                 StreamReader stw = null;
@@ -57,8 +58,8 @@ namespace QuanLyHocSinhTHPT.Helper
                 {
                     stw = new StreamReader(pad);
                     MaHoaString.key = "HuyenTrang";
-                    TaiKhoan ac = new TaiKhoan(MaHoaString.Decrypt(stw.ReadLine()),
-                        MaHoaString.Decrypt(stw.ReadLine()));
+                    ac = new TaiKhoan(MaHoaString.Decrypt(stw.ReadLine()),
+                       MaHoaString.Decrypt(stw.ReadLine()));
                     stw.Close();
                     stw.Dispose();
                     return ac;
@@ -69,7 +70,7 @@ namespace QuanLyHocSinhTHPT.Helper
                     return null;
                 }
             }
-            return null;
+            return ac;
         }
 
         public static void ghifileLG(string pad, string uName, string pass)
@@ -90,6 +91,68 @@ namespace QuanLyHocSinhTHPT.Helper
             else
             {
                 return;
+            }
+        }
+
+        /// <summary>
+        /// Exports the datagridview values to Excel.
+        /// </summary>
+        public static void ExportToExcel(DataGridView dtgr)
+        {
+            // Creating a Excel object.
+            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            try
+            {
+                worksheet = workbook.ActiveSheet;
+
+                worksheet.Name = "ExportedFromDatGrid";
+
+                int cellRowIndex = 1;
+                int cellColumnIndex = 1;
+
+                //Loop through each row and read value from each column.
+                for (int i = 0; i < dtgr.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < dtgr.Columns.Count; j++)
+                    {
+                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check.
+                        if (cellRowIndex == 1)
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgr.Columns[j].HeaderText;
+                        }
+                        else
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgr.Rows[i].Cells[j].Value.ToString();
+                        }
+                        cellColumnIndex++;
+                    }
+                    cellColumnIndex = 1;
+                    cellRowIndex++;
+                }
+                worksheet.Columns.AutoFit();
+                //Getting the location and file name of the excel to save from user.
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                saveDialog.FilterIndex = 2;
+
+                if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    workbook.SaveAs(saveDialog.FileName);
+                    MessageBox.Show("Export Successful");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                excel.Quit();
+                workbook = null;
+                excel = null;
             }
         }
     }

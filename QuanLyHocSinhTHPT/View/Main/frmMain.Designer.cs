@@ -58,9 +58,9 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barMonHoc = new DevExpress.XtraBars.BarButtonItem();
             this.barChuNhiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barDiemHS = new DevExpress.XtraBars.BarButtonItem();
             this.menuHethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,6 +70,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -151,9 +152,11 @@
             this.barButtonItem19,
             this.barButtonItem6,
             this.barMonHoc,
-            this.barChuNhiem});
+            this.barChuNhiem,
+            this.barDiemHS,
+            this.barButtonItem7});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.menuHethong,
@@ -217,6 +220,7 @@
             this.barPhongHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barPhongHoc.ImageOptions.Image")));
             this.barPhongHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barPhongHoc.ImageOptions.LargeImage")));
             this.barPhongHoc.Name = "barPhongHoc";
+            this.barPhongHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPhongHoc_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -309,12 +313,21 @@
             this.barChuNhiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barChuNhiem.ImageOptions.Image")));
             this.barChuNhiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barChuNhiem.ImageOptions.LargeImage")));
             this.barChuNhiem.Name = "barChuNhiem";
+            this.barChuNhiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barChuNhiem_ItemClick);
+            // 
+            // barDiemHS
+            // 
+            this.barDiemHS.Caption = "Điểm Học Sinh";
+            this.barDiemHS.Id = 21;
+            this.barDiemHS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barDiemHS.ImageOptions.Image")));
+            this.barDiemHS.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barDiemHS.ImageOptions.LargeImage")));
+            this.barDiemHS.Name = "barDiemHS";
+            this.barDiemHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDiemHS_ItemClick);
             // 
             // menuHethong
             // 
             this.menuHethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup2});
             this.menuHethong.Name = "menuHethong";
             this.menuHethong.Text = "Hệ Thống";
             // 
@@ -322,19 +335,11 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnLogin);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnLogout);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnPQ);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem15);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDoiMK);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Hệ Thống";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnSetting);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem18);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // menuQuanLy
             // 
@@ -353,6 +358,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barPhongHoc);
             this.ribbonPageGroup1.ItemLinks.Add(this.barMonHoc);
             this.ribbonPageGroup1.ItemLinks.Add(this.barChuNhiem);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barDiemHS);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Quản lí nhà trường";
             // 
@@ -399,6 +405,14 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Cài Đặt";
+            this.barButtonItem7.Id = 22;
+            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,6 +428,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Chương trình quản lý học sinh THPT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -452,7 +467,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.Ribbon.RibbonPage menuHethong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPage menuQuanLy;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
@@ -465,5 +479,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barMonHoc;
         private DevExpress.XtraBars.BarButtonItem barChuNhiem;
+        private DevExpress.XtraBars.BarButtonItem barDiemHS;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

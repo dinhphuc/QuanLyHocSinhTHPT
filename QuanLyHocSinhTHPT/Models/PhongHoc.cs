@@ -14,16 +14,16 @@ namespace QuanLyHocSinhTHPT.Models
 
         public PhongHoc()
         {
-            MaPhong = "";
-            SoPhong = "";
-            SoChoToiDa = 30;
+            this.MaPhong = "";
+            this.SoPhong = "";
+            this.SoChoToiDa = 30;
         }
 
         public PhongHoc(string _MaPhong, string _SoPhong, int _SoChoToiDa)
         {
-            MaPhong = _MaPhong;
-            SoPhong = _SoPhong;
-            SoChoToiDa = _SoChoToiDa;
+            this.MaPhong = _MaPhong;
+            this.SoPhong = _SoPhong;
+            this.SoChoToiDa = _SoChoToiDa;
         }
     }
 }

@@ -63,6 +63,16 @@ namespace QuanLyHocSinhTHPT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap folder_downloads {
+            get {
+                object obj = ResourceManager.GetObject("folder-downloads", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_data_backup_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-data-backup-50", resourceCulture);

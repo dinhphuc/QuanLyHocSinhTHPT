@@ -28,10 +28,11 @@ namespace QuanLyHocSinhTHPT.Controller
         {
         }
 
-        public bool ThemGV(string _MaGV, string _HoTen, DateTime NgaySinh, bool _GioiTinh, string _Sdt, string _QueQuan)
+        public static bool ThemGV(string _MaGV, string _HoTen, DateTime _NgaySinh, bool _GioiTinh, string _Sdt, string _DiaChi, string _TenMon)
         {
-            if (checkInputGV(_MaGV, _HoTen, NgaySinh, _Sdt, _QueQuan))
+            if (checkInputGV(_MaGV, _HoTen, _NgaySinh, _Sdt, _DiaChi))
             {
+                int Insert_GV;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -40,10 +41,16 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Insert_GV = db.Execute("Name proceduce",
+                            Insert_GV = db.Execute("sp_InsGiaoVien",
                                 new
                                 {
-                                    //para
+                                    MaGV = _MaGV,
+                                    HoTen = _HoTen,
+                                    NgaySinh = _NgaySinh,
+                                    GioiTinh = _GioiTinh,
+                                    Sdt = _Sdt,
+                                    DiaChi = _DiaChi,
+                                    MaMon = _TenMon
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -55,15 +62,17 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                return true;
+                if (Insert_GV == 1) return true;
+                else return false;
             }
             return false;
         }
 
-        public bool SuaGV(string _MaGV, string _HoTen, DateTime NgaySinh, bool _GioiTinh, string _Sdt, string _QueQuan)
+        public static bool SuaGV(string _MaGV, string _HoTen, DateTime _NgaySinh, bool _GioiTinh, string _Sdt, string _DiaChi, string _TenMon)
         {
-            if (checkInputGV(_MaGV, _HoTen, NgaySinh, _Sdt, _QueQuan))
+            if (checkInputGV(_MaGV, _HoTen, _NgaySinh, _Sdt, _DiaChi))
             {
+                int Edit_GV;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -72,13 +81,19 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Insert_GV = db.Execute("Name proceduce",
-                                new
-                                {
-                                    //para
-                                },
-                                commandType: CommandType.StoredProcedure,
-                                transaction: transaction);
+                            Edit_GV = db.Execute("sp_UpdateGiaoVien",
+                                  new
+                                  {
+                                      MaGV = _MaGV,
+                                      HoTen = _HoTen,
+                                      NgaySinh = _NgaySinh,
+                                      GioiTinh = _GioiTinh,
+                                      Sdt = _Sdt,
+                                      DiaChi = _DiaChi,
+                                      MaMon = _TenMon
+                                  },
+                                  commandType: CommandType.StoredProcedure,
+                                  transaction: transaction);
                             transaction.Commit();
                         }
                     }
@@ -87,7 +102,8 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                return true;
+                if (Edit_GV == 1) return true;
+                else return false;
             }
             return false;
         }
@@ -124,12 +140,12 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public static bool checkInputGV(string _MaGV, string _HoTen, DateTime _NgaySinh, string _Sdt, string _QueQuan)
+        public static bool checkInputGV(string _MaGV, string _HoTen, DateTime _NgaySinh, string _Sdt, string _DiaChi)
         {
             string errMS = "";
             if (_MaGV == "") { errMS = "Trống mã giáo viên"; }
             if (_HoTen == "") { errMS += "\nTrống họ tên"; }
-            if (_QueQuan == "") { errMS += "\nTrống quê quán"; }
+            if (_DiaChi == "") { errMS += "\nTrống quê quán"; }
             if (_NgaySinh.Year > DateTime.Now.Year) { errMS += "\nLỗi ngày sinh"; }
             if (_Sdt.Length > 15 || _Sdt.Length == 0) { errMS += "\nLỗi số điện thoại"; }
             if (errMS != "")

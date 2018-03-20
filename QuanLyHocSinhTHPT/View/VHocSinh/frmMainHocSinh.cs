@@ -71,6 +71,7 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
         {
             frmThaoTacHS frmThem = new frmThaoTacHS(null, null, null, true, null, DateTime.Now, null, null, null, 1);
             frmThem.ShowDialog();
+            Hienthi();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -84,7 +85,13 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
             {
                 frmThaoTacHS frmSua = new frmThaoTacHS(MaHS, HoTen, DiaChi, GioiTinh, Sdt, NgaySinh, TenPhuHuynh, SDTphuHuynh, TenLop, 2);
                 frmSua.ShowDialog();
+                Hienthi();
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            file.ExportToExcel(dtgHocSinh);
         }
 
         public void Hienthi()

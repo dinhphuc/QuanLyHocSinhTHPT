@@ -17,10 +17,12 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
     public partial class frmThaoTacHS : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private List<HocSinh> lstHS;
+        private int _state;
 
         public frmThaoTacHS(string _MaHS, string _HoTen, string _DiaChi, bool _GioiTinh, string _Sdt, DateTime _NgaySinh, string _TenPhuHuynh, string _SDTphuHuynh, string _TenLop, int state)
         {
             InitializeComponent();
+            _state = state;
             lstHS = HocSinhController.getAllDataHS();
             if (state == 2)
             {
@@ -226,13 +228,28 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
             if (radNam.Checked == true)
             { gt = true; }
             else gt = false;
-            if (HocSinhController.ThemHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim(), item.Value.ToString()))
+
+            if (_state == 1)
             {
-                MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (HocSinhController.ThemHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim(), item.Value.ToString()))
+                {
+                    MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            if (_state == 2)
             {
-                MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (HocSinhController.SuaHS(txtID.Text.Trim().ToUpper(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), gt, dateNgaySinh.Value, txtSDT.Text.Trim(), txtTenPhuHuynh.Text.Trim(), txtSDTphuHuynh.Text.Trim(), item.Value.ToString()))
+                {
+                    MessageBox.Show("Thành Công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

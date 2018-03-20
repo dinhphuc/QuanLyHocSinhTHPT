@@ -569,12 +569,8 @@ D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\Qua
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.Support.frmBanQuyen.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHoc.frmHoc.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHoc.frmThaoTacHoc.resources
-D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VLop.frmLop.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VLop.frmThaoTacLop.resources
-D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmMonHoc.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmThaoTacmMH.resources
-D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHocSinh.frmHocSinh.resources
-D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VGiaoVien.frmGaioVien.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VGiaoVien.frmThaoTacGV.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.Main.LoadDataBase.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.Main.frmMain.resources
@@ -849,3 +845,6 @@ D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\Qua
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHocSinh.frmMainHocSinh.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VLop.frmMainLop.resources
 D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmMainMonHoc.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VChuNhiem.frmMainChuNhiem.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VPhongHoc.frmMainPhongHoc.resources
+D:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VDiemHS.frmDiemHS.resources

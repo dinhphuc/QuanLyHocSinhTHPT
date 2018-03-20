@@ -37,6 +37,7 @@
             this.txtPassWord = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblLuu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "login";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click_1);
             // 
             // btnCancel
             // 
@@ -113,6 +115,14 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // lblLuu
+            // 
+            this.lblLuu.AutoSize = true;
+            this.lblLuu.Location = new System.Drawing.Point(383, 105);
+            this.lblLuu.Name = "lblLuu";
+            this.lblLuu.Size = new System.Drawing.Size(0, 13);
+            this.lblLuu.TabIndex = 9;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +132,7 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblLuu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassWord);
             this.Controls.Add(this.txtUserName);
@@ -149,5 +160,6 @@
         private System.Windows.Forms.TextBox txtPassWord;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblLuu;
     }
 }

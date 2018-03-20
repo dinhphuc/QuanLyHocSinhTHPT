@@ -19,7 +19,7 @@ namespace QuanLyHocSinhTHPT.Controller
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<PhongHoc>("SELECT *FROM dbo.GiaoVien").ToList();
+                return db.Query<PhongHoc>("SELECT *FROM dbo.PhongHoc").ToList();
             }
         }
 

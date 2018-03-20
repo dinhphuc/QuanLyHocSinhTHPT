@@ -14,11 +14,11 @@ namespace QuanLyHocSinhTHPT.Helper
         public static string PassWord = "";
         public static bool WinAuthentication = true;
 
-        public static string StringConnect = ""; 
+        public static string StringConnect = "";
 
         public static void TaoChuoiKetNoi()
         {
-            string temp="";
+            string temp = "";
             temp = "Data Source =" + ServerName + ";";
             temp += "Initial Catalog =" + DatabaseName + ";";
             if (WinAuthentication == true)
@@ -29,7 +29,7 @@ namespace QuanLyHocSinhTHPT.Helper
             {
                 temp += "integrated security = false ; USser ID =" + UserName + ";"
                      + "Password = " + PassWord;
-            }    
+            }
             StringConnect = temp;
         }
     }

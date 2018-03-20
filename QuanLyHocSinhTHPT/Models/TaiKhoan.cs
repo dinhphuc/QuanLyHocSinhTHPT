@@ -10,6 +10,7 @@ namespace QuanLyHocSinhTHPT.Models
     {
         public string TenTaiKhoan { get; set; }
         public string Matkhau { get; set; }
+        public string Quyen { get; set; }
 
         public TaiKhoan(string Tk, string mk)
         {

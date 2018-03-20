@@ -12,8 +12,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyHocSinhTHPT.Models;
 
-using QuanLyHocSinhTHPT.Helper;
-
 namespace QuanLyHocSinhTHPT.View.Main
 {
     public partial class LoadDataBase : Form
@@ -21,6 +19,8 @@ namespace QuanLyHocSinhTHPT.View.Main
         public LoadDataBase()
         {
             InitializeComponent();
+            //DevExpress.LookAndFeel.DefaultLookAndFeel theme = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            //theme.LookAndFeel.SkinName = "Office 2013";
         }
 
         private SqlConnection myConnect;
@@ -58,6 +58,7 @@ namespace QuanLyHocSinhTHPT.View.Main
                     Helper.ThamSoKetNoi.UserName = sUN;
                     Helper.ThamSoKetNoi.PassWord = sPW;
                 }
+
                 Helper.ThamSoKetNoi.ServerName = sHost;
                 Helper.ThamSoKetNoi.DatabaseName = sDB;
                 Helper.ThamSoKetNoi.TaoChuoiKetNoi();
