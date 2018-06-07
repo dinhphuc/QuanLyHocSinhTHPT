@@ -5282,6 +5282,45 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
 
         </member>
+        <member name="T:DevExpress.Data.Controls.IControlRowSource">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.Data.Controls.IControlRowSource.Changed">
+            <summary>
+                <para>Occurs every time the data source is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Controls.IControlRowSource.GetRows(DevExpress.Data.Controls.ControlRows)">
+            <summary>
+                <para>Returns data rows of the specified row type.
+</para>
+            </summary>
+            <param name="rows">
+		The requested row type.
+
+            </param>
+            <returns>Data rows of the specified row type.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Controls.IControlRowSource.RowSource">
+            <summary>
+                <para>Returns the data row source.
+</para>
+            </summary>
+            <value>The data row source.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Utils.IoC.InstanceRegistration">
 
             <summary>
@@ -8983,7 +9022,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Boolean">
             <summary>
-                <para>Indicates that the field returns a Boolean value (the <see cref="T:System.Boolean"/> type).
+                <para>Indicates that the field returns a Boolean (<b>true</b> or <b>false</b>) value (the <see cref="T:System.Boolean"/> type).
 </para>
             </summary>
 
@@ -8991,7 +9030,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Byte">
             <summary>
-                <para>Indicates that the field returns a byte value (the <see cref="T:System.Byte"/> type).
+                <para>Indicates that the field returns an 8-bit unsigned integer value (the <see cref="T:System.Byte"/> type).
 </para>
             </summary>
 
@@ -8999,7 +9038,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.DateTime">
             <summary>
-                <para>Indicates that the field returns a date-time value (the <see cref="T:System.DateTime"/> type).
+                <para>Indicates that the field returns a value expressed as a date and time of day (the <see cref="T:System.DateTime"/> type).
 </para>
             </summary>
 
@@ -9015,7 +9054,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Double">
             <summary>
-                <para>Indicates that the field returns a double value (the <see cref="T:System.Double"/> type).
+                <para>Indicates that the field returns a double-precision floating-point value (the <see cref="T:System.Double"/> type).
 </para>
             </summary>
 
@@ -9023,7 +9062,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Float">
             <summary>
-                <para>Indicates that the field returns a float value (the <see cref="T:System.Single"/> type).
+                <para>Indicates that the field returns a single-precision floating-point value (the <see cref="T:System.Single"/> type).
 </para>
             </summary>
 
@@ -9031,7 +9070,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Guid">
             <summary>
-                <para>Indicates that the field returns a GUID value (the System.Guid type)
+                <para>Indicates that the field returns a globally unique identifier value (the System.Guid type).
 </para>
             </summary>
 
@@ -9039,7 +9078,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Int16">
             <summary>
-                <para>Indicates that the field returns an integer value (the <see cref="T:System.Int16"/> type).
+                <para>Indicates that the field returns a 16-bit signed integer value (the <see cref="T:System.Int16"/> type).
 </para>
             </summary>
 
@@ -9047,7 +9086,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.Int32">
             <summary>
-                <para>Indicates that the field returns an integer value (the <see cref="T:System.Int32"/> type).
+                <para>Indicates that the field returns a 32-bit signed integer value (the <see cref="T:System.Int32"/> type).
 </para>
             </summary>
 
@@ -9055,7 +9094,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.None">
             <summary>
-                <para>Indicates that the field's type is undefined, and it determined by evaluating the actually returned object when it is used during report generation.
+                <para>Indicates that the field's type is undefined and determined by evaluating the actually returned object during report generation.
 
 </para>
             </summary>
@@ -9064,7 +9103,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.String">
             <summary>
-                <para>Indicates that the field returns a string value (the <see cref="T:System.String"/> type).
+                <para>Indicates that the field returns a string value as a sequence of UTF-16 code units (the <see cref="T:System.String"/> type).
 </para>
             </summary>
 
@@ -9072,7 +9111,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.XtraReports.UI.FieldType.TimeSpan">
             <summary>
-                <para>Indicates that the field returns a time span value (the <see cref="T:System.TimeSpan"/> type).
+                <para>Indicates that the field returns a value as a time interval (the <see cref="T:System.TimeSpan"/> type).
 </para>
             </summary>
 
@@ -9445,7 +9484,8 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         <member name="T:DevExpress.Data.Controls.ExpressionEditor.ExpressionEditorPresenter">
 
             <summary>
-                <para> </para>
+                <para>Provides the Presenter functionality to an Expression Editor.
+</para>
             </summary>
 
         </member>
@@ -9510,7 +9550,8 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         <member name="T:DevExpress.Data.Controls.ExpressionEditor.ExpressionEditorModel">
 
             <summary>
-                <para> </para>
+                <para>The Expression Editor model.
+</para>
             </summary>
 
         </member>
@@ -9605,45 +9646,6 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <value>The type of changed rows.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Data.Controls.IControlRowSource">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="E:DevExpress.Data.Controls.IControlRowSource.Changed">
-            <summary>
-                <para>Occurs every time the data source is changed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Data.Controls.IControlRowSource.GetRows(DevExpress.Data.Controls.ControlRows)">
-            <summary>
-                <para>Returns data rows of the specified row type.
-</para>
-            </summary>
-            <param name="rows">
-		The requested row type.
-
-            </param>
-            <returns>Data rows of the specified row type.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Data.Controls.IControlRowSource.RowSource">
-            <summary>
-                <para>Returns the data row source.
-</para>
-            </summary>
-            <value>The data row source.
 </value>
 
 
@@ -13437,7 +13439,8 @@ Tree Lists: The <b>Default</b> mode is equivalent to <b>None</b> (data pasting i
         </member>
         <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.DefaultCommandTimeout">
             <summary>
-                <para> </para>
+                <para>Specifies the timeout value passed to the IDbCommand.CommandTimeout property of each created command, in seconds.
+</para>
             </summary>
             <returns> </returns>
 
@@ -13951,7 +13954,8 @@ Tree Lists: The <b>Default</b> mode is equivalent to <b>None</b> (data pasting i
         </member>
         <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.GlobalDefaultCommandTimeout">
             <summary>
-                <para> </para>
+                <para>Specifies the timeout value passed to the IDbCommand.CommandTimeout property, in seconds. Can be overridden by the <see cref="F:DevExpress.Xpo.DB.ConnectionProviderSql.DefaultCommandTimeout"/> field. The default is <b>300</b>.
+</para>
             </summary>
             <returns> </returns>
 
@@ -27713,6 +27717,17 @@ Otherwise, the closest matching image side (height or width) will be sized to th
 
 
         </member>
+        <member name="M:DevExpress.XtraPrinting.GraphicsUnitConverter.DocToDip(System.Drawing.RectangleF)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="val">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrinting.GraphicsUnitConverter.DocToPixel(System.Single)">
             <summary>
                 <para>Converts the floating-point value calculated in document units (measured in <b>1</b>/<b>300</b> of an inch) to a value calculated in pixels.
@@ -29574,6 +29589,13 @@ Otherwise, the closest matching image side (height or width) will be sized to th
             <summary>
                 <para>The default column type.
 </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.Enum">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -32053,7 +32075,8 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         </member>
         <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.ExportOption_CsvSeparator_UsingSystem">
             <summary>
-                <para> </para>
+                <para>"<b>(Using System Separator)</b>"
+</para>
             </summary>
 
 
@@ -33671,7 +33694,8 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         </member>
         <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.Msg_NotSupportedFontException">
             <summary>
-                <para> </para>
+                <para>"<b>The \"{0}\" cannot be used since this could be an unsupported OpenType font.</b>"
+</para>
             </summary>
 
 
@@ -33704,6 +33728,13 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
             <summary>
                 <para>"<b>The path is too long.\r\nTry a shorter name.</b>"
 </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.Msg_Search_Caption">
+            <summary>
+                <para> </para>
             </summary>
 
 

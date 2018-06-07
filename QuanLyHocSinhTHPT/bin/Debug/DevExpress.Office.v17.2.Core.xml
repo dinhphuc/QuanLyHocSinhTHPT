@@ -790,9 +790,11 @@
         </member>
         <member name="M:DevExpress.Office.Utils.OfficeImage.GetResolution">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
             </summary>
-            <returns> </returns>
+            <returns> 
+</returns>
 
 
         </member>

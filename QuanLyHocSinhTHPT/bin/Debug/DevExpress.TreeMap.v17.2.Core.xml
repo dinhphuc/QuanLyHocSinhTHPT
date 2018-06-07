@@ -25,11 +25,9 @@
         </member>
         <member name="P:DevExpress.TreeMap.ITreeMapItem.Label">
             <summary>
-                <para>Returns the label text of the current item.
-</para>
+                <para> </para>
             </summary>
-            <value>A string value that is the text label of the item.
-</value>
+            <value> </value>
 
 
         </member>

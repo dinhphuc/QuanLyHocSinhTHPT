@@ -2324,6 +2324,82 @@ Manual searching is enabled in the following cases: 1) a control functions in re
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.SearchLookUpEdit">
+
+            <summary>
+                <para>The editor that provides lookup functionality using a dropdown feature-rich data grid (<see cref="T:DevExpress.XtraGrid.GridControl"/>), and contains the built-in Find Panel, allowing end-users to quickly filter and locate dropdown records. You can display lookup records in a tabular format, banded tabular format, or as tiles (which can be arranged in one or multiple columns/rows, rendered as a list or a Kanban board). 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SearchLookUpEdit class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.SearchLookUpEdit.AddNewValue">
+            <summary>
+                <para>Fires when the "Add New" button is clicked, and allows you to add new records to the dropdown data source.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.EditorContainsFocus">
+            <summary>
+                <para>Gets whether the editor or its popup has input focus.
+</para>
+            </summary>
+            <value><b>true</b> if the editor or its popup window has focus; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.EditorTypeName">
+            <summary>
+                <para>Gets the class name of the current editor. 
+</para>
+            </summary>
+            <value>A string giving the class name of the current editor.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.GetPopupEditForm">
+            <summary>
+                <para>Returns the control's popup window.
+</para>
+            </summary>
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupSearchLookUpEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.GetSelectedDataRow">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.Properties">
+            <summary>
+                <para>Specifies settings specific to the current editor.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit"/> object containing settings for the editor. 
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraGrid.GridFormatRuleCollection">
 
             <summary>
@@ -4105,26 +4181,33 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetChildRowCount(System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns the number of tiles in the group with the specified unique identifier.
+</para>
             </summary>
             <param name="rowHandle">
-		 
+		An integer value that specifies a unique identifier of the group for which to return the number of child tiles.
+
             </param>
-            <returns> </returns>
+            <returns>An integer value that specifies the number of tiles in the group with the specified <i>rowHandle</i>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetChildRowHandle(System.Int32,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns a unique identifier of the tile at the specified position in the group with the specified handle.
+</para>
             </summary>
             <param name="rowHandle">
-		 
+		An integer value that specifies a unique identifier of the group.
+
             </param>
             <param name="childIndex">
-		 
+		An integer value that specifies an index of the required tile in the group.
+
             </param>
-            <returns> </returns>
+            <returns>An integer value that specifies a tile handle.
+</returns>
 
 
         </member>
@@ -4138,12 +4221,17 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetParentRowHandle(System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns the unique identifier of the group to which the tile with the specified identifier belongs.
+
+</para>
             </summary>
             <param name="rowHandle">
-		 
+		An integer value that specifies a handle of the tile for which to return the group handle.
+
             </param>
-            <returns> </returns>
+            <returns>An integer value that specifies the unique identifier of the group to which the tile with the specified <i>rowHandle</i> belongs.
+
+</returns>
 
 
         </member>
@@ -4157,9 +4245,11 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetViewInfo">
             <summary>
-                <para> </para>
+                <para>Returns an object containing the internal information used to render the view.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <b><see cref="TileViewInfo"/></b> object which contains the internal information used to render the view.
+</returns>
 
 
         </member>
@@ -4195,12 +4285,15 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.IsGroupRow(System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns whether the specified handle corresponds to a group of tiles.
+</para>
             </summary>
             <param name="rowHandle">
-		 
+		An integer value specifying a unique identifier (handle).
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if the specified handle corresponds to a group of tiles; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
@@ -4214,6 +4307,20 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
 
             </param>
             <returns><b>true</b>, if the specified column displays images; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.IsTileVisible(System.Int32)">
+            <summary>
+                <para>Returns whether the tile with the specified handle is completely or partially visible, or invisible in the view.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value that specifies a unique identifier of the required tile (see <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItem.RowHandle"/>).
+
+            </param>
+            <returns>A <see cref="RowVisibleState"/> enumeration value that specifies tile visibility.
 </returns>
 
 
@@ -4482,6 +4589,14 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.RowCount">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -5731,9 +5846,11 @@ The <b>ColumnCount</b> property is in effect when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.DefaultGroupTextPadding">
             <summary>
-                <para> </para>
+                <para>Gets a default value for the <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.GroupTextPadding"/> property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Padding"/> structure that specifies a default value for the <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.GroupTextPadding"/> property.
+</value>
 
 
         </member>
@@ -5801,9 +5918,11 @@ The <b>ColumnCount</b> property is in effect when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.GroupTextPadding">
             <summary>
-                <para> </para>
+                <para>Gets or sets the amount of empty space around a group header text (see <see cref="P:DevExpress.XtraGrid.Columns.TileViewColumns.GroupColumn"/>).
+</para>
             </summary>
-            <value> </value>
+            <value>A Padding structure that specifies the amount of empty space around a group header text.
+</value>
 
 
         </member>
@@ -5831,9 +5950,13 @@ The <b>ColumnCount</b> property is in effect when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.HighlightFocusedTileStyle">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the focused tile is highlighted using a border, background, both or is not highlighted.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <b><see cref="HighlightFocusedTileStyle"/></b> enumeration value specifying whether the focused tile is highlighted using a border, background, both or is not highlighted.
+
+</value>
 
 
         </member>
@@ -6971,82 +7094,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 </para>
             </summary>
             <value><b>true</b> if the element's text is visible; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.SearchLookUpEdit">
-
-            <summary>
-                <para>The editor that provides lookup functionality using a dropdown feature-rich data grid (<see cref="T:DevExpress.XtraGrid.GridControl"/>), and contains the built-in Find Panel, allowing end-users to quickly filter and locate dropdown records. You can display lookup records in a tabular format, banded tabular format, or as tiles (which can be arranged in one or multiple columns/rows, rendered as a list or a Kanban board). 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SearchLookUpEdit class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.SearchLookUpEdit.AddNewValue">
-            <summary>
-                <para>Fires when the "Add New" button is clicked, and allows you to add new records to the dropdown data source.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.EditorContainsFocus">
-            <summary>
-                <para>Gets whether the editor or its popup has input focus.
-</para>
-            </summary>
-            <value><b>true</b> if the editor or its popup window has focus; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.EditorTypeName">
-            <summary>
-                <para>Gets the class name of the current editor. 
-</para>
-            </summary>
-            <value>A string giving the class name of the current editor.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.GetPopupEditForm">
-            <summary>
-                <para>Returns the control's popup window.
-</para>
-            </summary>
-            <returns>A <b>DevExpress.XtraEditors.Popup.PopupSearchLookUpEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.GetSelectedDataRow">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.Properties">
-            <summary>
-                <para>Specifies settings specific to the current editor.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit"/> object containing settings for the editor. 
-
 </value>
 
 
@@ -9380,11 +9427,9 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
         </member>
         <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerViewStyleOptionsCollection.List">
             <summary>
-                <para>Provides access to the set of advanced List Style settings.
-</para>
+                <para> </para>
             </summary>
-            <value>A WinExplorerViewStyleOptions object that stores advanced settings for the List Style.
-</value>
+            <value> </value>
 
 
         </member>
@@ -32266,6 +32311,14 @@ Supports numerous editing and data-shaping features, such as summaries, filtrati
 
 
         </member>
+        <member name="M:DevExpress.XtraGrid.GridControl.CreateGraphicsCache">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraGrid.GridControl.CreateSplitContainer">
             <summary>
                 <para>Creates a Split Container and places the current GridControl to it.
@@ -33565,6 +33618,14 @@ to the specified file in XLSX (MS Excel 2007) format.
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.GridControl.UseDirectXPaint">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

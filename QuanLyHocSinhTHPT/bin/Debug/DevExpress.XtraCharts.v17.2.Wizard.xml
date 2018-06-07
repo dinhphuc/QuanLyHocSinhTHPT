@@ -4956,6 +4956,14 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.EmptyChartTextModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.EmptyChartText"/> model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.SwiftPlotDiagramAxisYModel">
 
             <summary>
@@ -6334,16 +6342,6 @@
 </para>
             </summary>
             <value>The legend model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.SeriesBaseModel.LegendText">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SeriesBase.LegendText"/> within the model.
-</para>
-            </summary>
-            <value>The legend item text of the series. 
 </value>
 
 
@@ -11530,14 +11528,6 @@
             <value>The end style of the Error Bars.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.EmptyChartTextModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.EmptyChartText"/> model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.ElasticEasingFunctionModel">

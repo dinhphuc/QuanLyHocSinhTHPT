@@ -148,6 +148,130 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout">
+
+            <summary>
+                <para>Contains mind-map tree layout settings.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.#ctor(DevExpress.XtraDiagram.DiagramControl)">
+            <summary>
+                <para>Initializes a new instance of the DiagramOptionsMindMapTreeLayout class.
+</para>
+            </summary>
+            <param name="diagram">
+		The owner of the options object created.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.ConnectorsRouting">
+            <summary>
+                <para>Gets or sets whether applying the Mind-Map Tree layout affects connector routing. This is a dependency property.
+</para>
+            </summary>
+            <value>A <b>TreeConnectorsRouting</b> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.HierarchyAlignment">
+            <summary>
+                <para>Specifies the mind-map tree layout vertical alignment relative to the layout direction axis.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.HierarchySpacing">
+            <summary>
+                <para>Specifies the distance between layers of hierarchy.
+</para>
+            </summary>
+            <value>A System.Single value that represents the distance in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.NodeAlignment">
+            <summary>
+                <para>Specifies the mind-map tree layout horizontal alignment relative to the layout direction axis.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.NodeSpacing">
+            <summary>
+                <para>Specifies the distance between shapes on the same level of hierarchy.
+</para>
+            </summary>
+            <value>A System.Single value that represents the distance in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.Orientation">
+            <summary>
+                <para>Specifies the mind-map tree orientation.
+</para>
+            </summary>
+            <value>A System.Windows.Forms.Orientation enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.RootSpacing">
+            <summary>
+                <para>Specifies the distance between the root shape and its immediate children.
+</para>
+            </summary>
+            <value>A System.Single value that is the distance in pixels between the root shape and its immediate children.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.SplitMode">
+            <summary>
+                <para>Specifies which diagram items are realigned when performing automatic relayout.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Diagram.Core.Layout.SplitToConnectedComponentsMode"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.SubTreeAlignment">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.SubTreeDefaultSplitMode">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsMindMapTreeLayout.SubTreeSelector">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraDiagram.Options.DiagramOptionsTipOverTreeLayout">
 
             <summary>
@@ -2635,7 +2759,7 @@
 </para>
             </summary>
             <param name="orientation">
-		An <see cref="T:DevExpress.Diagram.Core.OrientationKind"/> enumeration value.
+		A <see cref="T:DevExpress.Diagram.Core.OrientationKind"/> enumeration value.
 
             </param>
             <param name="items">
@@ -3856,17 +3980,21 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.ItemTypeRegistrator">
             <summary>
-                <para> </para>
+                <para>Provides access to methods used to create serializable custom diagram item types.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.Diagram.Core.DiagramItemTypeRegistrator"/> object. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.LastShapeStyles">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of the recently used shape styles.
+</para>
             </summary>
-            <value> </value>
+            <value>A read-only collection of the recently used shape styles.
+</value>
 
 
         </member>
@@ -3904,9 +4032,11 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.MenuManager">
             <summary>
-                <para> </para>
+                <para>Gets or sets the menu manager which controls the look and feel of the context menus.
+</para>
             </summary>
-            <value> </value>
+            <value>An object which implements the <see cref="T:DevExpress.Utils.Menu.IDXMenuManager"/> interface.
+</value>
 
 
         </member>
@@ -4026,9 +4156,11 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.Page">
             <summary>
-                <para> </para>
+                <para>Gets the diagram canvas.
+</para>
             </summary>
-            <value> </value>
+            <value>A DevExpress.XtraDiagram.DiagramRoot object that represents the diagram canvas.
+</value>
 
 
         </member>
@@ -4042,9 +4174,11 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.PlatformCache">
             <summary>
-                <para> </para>
+                <para>This property supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -4735,7 +4869,9 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramConnectionChangedEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ConnectionChanged"/> event.
+
+</para>
             </summary>
 
         </member>
@@ -4863,7 +4999,9 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramConnectionChangingEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ConnectionChanging"/> event.
+
+</para>
             </summary>
 
         </member>
@@ -4996,7 +5134,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ClosedEditor"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ClosedEditor"/> events.
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ClosedEditor"/> event.
 </para>
             </summary>
 
@@ -5068,7 +5206,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingSaveDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingSaveDialog"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingSaveDialog"/> event.
 </para>
             </summary>
 
@@ -5107,9 +5245,11 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.DefaultFileName">
             <summary>
-                <para> </para>
+                <para>Gets or sets the default name of the file to which to save the diagram.
+</para>
             </summary>
-            <value> </value>
+            <value>A string value that is the default name of the file to which to save the diagram.
+</value>
 
 
         </member>
@@ -5167,7 +5307,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenImageDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingOpenImageDialog"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenImageDialog"/> event.
 </para>
             </summary>
 
@@ -5239,7 +5379,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingOpenDialog"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenDialog"/> event.
 </para>
             </summary>
 
@@ -5313,7 +5453,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         <member name="T:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ItemCreating"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ItemCreating"/> events.
+                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ItemCreating"/> event.
 </para>
             </summary>
 
@@ -5950,10 +6090,10 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.EnableNotificationToSource">
             <summary>
-                <para>Gets or sets whether to send the property changed notifications to the data source.
+                <para>Gets or sets whether to send the data change notifications to the data source.
 </para>
             </summary>
-            <value><b>true</b> to enable the property changed notifications to the data source; otherwise, <b>false</b>. By default, <b>true</b>.
+            <value><b>true</b> to enable the data change notifications to the data source; otherwise, <b>false</b>. By default, <b>true</b>.
 </value>
 
 
@@ -5992,7 +6132,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.ItemsPath">
             <summary>
-                <para>Specifies the name of the data field that identifies the collection of data items.
+                <para>Specifies the name of the data field that identifies the collection of nested data items.
 </para>
             </summary>
             <value>A string value that is the name of the data field that identifies the collection of data items.
@@ -6002,7 +6142,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.ItemsSelector">
             <summary>
-                <para>Gets or sets the selector that returns the data field that identifies the collection of data items.
+                <para>Gets or sets the selector that returns the data field that identifies the collection of nested data items.
 </para>
             </summary>
             <value>An object implementing the DevExpress.Diagram.Core.IChildrenSelector interface.

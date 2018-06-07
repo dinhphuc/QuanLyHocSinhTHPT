@@ -1352,9 +1352,11 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobDto.OptimisticLock">
             <summary>
-                <para> </para>
+                <para>Identifies the scheduled job version used for optimistic locking.
+</para>
             </summary>
-            <value> </value>
+            <value>A nullable integer value that specifies the scheduled job version. 
+</value>
 
 
         </member>
@@ -4200,21 +4202,22 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 </para>
             </summary>
             <param name="id">
-		An integer value, identifying the report category.
+		An integer value identifying the report category.
 
             </param>
             <param name="name">
-		A <see cref="T:System.String"/> value, specifying the report category name.
+		A <see cref="T:System.String"/> value specifying the report category name.
 
             </param>
             <param name="optimisticLock">
-		 
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+		A nullable integer value specifying a category version used for optimistic locking.
 
             </param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/>, specifying an asynchronous operation.
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value containing information about the asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> specifying an asynchronous operation.
 </returns>
 
 
@@ -4297,10 +4300,11 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 
             </param>
             <param name="optimisticLock">
-		 
+		A nullable integer value specifying a category version used for optimistic locking.
+
             </param>
             <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+		A <see cref="T:System.Object"/> value containing information about the asynchronous operation.
 
             </param>
             <param name="onCompleted">
@@ -16552,7 +16556,8 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         <member name="T:DevExpress.XtraPrinting.CharacterCombBrick">
 
             <summary>
-                <para> </para>
+                <para>A visual brick containing text whose characters are displayed in individual cells.
+</para>
             </summary>
 
         </member>
@@ -16578,49 +16583,61 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.BrickType">
             <summary>
-                <para> </para>
+                <para>Gets the text string containing the brick type information.
+</para>
             </summary>
-            <value> </value>
+            <value>A string characterizing the brick's type. Always returns "CharacterComb".
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.CellHeight">
             <summary>
-                <para> </para>
+                <para>Specifies the cell height in a CharacterCombBrick.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the cell height.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.CellHorizontalSpacing">
             <summary>
-                <para> </para>
+                <para>Specifies the horizontal spacing between adjacent cells in a CharacterCombBrick. 
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.CellSizeMode">
             <summary>
-                <para> </para>
+                <para>Specifies whether the cell size should depend on the current font size.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraPrinting.SizeMode"/> enumeration value.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.CellVerticalSpacing">
             <summary>
-                <para> </para>
+                <para>Specifies the vertical spacing between adjacent cells in a CharacterCombBrick.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.CharacterCombBrick.CellWidth">
             <summary>
-                <para> </para>
+                <para>Specifies the cell width a CharacterCombBrick.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the cell width.
+</value>
 
 
         </member>
@@ -16636,34 +16653,42 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="M:DevExpress.XtraPrinting.CharacterCombBrick.GetClientRectangle(System.Drawing.RectangleF,System.Single)">
             <summary>
-                <para> </para>
+                <para>Returns the CharacterCombBrick's client rectangle.
+</para>
             </summary>
             <param name="rect">
-		 
+		A <see cref="T:System.Drawing.RectangleF"/> object specifying the brick layout rectangle.
+
             </param>
             <param name="dpi">
-		 
+		A <see cref="T:System.Single"/> value specifying the printing resolution.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:System.Drawing.RectangleF"/> object specifying the brick's client rectangle.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.CharacterCombBrick.Restore(DevExpress.Printing.Utils.DocumentStoring.RestoringContext)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="context">
 		 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.CharacterCombBrick.Store(DevExpress.Printing.Utils.DocumentStoring.StoringContext)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="context">
 		 
+
             </param>
 
 
@@ -16750,9 +16775,12 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.CsvExportOptionsEx.Separator">
             <summary>
-                <para> </para>
+                <para>Specifies the symbol that is used to separate the text elements in the created CSV file.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> containing the symbol which will be used to separate text elements in the created CSV file.
+</value>
 
 
         </member>
@@ -16945,6 +16973,14 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.CalcTotalSummaryOnCompositeRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -17380,6 +17416,14 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.CalcTotalSummaryOnCompositeRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -19538,9 +19582,11 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.ReportCatalogItemDto.OptimisticLock">
             <summary>
-                <para> </para>
+                <para>Identifies the report catalog version used for optimistic locking.
+</para>
             </summary>
-            <value> </value>
+            <value>A nullable integer value that specifies the report catalog version. 
+</value>
 
 
         </member>
@@ -19651,9 +19697,11 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.CategoryDto.OptimisticLock">
             <summary>
-                <para> </para>
+                <para>Identifies the category version used for optimistic locking.
+</para>
             </summary>
-            <value> </value>
+            <value>A nullable integer value that specifies the category version.
+</value>
 
 
         </member>
@@ -19670,6 +19718,16 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
                 <para>Initializes a new instance of the CreateReportResult class with the default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.CreateReportResult.OptimisticLock">
+            <summary>
+                <para>Identifies the report version used for optimistic locking.
+</para>
+            </summary>
+            <value>A nullable integer value that specifies the report version. 
+</value>
 
 
         </member>
@@ -19771,9 +19829,11 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.ReportDto.OptimisticLock">
             <summary>
-                <para> </para>
+                <para>Identifies the report version used for optimistic locking.
+</para>
             </summary>
-            <value> </value>
+            <value>A nullable integer value that specifies the report version. 
+</value>
 
 
         </member>
@@ -20754,22 +20814,23 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
 </para>
             </summary>
             <param name="categoryId">
-		An integer value, specifying the report category ID.
+		An integer value specifying the report category ID.
 
             </param>
             <param name="name">
-		A <see cref="T:System.String"/> value, specifying the new category name.
+		A <see cref="T:System.String"/> value specifying the new category name.
 
             </param>
             <param name="optimisticLock">
-		 
+		A nullable integer value specifying a report category version used for optimistic locking.
+
             </param>
             <param name="callback">
 		References a method to be called when a corresponding asynchronous operation is completed.
 
             </param>
             <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+		A <see cref="T:System.Object"/> value containing information about the asynchronous operation.
 
             </param>
             <returns>An object containing information about the status of an asynchronous operation.
@@ -22947,9 +23008,11 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.DataContracts.DataModelDto.OptimisticLock">
             <summary>
-                <para> </para>
+                <para>Identifies the data model version used for optimistic locking.
+</para>
             </summary>
-            <value> </value>
+            <value>A nullable integer value that specifies the data model version. 
+</value>
 
 
         </member>
@@ -26024,9 +26087,11 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN128Generator.AddLeadingZero">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -27183,9 +27248,11 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
         </member>
         <member name="P:DevExpress.XtraPrinting.ProgressBarBrick.FillColor">
             <summary>
-                <para> </para>
+                <para>Gets or sets the color to fill a progress bar brick's content.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Drawing.Color"/> object which specifies the fill color of a progress bar.
+</value>
 
 
         </member>
@@ -29945,21 +30012,22 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 </para>
             </summary>
             <param name="id">
-		An integer value, identifying the report category.
+		An integer value identifying the report category.
 
             </param>
             <param name="name">
-		A <see cref="T:System.String"/> value, specifying the report category name.
+		A <see cref="T:System.String"/> value specifying the report category name.
 
             </param>
             <param name="optimisticLock">
-		 
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+		A nullable integer value specifying a category version used for optimistic locking.
 
             </param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/>, specifying an asynchronous operation.
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value containing information about the asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> specifying an asynchronous operation.
 </returns>
 
 
@@ -30042,10 +30110,11 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
             </param>
             <param name="optimisticLock">
-		 
+		A nullable integer value specifying a report category version used for optimistic locking.
+
             </param>
             <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+		A <see cref="T:System.Object"/> value containing information about the asynchronous operation.
 
             </param>
             <param name="onCompleted">
@@ -31233,6 +31302,16 @@ Supported in Excel 2010 and higher.
 </para>
             </summary>
             <value><b>true</b> if the document is emtpy; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DocumentView.IDocument.IsRightToLeftLayout">
+            <summary>
+                <para>For internal use. Specifies the orientation of the document's content.
+</para>
+            </summary>
+            <value><b>true</b>, if the right-to-left layout is enabled; otherwise, <b>false</b>.
 </value>
 
 
@@ -36968,18 +37047,12 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.Export.BrickViewData.ApplyClipping(System.Drawing.RectangleF,System.Boolean)">
+        <member name="M:DevExpress.XtraPrinting.Export.BrickViewData.ApplyClipping(System.Drawing.RectangleF)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="clipBounds">
 		 
-
-            </param>
-            <param name="round">
-		 
-
             </param>
 
 
@@ -41238,9 +41311,11 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="P:DevExpress.XtraExport.Csv.CsvDataAwareExporterOptions.PreventCsvInjection">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether to prevent Formula Injection into the CSV file.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to prevent CSV Injection; otherwise, <b>false</b>. The default is <b>false</b>.
+</value>
 
 
         </member>

@@ -10,14 +10,12 @@
 9. Tài Khoản (Mã Học Sinh or (mã Giáo Viên) , Thời Gian đăng nhập, Quyền, Log, Avt)
 */
 --1.lop--
-USE QuanLyHSGVTHPT
-GO
-
 CREATE PROC sp_InsLop(
 	@MaLop VARCHAR(9),
 	@TenLop NVARCHAR(100),
 	@NienKhoa VARCHAR(10)
 	)
+
 AS
 BEGIN
 	DECLARE @CheckID INT
@@ -116,7 +114,6 @@ BEGIN
 	          )
 END
 GO
-
 CREATE PROC sp_UpdatePhongHoc(
 	@MaPhong VARCHAR(9) ,
 	@SoPhong NVARCHAR(20),
@@ -153,8 +150,8 @@ CREATE PROC sp_InsGiaoVien(
 AS
 BEGIN
 	DECLARE @CheckID INT
-	SELECT  @CheckID = COUNT(*) FROM dbo.GiaoVien WHERE MaGV=@MaGV
-	IF(@CheckID=0)
+	SELECT  @CheckID = COUNT(*) FROM dbo.MonHoc WHERE MaMon=@MaMon
+	IF(@CheckID=1)
 		INSERT INTO dbo.GiaoVien
 		        ( MaGV ,
 		          HoTen ,
@@ -170,7 +167,6 @@ BEGIN
 				@NgaySinh,
 				@GioiTinh,
 				@Sdt,
-				@DiaChi,
 				@MaMon
 		        )
 
@@ -212,15 +208,15 @@ CREATE PROC sp_InsHocSinh(
 	@DiaChi nvarchar(200) ,
 	@GioiTinh bit ,
 	@Sdt VARCHAR(15),
-	@TenPhuHuynh nvarchar(100) ,
-	@SDTPhuHuynh nvarchar(100),
+	@TenBo nvarchar(100) ,
+	@TenMe nvarchar(100),
 	@MaLop VARCHAR(9)
 	)
 AS
 BEGIN
 	DECLARE @CheckID INT
-	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
-	IF(@CheckID=0)
+	SELECT  @CheckID = COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	IF(@CheckID=1)
 		INSERT INTO dbo.HocSinh
 		        ( MaHS ,
 		          HoTen ,
@@ -228,8 +224,8 @@ BEGIN
 		          DiaChi ,
 		          GioiTinh ,
 		          Sdt ,
-		          TenPhuHuynh ,
-		          SDTPhuHuynh ,
+		          TenBo ,
+		          TenMe ,
 		          MaLop
 		        )
 		VALUES  ( 
@@ -239,21 +235,21 @@ BEGIN
 		@DiaChi  ,
 		@GioiTinh ,
 		@Sdt ,
-		@TenPhuHuynh ,
-		@SDTPhuHuynh ,
+		@TenBo ,
+		@TenMe ,
 		@MaLop
 )
 END
 GO
-ALTER PROC sp_UpdateHocSinh(
+CREATE PROC sp_UpdateHocSinh(
 	@MaHS VARCHAR(9) ,
 	@HoTen nvarchar(100) ,
 	@NgaySinh date ,
 	@DiaChi nvarchar(200) ,
 	@GioiTinh bit ,
 	@Sdt VARCHAR(15),
-	@TenPhuHuynh nvarchar(100) ,
-	@SDTPhuHuynh nvarchar(100),
+	@TenBo nvarchar(100) ,
+	@TenMe nvarchar(100),
 	@MaLop VARCHAR(9)
 )
 AS
@@ -262,11 +258,10 @@ BEGIN
 	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
 	IF(@CheckID=1)
 	UPDATE dbo.HocSinh
-	SET MaHS=@MaHS,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,Sdt=@sdt,TenPhuHuynh=@TenPhuHuynh,SDTPhuHuynh=@SDTPhuHuynh,MaLop=@MaLop
+	SET MaHS=@MaHS,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,Sdt=@sdt,TenBo=@TenBo,TenMe=@TenMe
 	WHERE MaHS=@MaHS
 END
 GO
-
 
 CREATE PROC sp_DelHocSinh(@MaHS varchar(9))
 AS

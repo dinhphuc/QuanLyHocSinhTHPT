@@ -1326,22 +1326,6 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPivotGrid.PivotFilter.#ctor(DevExpress.PivotGrid.Filtering.IFilterOwnerBase,DevExpress.XtraPivotGrid.IFilterFormOwner)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="owner">
-		 
-
-            </param>
-            <param name="formOwner">
-		 
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraPivotGrid.PivotFilter.ChangeFilterEditorVisible">
             <summary>
                 <para>Toggles the Filter Editor visibility.
@@ -2017,26 +2001,6 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldOptionsFilter.#ctor(System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="optionsChanged">
-		 
-
-            </param>
-            <param name="viewBagOwner">
-		 
-
-            </param>
-            <param name="objectPath">
-		 
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldOptionsFilter.Assign(DevExpress.Utils.Controls.BaseOptions)">
             <summary>
                 <para>Copies settings of the specified object to the current object.
@@ -2144,38 +2108,6 @@
 		A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object that specifies the Pivot Grid field.
 
             </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldImageOptions.Assign(DevExpress.Utils.ImageOptions)">
-            <summary>
-                <para>Copies settings of the specified object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		An ImageOptions object whose settings are copied to the current object. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldImageOptions.ImageIndex">
-            <summary>
-                <para>Gets or sets the index of the image displayed within the field header.
-</para>
-            </summary>
-            <value>An integer value specifying the image by its zero-based index within the source collection. <b>-1</b> to display no image.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldImageOptions.Images">
-            <summary>
-                <para>Gets or sets a collection of images that can be displayed within field headers.
-</para>
-            </summary>
-            <value>An object that is an image collection providing images.
-</value>
 
 
         </member>
@@ -2533,6 +2465,14 @@
             </summary>
             <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotShowButtonModeEnum"/> value that specifies the current display mode for cell buttons.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldOptionsEx.ShowInFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -3185,22 +3125,6 @@
                 <para>Represents a Pivot Grid Control's <b>Prefilter</b>.
 </para>
             </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPivotGrid.Prefilter.#ctor(DevExpress.PivotGrid.Filtering.IFilterOwnerBase,DevExpress.XtraPivotGrid.IFilterFormOwner)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="owner">
-		 
-
-            </param>
-            <param name="formOwner">
-		 
-
-            </param>
-
 
         </member>
         <member name="M:DevExpress.XtraPivotGrid.Prefilter.ChangePrefilterVisible">
@@ -7094,6 +7018,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridField.FilterColumnName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="M:DevExpress.XtraPivotGrid.PivotGridField.GetCaption">
             <summary>
                 <para>Gets or sets the field's display caption.
@@ -8075,6 +8007,13 @@
             </summary>
             <value>A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant that specifies a filter criteria applied to data displayed in the <see cref="T:DevExpress.XtraPivotGrid.PivotGridControl"/>. 
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraPivotGrid.PivotGridControl.ActiveFilterCriteriaChanged">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -12016,6 +11955,13 @@
             </summary>
             <value>The <see cref="T:DevExpress.Utils.ToolTipController"/> component which controls the appearance and behavior of the hints displayed by the PivotGrid control.
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraPivotGrid.PivotGridControl.UnboundExpressionEditorCreated">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>

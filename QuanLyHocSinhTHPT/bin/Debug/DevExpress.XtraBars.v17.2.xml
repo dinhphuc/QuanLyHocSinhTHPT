@@ -6760,20 +6760,6 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="M:DevExpress.XtraToolbox.ToolboxElementBase.GetActualImage(System.Func`1)">
-            <summary>
-                <para>Returns the actual icon of the current <see cref="T:DevExpress.XtraToolbox.ToolboxControl"/> element. 
-</para>
-            </summary>
-            <param name="paletteGetter">
-		A method that returns an ISvgPaletteProvider object specifying colors used to paint vector images.
-
-            </param>
-            <returns>An Image object that specifies the actual icon of the current <see cref="T:DevExpress.XtraToolbox.ToolboxControl"/> element. 
-</returns>
-
-
-        </member>
         <member name="P:DevExpress.XtraToolbox.ToolboxElementBase.HasImage">
             <summary>
                 <para>Gets whether or not this ToolboxElementBase has a glyph assigned.
@@ -9068,6 +9054,13 @@ See Navigation Frame and Tab Pane.
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.Clear">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseAll">
             <summary>
                 <para>Collapses all group elements that belong to this AccordionControl.
@@ -9844,10 +9837,31 @@ See Navigation Frame and Tab Pane.
 
 
         </member>
+        <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlLoaded">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlReleased">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlReleasing">
             <summary>
                 <para>Fires when a dynamically populated <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> is deselected.
 </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlShown">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -20157,18 +20171,6 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
-        <member name="M:DevExpress.XtraBars.BarItemImageOptions.Assign(DevExpress.Utils.ImageOptions)">
-            <summary>
-                <para>Assigns property values of the specified BarItemImageOptions object to the corresponding properties of this object.
-</para>
-            </summary>
-            <param name="source">
-		An object whose property values are copied to the current object.
-
-            </param>
-
-
-        </member>
         <member name="P:DevExpress.XtraBars.BarItemImageOptions.DefaultSvgImage">
             <summary>
                 <para>Gets or sets the default vector image.
@@ -20260,7 +20262,7 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 		An ISvgPaletteProvider object specifying colors used to paint vector images.
 
             </param>
-            <param name="getLargeImage">
+            <param name="isLarge">
 		<b>true</b> to get a large image; <b>false</b> to get a small image.
 
             </param>
@@ -20293,6 +20295,22 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.BarItemImageOptions.HasLargeImageUriImage">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarItemImageOptions.HasSvgImage">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.BarItemImageOptions.Image">
             <summary>
                 <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarItem"/>'s glyph.
@@ -20309,16 +20327,6 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 </para>
             </summary>
             <value>The index of an image in the collection of small images.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.BarItemImageOptions.Images">
-            <summary>
-                <para>Gets the source of images that can be displayed in this <see cref="T:DevExpress.XtraBars.BarItem"/>.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> that is an image collection containing images to be displayed in this item.
 </value>
 
 
@@ -30550,6 +30558,13 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.RibbonStatusBar.BeginUpdate">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.XtraBars.Ribbon.RibbonStatusBar.CalcHitInfo(System.Drawing.Point)">
             <summary>
                 <para>Returns information on the status bar elements located at the specified point.
@@ -30571,6 +30586,13 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
             </summary>
             <value>A <see cref="T:System.Windows.Forms.DockStyle"/> enumeration value which specifies the position and manner in which a control is docked.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.RibbonStatusBar.EndUpdate">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -51319,6 +51341,14 @@ Return value: Visible
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document.ImageOptions">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document.IsAnimated">
             <summary>
                 <para>Gets if a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/>'s tab icon is currently animated.
@@ -51907,6 +51937,35 @@ Return value: Visible
             <param name="p">
 		A point specifying the position at which to display the PopupControlContainer.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.PopupControlContainer.ShowPopup(System.Drawing.Point,DevExpress.Utils.Win.IPopupControl)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="p">
+		 
+            </param>
+            <param name="parentPopup">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.PopupControlContainer.ShowPopup(DevExpress.XtraBars.BarManager,System.Drawing.Point,DevExpress.Utils.Win.IPopupControl)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="manager">
+		 
+            </param>
+            <param name="p">
+		 
+            </param>
+            <param name="parentPopup">
+		 
             </param>
 
 
@@ -54133,6 +54192,14 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
                 <para>Occurs when a control's <b>PopupContextMenu</b> is about to appear.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarManager.ReFocusEditorOnPopupClose">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

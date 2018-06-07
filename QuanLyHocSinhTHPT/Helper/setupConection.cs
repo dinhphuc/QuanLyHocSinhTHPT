@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyHocSinhTHPT.Helper
 {
-    internal class setupConection
+    public class setupConection
     {
         public static Func<DbConnection> ConnectionFactory = () => new SqlConnection(ConnectionString.Connection);
 
         public static class ConnectionString
         {
-            public static string Connection = "Data Source=phucnd\\phucnd;Initial Catalog=QuanLyHSGVTHPT;Integrated Security=True";
+            public static string Connection = Help.ThamSoKetNoi.StringConnect;
         }
     }
 }

@@ -1304,17 +1304,21 @@ Otherwise, the default mode is <b>Fast</b>.
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.ImageOptions">
             <summary>
-                <para> </para>
+                <para>Provides access to settings that allow you to set up raster and vector icons for this TreeListBand.
+</para>
             </summary>
-            <value> </value>
+            <value>An <see cref="TreeListBandImageOptions"/> object that stores image-related options.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.Images">
             <summary>
-                <para> </para>
+                <para>Provides access to the source of images that can be displayed within column headers and bands.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that is the source of images that can be displayed within column headers and bands.
+</value>
 
 
         </member>
@@ -4521,6 +4525,14 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
             </summary>
             <value><b>true</b> to paint the tree indents using the appearance settings of their corresponding nodes; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.TreeListOptionsPrint.PrintFirstLine">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -9413,6 +9425,16 @@ If a node fits the filter but any of its parent nodes does not, the node is not 
 
 
         </member>
+        <member name="M:DevExpress.XtraTreeList.TreeListMultiSelection.RemoveAt(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="index">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraTreeList.TreeListMultiSelection.SelectCell(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Columns.TreeListColumn)">
             <summary>
                 <para>Selects the cell in the specified column of the specified node (row).
@@ -12189,10 +12211,10 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.ColumnsImageList">
             <summary>
-                <para>Gets or sets the source of images that can be displayed within column headers.
+                <para>Gets or sets the source of images that can be displayed within column headers and bands.
 </para>
             </summary>
-            <value>An object that is the source of images that can be displayed within column headers.
+            <value>An object that is the source of images that can be displayed within column headers and bands.
 </value>
 
 
@@ -13453,7 +13475,8 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelCustomizeTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to customize templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 
@@ -13468,7 +13491,8 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelPrepareTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to replace templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 
@@ -14750,6 +14774,16 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
             </summary>
             <value>A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object whose properties specify the Tree List control's look and feel.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.TreeList.MakeColumnVisible(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="column">
+		 
+            </param>
 
 
         </member>

@@ -2038,6 +2038,17 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
+        <member name="M:DevExpress.XtraVerticalGrid.PropertyGridControl.GetRecordObject(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="recordIndex">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraVerticalGrid.PropertyGridControl.IsDataRecord(System.Int32)">
             <summary>
                 <para>Returns whether or not the specified row handle corresponds to a data row.
@@ -2176,6 +2187,14 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
                 <para>Allows context menus for rows to be customized.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.SupportDefaultPropertyAttribute">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -7335,6 +7354,14 @@ Office2003 style:
 
 
         </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.MultiEditorRowProperties.Name">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.MultiEditorRowProperties.Width">
             <summary>
                 <para>Gets or sets the width of a row item.
@@ -9337,7 +9364,8 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelCustomizeTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to customize templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 
@@ -9352,7 +9380,8 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelPrepareTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to replace templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 

@@ -1446,6 +1446,270 @@
 
 
         </member>
+        <member name="T:DevExpress.Utils.VisualEffects.BadgeDefaultProperties">
+
+            <summary>
+                <para>Provides members that specify the appearance and behavior of the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.#ctor(DevExpress.Utils.VisualEffects.BadgeProperties)">
+            <summary>
+                <para>Initializes a new instance of the BadgeDefaultProperties class and inherits its property values from the parent object.
+</para>
+            </summary>
+            <param name="parentProperties">
+		A BadgeProperties object whose property values are copied to the newly created BadgeDefaultProperties object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualImage">
+            <summary>
+                <para>Gets the current image displayed by this badge.
+</para>
+            </summary>
+            <value>An Image, currently displayed by this badge.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualImageStretchMargins">
+            <summary>
+                <para>Returns the current stretch margins applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s image.
+</para>
+            </summary>
+            <value>A Padding structure that is the current image stretch margins of this badge.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualLocation">
+            <summary>
+                <para>Returns the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> alignment relative to its target element.
+</para>
+            </summary>
+            <value>A <see cref="ContentAlignment"/> enumerator value that specifies the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> alignment relative to its target element.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualOffset">
+            <summary>
+                <para>Returns the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> offset.
+</para>
+            </summary>
+            <value>A Point structure that is the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> offset.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualPaintStyle">
+            <summary>
+                <para>Returns the paint style currently applied to this badge.
+</para>
+            </summary>
+            <value>A <see cref="BadgePaintStyle"/> enumerator value that is the paint style currently applied to this badge. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualText">
+            <summary>
+                <para>Returns the text currently displayed in this badge.
+</para>
+            </summary>
+            <value>A String value that is the currently displayed badge text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualTextMargin">
+            <summary>
+                <para>Returns margins currently applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
+</para>
+            </summary>
+            <value>A Padding structure that specifies margins currently applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualTrimByParent">
+            <summary>
+                <para>Gets whether or not this badge will be trimmed if it goes beyond its target element's parent.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the badge should be trimmed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowGlyphSkinning">
+            <summary>
+                <para>Gets or sets whether or not the glyph skinning feature is applied to this badge.
+</para>
+            </summary>
+            <value>A DefaultBoolean enumerator value that specifies whether or not the glyph skinning feature is applied to this badge.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowHtmDrawText">
+            <summary>
+                <para>Gets or sets whether or not this badge recognizes HTML tags in its text.
+</para>
+            </summary>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this badge recognizes HTML tags in its text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowImage">
+            <summary>
+                <para>Gets or sets whether or not this badge should display its image.
+</para>
+            </summary>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this badge should display its image.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanHtmDrawText">
+            <summary>
+                <para>Returns whether or not this badge can recognize HTML tags in its caption string.
+</para>
+            </summary>
+            <value><b>true</b> if this badge can recognize HTML tags in its caption string; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanStretchImage">
+            <summary>
+                <para>Gets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> image can be stretched.
+
+</para>
+            </summary>
+            <value><b>true</b>, if this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s image can be stretched; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanUseImage">
+            <summary>
+                <para>Gets whether or not an image, assigned to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> will be displayed.
+</para>
+            </summary>
+            <value><b>true</b>, if an image, assigned to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> will be displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Image">
+            <summary>
+                <para>Gets or sets an image, used by this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
+</para>
+            </summary>
+            <value>An Image displayed within this badge.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ImageStretchMargins">
+            <summary>
+                <para>Gets or sets the image region that can be stretched.
+</para>
+            </summary>
+            <value>A Padding structure that is the image stretch region.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.IsGlyphSkinningEnabled">
+            <summary>
+                <para>Gets whether or not this badge should colorize its glyph.
+</para>
+            </summary>
+            <value><b>true</b>, if this badge should colorize its glyph; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Location">
+            <summary>
+                <para>Gets or sets the relative position for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
+</para>
+            </summary>
+            <value>A ContentAlignment enumerator value that specifies the relative position for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Offset">
+            <summary>
+                <para>Gets or sets this badge's offset from its relative position.
+</para>
+            </summary>
+            <value>A Point structure that specifies this badge's offset from its relative position.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.PaintStyle">
+            <summary>
+                <para>Gets or sets the paint style applied to this badge.
+</para>
+            </summary>
+            <value>A <see cref="Nullable&lt;BadgePaintStyle&gt;"/> enumerator value that specifies the paint style currently applied to this badge. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.StretchImage">
+            <summary>
+                <para>Gets or sets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should stretch its image to fit the text block.
+</para>
+            </summary>
+            <value>A DefaultBoolean enumerator value that specifies whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should stretch its image to fit the text block.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Text">
+            <summary>
+                <para>Gets or sets the text string, displayed by this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
+</para>
+            </summary>
+            <value>A String value that is the <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.TextMargin">
+            <summary>
+                <para>Gets or sets margins for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
+</para>
+            </summary>
+            <value>A Padding structure that specifies margins for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.TrimByParent">
+            <summary>
+                <para>Gets or sets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should be trimmed to match its target element's parent.
+</para>
+            </summary>
+            <value>A DefaultBoolean enumerator value that specifies whether or not this badge should be trimmed to match its target element's parent.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Utils.Menu.DXMenuCheckItem">
 
             <summary>
@@ -1638,6 +1902,16 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.SidePanel.GetBorderThickness">
+            <summary>
+                <para>Gets or sets the actual SidePanel border thickness scaled according to the current DPI settings.
+</para>
+            </summary>
+            <returns>An Int32 value that specifies the SidePanel border thickness.
+</returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.SidePanel.LookAndFeel">
             <summary>
                 <para>Provides access to Look and Feel settings of this SidePanel.
@@ -1681,6 +1955,42 @@
 </para>
             </summary>
             <value>An Int32 value that is the distance between panel borders, starting from which the panel snapping feature activates.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.VisualEffects.Badge">
+
+            <summary>
+                <para>A simple element within the <see cref="T:DevExpress.Utils.VisualEffects.AdornerUIManager"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.VisualEffects.Badge.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Badge class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.Badge.Appearance">
+            <summary>
+                <para>Provides access to the appearance settings that affect this Badge.
+</para>
+            </summary>
+            <value>An <see cref="AppearanceObject"/> object that stores Badge appearance settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.VisualEffects.Badge.Properties">
+            <summary>
+                <para>Provides access to advanced Badge settings.
+</para>
+            </summary>
+            <value>A <see cref="BadgeDefaultProperties"/> object that stores advanced badge settings.
 </value>
 
 
@@ -1828,6 +2138,16 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
                 <para>Removes all images from the collection.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DestroyImageListImage(System.Drawing.Image)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="image">
+		 
+            </param>
 
 
         </member>
@@ -2013,72 +2333,92 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean,DevExpress.Utils.Design.ISvgPaletteProvider)">
             <summary>
-                <para> </para>
+                <para>Draws the specified image using the specified paint settings.
+</para>
             </summary>
             <param name="cache">
-		 
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
             </param>
             <param name="images">
-		 
+		An object that represents the image source.
+
             </param>
             <param name="index">
-		 
+		An integer value that identifies the image within the collection.
+
             </param>
             <param name="bounds">
-		 
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
             </param>
             <param name="enabled">
-		 
+		<b>true</b>, to draw an image in enabled state; otherwise, <b>false</b>.
+
             </param>
             <param name="palette">
-		 
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,DevExpress.Utils.Design.ISvgPaletteProvider)">
             <summary>
-                <para> </para>
+                <para>Draws the specified image using the specified paint settings.
+</para>
             </summary>
             <param name="cache">
-		 
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
             </param>
             <param name="images">
-		 
+		An object that represents the image source.
+
             </param>
             <param name="index">
-		 
+		An integer value that identifies the image within the collection.
+
             </param>
             <param name="bounds">
-		 
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
             </param>
             <param name="palette">
-		 
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes,DevExpress.Utils.Design.ISvgPaletteProvider)">
             <summary>
-                <para> </para>
+                <para>Draws the specified image using the specified paint settings.
+</para>
             </summary>
             <param name="cache">
-		 
+		Provides the paint surface and storage of the recently used pens, fonts and brushes.
+
             </param>
             <param name="images">
-		 
+		An object that represents the image source.
+
             </param>
             <param name="index">
-		 
+		An integer value that identifies the image within the collection.
+
             </param>
             <param name="bounds">
-		 
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
             </param>
             <param name="attributes">
-		 
+		Contains information about how image colors are manipulated during rendering. 
+
             </param>
             <param name="palette">
-		 
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
             </param>
 
 
@@ -2142,21 +2482,27 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32,DevExpress.Utils.Design.ISvgPaletteProvider,System.Nullable`1)">
             <summary>
-                <para> </para>
+                <para>Returns the image at the specified position within the specified image list.
+</para>
             </summary>
             <param name="images">
-		 
+		An object that represents the source of images.
+
             </param>
             <param name="index">
-		 
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
             </param>
             <param name="palette">
-		 
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
             </param>
             <param name="size">
-		 
+		A vector image size.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. <b>null</b> (<b>Nothing</b> in Visual Basic) if the image isn't found.
+</returns>
 
 
         </member>
@@ -2421,6 +2767,17 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
 
 
         </member>
+        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageClone(System.Drawing.Image)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="image">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageExists(System.Object,System.Int32)">
             <summary>
                 <para>Determines whether the image exists at the specified position within the specified source of images.
@@ -2470,15 +2827,19 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.IsSvgImageExists(System.Object,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns whether an image with the specified index exists in the specified collection.
+</para>
             </summary>
             <param name="images">
-		 
+		An object that represents the source of images.
+
             </param>
             <param name="index">
-		 
+		The index of the required image in the <i>images</i> list. 
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if an image exists; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
@@ -2509,6 +2870,20 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
                 <para>When requesting an image from the ImageCollection, the <b>ResolveImage</b> event fires when the project resources do not contain a DPI-specific image that matches the requested image and allows you to provide this DPI-specific image manually. This event is in effect when the <see cref="P:DevExpress.Utils.ImageCollection.IsDpiAware"/> option is enabled and the requested image was loaded into the ImageCollection from the project resources.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.SupportAnimation(System.Object,System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="images">
+		 
+            </param>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -4010,306 +4385,6 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
             </summary>
             <value><b>true</b>, to trim badges; otherwise, <b>false</b>.
 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.VisualEffects.BadgeDefaultProperties">
-
-            <summary>
-                <para>Provides members that specify the appearance and behavior of the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.#ctor(DevExpress.Utils.VisualEffects.BadgeProperties)">
-            <summary>
-                <para>Initializes a new instance of the BadgeDefaultProperties class and inherits its property values from the parent object.
-</para>
-            </summary>
-            <param name="parentProperties">
-		A BadgeProperties object whose property values are copied to the newly created BadgeDefaultProperties object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualImage">
-            <summary>
-                <para>Gets the current image displayed by this badge.
-</para>
-            </summary>
-            <value>An Image, currently displayed by this badge.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualImageStretchMargins">
-            <summary>
-                <para>Returns the current stretch margins applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s image.
-</para>
-            </summary>
-            <value>A Padding structure that is the current image stretch margins of this badge.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualLocation">
-            <summary>
-                <para>Returns the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> alignment relative to its target element.
-</para>
-            </summary>
-            <value>A <see cref="ContentAlignment"/> enumerator value that specifies the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> alignment relative to its target element.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualOffset">
-            <summary>
-                <para>Returns the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> offset.
-</para>
-            </summary>
-            <value>A Point structure that is the current <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> offset.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualPaintStyle">
-            <summary>
-                <para>Returns the paint style currently applied to this badge.
-</para>
-            </summary>
-            <value>A <see cref="BadgePaintStyle"/> enumerator value that is the paint style currently applied to this badge. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualText">
-            <summary>
-                <para>Returns the text currently displayed in this badge.
-</para>
-            </summary>
-            <value>A String value that is the currently displayed badge text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualTextMargin">
-            <summary>
-                <para>Returns margins currently applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
-</para>
-            </summary>
-            <value>A Padding structure that specifies margins currently applied to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ActualTrimByParent">
-            <summary>
-                <para>Gets whether or not this badge will be trimmed if it goes beyond its target element's parent.
-
-</para>
-            </summary>
-            <value><b>true</b>, if the badge should be trimmed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowGlyphSkinning">
-            <summary>
-                <para>Gets or sets whether or not the glyph skinning feature is applied to this badge.
-</para>
-            </summary>
-            <value>A DefaultBoolean enumerator value that specifies whether or not the glyph skinning feature is applied to this badge.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowHtmDrawText">
-            <summary>
-                <para>Gets or sets whether or not this badge recognizes HTML tags in its text.
-</para>
-            </summary>
-            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this badge recognizes HTML tags in its text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.AllowImage">
-            <summary>
-                <para>Gets or sets whether or not this badge should display its image.
-</para>
-            </summary>
-            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this badge should display its image.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanHtmDrawText">
-            <summary>
-                <para>Returns whether or not this badge can recognize HTML tags in its caption string.
-</para>
-            </summary>
-            <value><b>true</b> if this badge can recognize HTML tags in its caption string; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanStretchImage">
-            <summary>
-                <para>Gets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> image can be stretched.
-
-</para>
-            </summary>
-            <value><b>true</b>, if this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s image can be stretched; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.CanUseImage">
-            <summary>
-                <para>Gets whether or not an image, assigned to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> will be displayed.
-</para>
-            </summary>
-            <value><b>true</b>, if an image, assigned to this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> will be displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Image">
-            <summary>
-                <para>Gets or sets an image, used by this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
-</para>
-            </summary>
-            <value>An Image displayed within this badge.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.ImageStretchMargins">
-            <summary>
-                <para>Gets or sets the image region that can be stretched.
-</para>
-            </summary>
-            <value>A Padding structure that is the image stretch region.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.IsGlyphSkinningEnabled">
-            <summary>
-                <para>Gets whether or not this badge should colorize its glyph.
-</para>
-            </summary>
-            <value><b>true</b>, if this badge should colorize its glyph; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Location">
-            <summary>
-                <para>Gets or sets the relative position for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
-</para>
-            </summary>
-            <value>A ContentAlignment enumerator value that specifies the relative position for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Offset">
-            <summary>
-                <para>Gets or sets this badge's offset from its relative position.
-</para>
-            </summary>
-            <value>A Point structure that specifies this badge's offset from its relative position.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.PaintStyle">
-            <summary>
-                <para>Gets or sets the paint style applied to this badge.
-</para>
-            </summary>
-            <value>A <see cref="Nullable&lt;BadgePaintStyle&gt;"/> enumerator value that specifies the paint style currently applied to this badge. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.StretchImage">
-            <summary>
-                <para>Gets or sets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should stretch its image to fit the text block.
-</para>
-            </summary>
-            <value>A DefaultBoolean enumerator value that specifies whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should stretch its image to fit the text block.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.Text">
-            <summary>
-                <para>Gets or sets the text string, displayed by this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>.
-</para>
-            </summary>
-            <value>A String value that is the <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.TextMargin">
-            <summary>
-                <para>Gets or sets margins for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
-</para>
-            </summary>
-            <value>A Padding structure that specifies margins for this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/>'s text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.BadgeDefaultProperties.TrimByParent">
-            <summary>
-                <para>Gets or sets whether or not this <see cref="T:DevExpress.Utils.VisualEffects.Badge"/> should be trimmed to match its target element's parent.
-</para>
-            </summary>
-            <value>A DefaultBoolean enumerator value that specifies whether or not this badge should be trimmed to match its target element's parent.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.VisualEffects.Badge">
-
-            <summary>
-                <para>A simple element within the <see cref="T:DevExpress.Utils.VisualEffects.AdornerUIManager"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.VisualEffects.Badge.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Badge class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.Badge.Appearance">
-            <summary>
-                <para>Provides access to the appearance settings that affect this Badge.
-</para>
-            </summary>
-            <value>An <see cref="AppearanceObject"/> object that stores Badge appearance settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.VisualEffects.Badge.Properties">
-            <summary>
-                <para>Provides access to advanced Badge settings.
-</para>
-            </summary>
-            <value>A <see cref="BadgeDefaultProperties"/> object that stores advanced badge settings.
 </value>
 
 
@@ -8081,6 +8156,16 @@ This is a static property.
 
 
         </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.Assign(DevExpress.Utils.ImageCollection)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageCollection">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.Utils.DPIAwareImageCollection.BeginInit">
             <summary>
                 <para>Begins the DPIAwareImageCollection initialization.
@@ -8102,6 +8187,28 @@ This is a static property.
                 <para>Finishes the DPIAwareImageCollection initialization.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.GetImage(System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageKey">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.GetImage(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageIndex">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -12428,6 +12535,14 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 
 
         </member>
+        <member name="P:DevExpress.Utils.Menu.DXMenuItem.HasImage">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.Utils.Menu.DXMenuItem.Image">
             <summary>
                 <para>Gets or sets an image displayed within the menu item,
@@ -13894,6 +14009,14 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.XtraForm.AcrylicAccentTintOpacity">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.XtraForm.ActiveGlowColor">
             <summary>
                 <para>Gets or sets the color of the glow adorning effect applied to the form's borders when the form is active.
@@ -14017,6 +14140,14 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraForm.EnableAcrylicAccent">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15305,6 +15436,14 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
             </summary>
             <value>A <see cref="T:DevExpress.Utils.ImageCollection"/> object that stores a collection of images.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.GroupControl.Images">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -21450,23 +21589,28 @@ Prevents the control from being updated until the <see cref="M:DevExpress.XtraEd
         </member>
         <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinStyle(System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Applies the specified skin and palette.
+</para>
             </summary>
             <param name="skinName">
-		 
+		A string value specifying the name of the skin to apply.
+
             </param>
             <param name="paletteName">
-		 
+		The name of the palette used to color vector images to apply.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinStyle(DevExpress.LookAndFeel.SkinSvgPalette)">
             <summary>
-                <para> </para>
+                <para>Applies the specified skin and palette.
+</para>
             </summary>
             <param name="palette">
-		 
+		A <b>SkinSvgPalette</b> object specifying the skin and palette to apply.
+
             </param>
 
 
@@ -21642,22 +21786,28 @@ Prevents the control from being updated until the <see cref="M:DevExpress.XtraEd
         </member>
         <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetStyle(DevExpress.LookAndFeel.LookAndFeelStyle,System.Boolean,System.Boolean,System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Sets the look and feel settings of the current object to the specified values.
+</para>
             </summary>
             <param name="style">
-		 
+		A <see cref="T:DevExpress.LookAndFeel.LookAndFeelStyle"/> enumeration value which specifies the style of the current object. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.Style"/> property.
+
             </param>
             <param name="useWindowsXPTheme">
-		 
+		<b>true</b>, if a control should be painted using the WindowsXP theme; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.UseWindowsXPTheme"/> property.
+
             </param>
             <param name="useDefaultLookAndFeel">
-		 
+		<b>true</b> to use the look and feel settings provided by the parent object or default look and feel object; <b>false</b> to apply the current object's settings. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.UseDefaultLookAndFeel"/> property.
+
             </param>
             <param name="skinName">
-		 
+		A string value specifying the skin name. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinName"/> property.
+
             </param>
             <param name="paletteName">
-		 
+		A string value specifying the name of the palette used to color vector images.
+
             </param>
 
 
@@ -23425,6 +23575,66 @@ Provides storage for pens, fonts and brushes.
             <param name="matrix">
 		A color-adjustment matrix for the default category.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="image">
+		 
+            </param>
+            <param name="destRect">
+		 
+            </param>
+            <param name="scrRect">
+		 
+            </param>
+            <param name="enabled">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="image">
+		 
+            </param>
+            <param name="destRect">
+		 
+            </param>
+            <param name="scrRect">
+		 
+            </param>
+            <param name="attributes">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawImage(System.Drawing.Image,System.Int32,System.Int32,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="image">
+		 
+            </param>
+            <param name="x">
+		 
+            </param>
+            <param name="y">
+		 
+            </param>
+            <param name="srcRect">
+		 
+            </param>
+            <param name="enabled">
+		 
             </param>
 
 

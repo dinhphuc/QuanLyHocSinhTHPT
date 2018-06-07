@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace QuanLyHocSinhTHPT.Helper
 {
-    class MaHoaString
+    internal class MaHoaString
     {
-        public static string key  { get; set; }
+        public static string key { get; set; }
+
         public static string Encrypt(string toEncrypt)
         {
             bool useHashing = true;
@@ -34,6 +35,7 @@ namespace QuanLyHocSinhTHPT.Helper
 
             return Convert.ToBase64String(resultArray, 0, resultArray.Length);
         }
+
         /// <summary>
         /// Giản mã
         /// </summary>

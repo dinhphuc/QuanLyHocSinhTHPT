@@ -252,5 +252,10 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
                 }
             }
         }
+
+        private void frmThaoTacHS_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

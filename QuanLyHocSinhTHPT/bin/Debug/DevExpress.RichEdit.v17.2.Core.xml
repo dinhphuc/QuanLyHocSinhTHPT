@@ -8552,6 +8552,16 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Native.ParagraphStyleCollection.Restore(DevExpress.XtraRichEdit.API.Native.ParagraphStyle)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="style">
+		 
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.FitToPageCommand">
 
             <summary>
@@ -15630,7 +15640,7 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.DocumentCapabilitiesOptions.EndNotes">
             <summary>
-                <para>Gets or sets the document's capability to display and work with endnotes.
+                <para>Gets or sets the document's capability to handle endnotes (notes placed at the end of the text).
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration specifying the document's capability to work with endnotes.
@@ -15692,7 +15702,7 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.DocumentCapabilitiesOptions.FootNotes">
             <summary>
-                <para>Gets or sets the document's capability to display and work with footnotes.
+                <para>Gets or sets the document's capability to handle footnotes (notes placed at the end of a document).
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration specifying the document's capability to work with footnotes.
@@ -15772,7 +15782,7 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.DocumentCapabilitiesOptions.InlineShapes">
             <summary>
-                <para>Gets or sets the document capability to handle inline shapes. 
+                <para>Gets or sets the document capability to handle inline shapes (objects in the document's text layer). 
 </para>
             </summary>
             <value>One of the <see cref="DocumentCapability"/> enumeration members specifying the document's capability to handle inline pictures. 
@@ -23769,6 +23779,16 @@ context.
             </param>
             <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TableCellStyle"/> value.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Native.TableCellStyleCollection.Restore(DevExpress.XtraRichEdit.API.Native.TableCellStyle)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="style">
+		 
+            </param>
 
 
         </member>
@@ -40146,7 +40166,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.RichEditHitTestResult">
 
             <summary>
-                <para>Represents the return value from a hit test.
+                <para>Provides options used to retrieve information about the layout element located under the hit point. 
 </para>
             </summary>
 
@@ -40922,7 +40942,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.HitTestSearchOption">
 
             <summary>
-                <para>Lists the levels of the accuracy.
+                <para>Lists the hit test's accuracy level. 
 
 
 </para>
@@ -48067,7 +48087,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.RichEditInvalidFormatExceptionEventHandler">
 
             <summary>
-                <para>References a method that will handle the <see cref="E:DevExpress.Xpf.RichEdit.RichEditControl.InvalidFormatException"/> event.
+                <para>References a method that will handle the <see cref="E:DevExpress.XtraRichEdit.RichEditDocumentServer.InvalidFormatException"/>, <see cref="E:DevExpress.XtraRichEdit.RichEditControl.InvalidFormatException"/> and <see cref="E:DevExpress.Xpf.RichEdit.RichEditControl.InvalidFormatException"/> events.
 </para>
             </summary>
 
@@ -48092,7 +48112,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.RichEditInvalidFormatExceptionEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Xpf.RichEdit.RichEditControl.InvalidFormatException"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.XtraRichEdit.RichEditDocumentServer.InvalidFormatException"/>, <see cref="E:DevExpress.XtraRichEdit.RichEditControl.InvalidFormatException"/> and <see cref="E:DevExpress.Xpf.RichEdit.RichEditControl.InvalidFormatException"/> events.
 </para>
             </summary>
 
@@ -48111,7 +48131,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditInvalidFormatExceptionEventArgs.Exception">
             <summary>
-                <para>Gets the exception which triggers the <see cref="E:DevExpress.XtraRichEdit.RichEditControl.InvalidFormatException"/> event.
+                <para>Gets the exception which triggers the InvalidFormatException event.
 </para>
             </summary>
             <value>An <see cref="T:System.Exception"/> object representing an exception which caused the event.
@@ -48598,6 +48618,16 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
             </param>
             <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.CharacterStyle"/> object which represents the style with the specified name.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Native.CharacterStyleCollection.Restore(DevExpress.XtraRichEdit.API.Native.CharacterStyle)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="style">
+		 
+            </param>
 
 
         </member>
@@ -52328,6 +52358,16 @@ Currently not supported.
             <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TableStyle"/> object which is the style with the specified name.
 
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Native.TableStyleCollection.Restore(DevExpress.XtraRichEdit.API.Native.TableStyle)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="style">
+		 
+            </param>
 
 
         </member>
@@ -56480,11 +56520,11 @@ Currently not supported.
 </para>
             </summary>
             <param name="page">
-		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPage"/> object indicating the search frontier.
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPage"/> object indicating the page area to be searched. 
 
             </param>
             <param name="point">
-		The test point.
+		A <see cref="T:System.Drawing.Point"/> object that is the test point. 
 
             </param>
             <param name="findOption">
@@ -56503,11 +56543,11 @@ Currently not supported.
 </para>
             </summary>
             <param name="pageArea">
-		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPageArea"/> object indicating the search frontier.
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPageArea"/> object indicating the page area to be searched. 
 
             </param>
             <param name="point">
-		The test point.
+		A <see cref="T:System.Drawing.Point"/> object that is the test point. 
 
             </param>
             <param name="findOption">

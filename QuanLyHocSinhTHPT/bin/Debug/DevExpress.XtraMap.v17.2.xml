@@ -437,6 +437,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraMap.BingMapDataProvider.ConnectionProtocol">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraMap.BingMapDataProvider.CultureName">
             <summary>
                 <para>Gets or sets the <a href="https://msdn.microsoft.com/en-us/library/hh441729.aspx">Culture</a> name used to obtain data from Bing GIS services.
@@ -8694,6 +8702,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraMap.MapWebRequestEventArgs.Accept">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraMap.MapWebRequestEventArgs.Credentials">
             <summary>
                 <para>Gets or sets authentication information for the map web request. 
@@ -13651,6 +13667,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraMap.BingMapDataProviderBase.ConnectionProtocol">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraMap.LocationInformationReceivedEventArgs">
 
             <summary>
@@ -18180,6 +18204,14 @@
             </summary>
 
         </member>
+        <member name="P:DevExpress.XtraMap.MapHitInfo.HitMapPoint">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraMap.MapHitInfo.HitObjects">
             <summary>
                 <para>Gets a collection of objects which represent all map visual elements located under the test point.
@@ -18894,6 +18926,13 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraMap.MapDataProviderBase.ClearCache">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="P:DevExpress.XtraMap.MapDataProviderBase.Projection">
             <summary>
                 <para>Gets a projection used by MapDataProviderBase class descendants.
@@ -18979,6 +19018,28 @@
             </param>
             <returns>A <see cref="T:DevExpress.XtraMap.MapHitInfo"/> object, which contains information about the map elements located at the hit point.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.MapControl.CalcHitInfo(DevExpress.Map.CoordPoint)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="hitPoint">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.MapControl.CalcHitInfo(DevExpress.XtraMap.MapPoint)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="hitPoint">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>

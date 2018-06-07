@@ -36,11 +36,13 @@ namespace QuanLyHocSinhTHPT.View.VDiemHS
         public void Hienthi()
         {
             lstDiem = DiemController.getAllDataDiem();
+            lstDiem = lstDiem.OrderBy(o => o.MaLop).ToList();
             DataTable dt = ViewHelper.ToDataTable<Diem>(lstDiem);
             dtgIDemHS.DataSource = dt;
             dtgIDemHS.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dt.Columns["HoTen"].ColumnName = "Họ Tên";
             dt.Columns["TenMon"].ColumnName = "Môn Học";
+            dt.Columns["MaLop"].ColumnName = "Tên Lớp";
             dt.Columns["DiemMieng"].ColumnName = "Điểm miệng";
             dt.Columns["Diem15p"].ColumnName = "Điểm 15 phút";
             dt.Columns["Diem1h"].ColumnName = "Điểm 1 tiết";

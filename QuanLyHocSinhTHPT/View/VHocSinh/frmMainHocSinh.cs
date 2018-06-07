@@ -62,6 +62,7 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
                 GioiTinh = false;
             }
             dateNgaySinh.Value = NgaySinh = lstHS[i].NgaySinh;
+            dateNgaySinh.CustomFormat = "dd/mm/yyyy";
             txtSDT.Text = Sdt = lstHS[i].Sdt;
             txtTenPhuHuynh.Text = TenPhuHuynh = lstHS[i].TenPhuHuynh;
             txtSDTphuHuynh.Text = SDTphuHuynh = lstHS[i].SDTphuHuynh;

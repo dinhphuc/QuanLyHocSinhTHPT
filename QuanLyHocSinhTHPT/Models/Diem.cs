@@ -12,6 +12,8 @@ namespace QuanLyHocSinhTHPT.Models
         [DisplayName("Mã HS")]
         public string MaHS { get; set; }
 
+        public string MaLop { get; set; }
+
         [DisplayName("Tên HS")]
         public string HoTen { get; set; }
 
@@ -51,6 +53,11 @@ namespace QuanLyHocSinhTHPT.Models
             this.Diem15p = 0.0;
             this.Diem1h = 0.0;
             this.DiemHK = 0.0;
+        }
+
+        public static double diemTB(Diem d)
+        {
+            return (d.DiemMieng + d.Diem15p + d.Diem1h * 2 + d.DiemHK * 3) / 7;
         }
     }
 }

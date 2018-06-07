@@ -1,4 +1,5 @@
-﻿using QuanLyHocSinhTHPT.Models;
+﻿using QuanLyHocSinhTHPT.Help;
+using QuanLyHocSinhTHPT.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -114,7 +115,7 @@ namespace QuanLyHocSinhTHPT.Helper
                 int cellColumnIndex = 1;
 
                 //Loop through each row and read value from each column.
-                for (int i = 0; i < dtgr.Rows.Count - 1; i++)
+                for (int i = -1; i < dtgr.Rows.Count - 1; i++)
                 {
                     for (int j = 0; j < dtgr.Columns.Count; j++)
                     {

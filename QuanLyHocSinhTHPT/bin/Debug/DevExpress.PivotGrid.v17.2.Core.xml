@@ -997,18 +997,6 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPivotGrid.PivotFilterBase.#ctor(DevExpress.PivotGrid.Filtering.IFilterOwnerBase)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="owner">
-		 
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraPivotGrid.PivotFilterBase.GetCriteria(DevExpress.XtraPivotGrid.PivotGridFieldBase)">
             <summary>
                 <para>Gets a current filter criteria applied to data displayed in the Pivot Grid.
@@ -7020,6 +7008,14 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.GetFieldSortConditions">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.GetLastLevelCells">
             <summary>
                 <para>For internal use.
@@ -7054,6 +7050,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.IsAnyFieldSortedByThisValue">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.IsCollapsed">
             <summary>
                 <para>For internal use.
@@ -7071,6 +7075,28 @@
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.IsDataFieldItem">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.IsFieldSortedBySummary(DevExpress.XtraPivotGrid.Data.PivotFieldItemBase,DevExpress.XtraPivotGrid.Data.PivotFieldItemBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="field">
+		 
+            </param>
+            <param name="dataField">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -7190,6 +7216,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.OlapMember">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.Parent">
             <summary>
                 <para>For internal use. 
@@ -7251,6 +7285,14 @@
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem.SortedBySummaryFields">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -9962,6 +10004,9 @@ Drill-Down operations
 </term></item>
 <item><term>
 Custom Summaries
+</term></item>
+<item><term>
+obtaining predefined summaries using <see cref="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.SummaryValue"/>
 </term></item>
 <item><term>
 Custom Sorting
@@ -13517,7 +13562,7 @@ Not supported in OLAP and server mode.
         </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowCustomTotals">
             <summary>
-                <para>Gets or sets whether Custom Totals that correspond to the current Column Field or Row Field are visible.
+                <para>Gets or sets whether custom totals that correspond to the current Column Field or Row Field are visible.
 </para>
             </summary>
             <value><b>true</b> if corresponding custom totals are visible; otherwise, <b>false</b>.
@@ -13553,6 +13598,14 @@ Not supported in OLAP and server mode.
             </summary>
             <value><b>true</b>, if the current field is available in the Expression Editor's field list; otherwise, <b>false</b>. 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -14164,6 +14217,14 @@ Not supported in OLAP and server mode.
             <value>A <see cref="T:System.String"/> value which is the name of the data field.
 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.FilterColumnName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

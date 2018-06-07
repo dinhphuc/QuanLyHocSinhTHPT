@@ -1536,7 +1536,8 @@
         <member name="T:DevExpress.Diagram.Core.Shapes.Parameter">
 
             <summary>
-                <para> </para>
+                <para>Represents a parameter.
+</para>
             </summary>
 
         </member>
@@ -1640,7 +1641,8 @@
         <member name="T:DevExpress.Diagram.Core.Shapes.Arc">
 
             <summary>
-                <para> </para>
+                <para>Represents an arc with the size and the direction.
+</para>
             </summary>
 
         </member>
@@ -1679,7 +1681,8 @@
         <member name="T:DevExpress.Diagram.Core.Shapes.Line">
 
             <summary>
-                <para> </para>
+                <para>Represents a line.
+</para>
             </summary>
 
         </member>
@@ -1694,7 +1697,8 @@
         <member name="T:DevExpress.Diagram.Core.Shapes.Start">
 
             <summary>
-                <para> </para>
+                <para>Represents the start point of the geometry and provides customization properties.
+</para>
             </summary>
 
         </member>
@@ -4294,7 +4298,8 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="T:DevExpress.Diagram.Core.TextAlignmentKind">
 
             <summary>
-                <para> </para>
+                <para>Lists values that specify the horizontal alignment of the text within a diagram shape.
+</para>
             </summary>
 
         </member>
@@ -4333,7 +4338,8 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="T:DevExpress.Diagram.Core.VerticalAlignmentKind">
 
             <summary>
-                <para> </para>
+                <para>Lists values that specify the vertical alignment of the text within a diagram shape.
+</para>
             </summary>
 
         </member>
@@ -6026,6 +6032,41 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
             </param>
             <returns>A ShapeDescription instance with updated properties.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Layout.SubTreeDefaultSplitMode">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.SubTreeDefaultSplitMode.Area">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.SubTreeDefaultSplitMode.Breadth">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.SubTreeDefaultSplitMode.RootChildrenCount">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.SubTreeDefaultSplitMode.TreeNodesCount">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>

@@ -1048,11 +1048,9 @@
         </member>
         <member name="P:DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleRangeBarComponent.AppearanceRangeBar">
             <summary>
-                <para>Contains appearance settings used to paint the range bar.
-</para>
+                <para> </para>
             </summary>
-            <value>A BaseShapeAppearance object that provides corresponding appearance settings.
-</value>
+            <value> </value>
 
 
         </member>

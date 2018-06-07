@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyHocSinhTHPT.Helper
+namespace QuanLyHocSinhTHPT.Help
 {
-    public class ThamSoKetNoi
+    public static class ThamSoKetNoi
     {
         public static string ServerName = "";
         public static string DatabaseName = "";

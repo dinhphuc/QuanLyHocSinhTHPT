@@ -3217,38 +3217,49 @@
         </member>
         <member name="M:DevExpress.XtraReports.ReportGeneration.ReportGenerator.GenerateReport(DevExpress.XtraGrid.Views.Base.BaseView,DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Generates a new report using the specified grid view.
+</para>
             </summary>
             <param name="view">
-		 
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions"/> object.
+
             </param>
             <param name="useExpressionBindings">
-		 
+		<b>true</b>, to use expression bindings; <b>false</b>, to use the legacy binding mode.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.ReportGeneration.ReportGenerator.GenerateReport(DevExpress.XtraReports.UI.XtraReport,DevExpress.XtraGrid.Views.Base.BaseView,DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Generates a new report using the specified source report and grid view. Only the settings related to the document layout of the source report are preserved in the resulting report (such as <see cref="P:DevExpress.XtraReports.UI.XtraReport.Landscape"/> and <see cref="P:DevExpress.XtraReports.UI.XtraReport.Margins"/>).
+</para>
             </summary>
             <param name="report">
-		 
+		An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
+
             </param>
             <param name="view">
-		 
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions"/> object.
+
             </param>
             <param name="useExpressionBindings">
-		 
+		<b>true</b>, to use expression bindings; <b>false</b>, to use the legacy binding mode.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
+</returns>
 
 
         </member>
@@ -6825,7 +6836,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.VerbConvertToExpressions">
             <summary>
-                <para> </para>
+                <para><para>Invokes the dialog that converts a report to use expression bindings instead of the legacy data bindings.</para>
+</para>
             </summary>
 
 
@@ -8086,7 +8098,7 @@
         <member name="T:DevExpress.XtraReports.Wizards.IWizardCustomizationService">
 
             <summary>
-                <para>If implemented, enables customization of the Report Wizard pages in WinForms applications.
+                <para>If implemented, enables customization of the Report Wizard pages in WinForms and WPF applications.
 </para>
             </summary>
 

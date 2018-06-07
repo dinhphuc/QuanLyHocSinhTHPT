@@ -480,6 +480,22 @@ Use the <see cref="P:DevExpress.XtraEditors.Controls.PictureEditOptionsMask.Rect
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.AppearanceHoveredCell">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.AppearanceSelectedCell">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
             <summary>
                 <para>Copies settings from the object passed as the parameter.
@@ -848,6 +864,13 @@ Use the <see cref="P:DevExpress.XtraEditors.Controls.PictureEditOptionsMask.Rect
             </summary>
             <value>A String value that specifies the notification displayed by the control if no capture device is found.
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.DisplayOrientationChanging">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -3196,6 +3219,13 @@ The object specifies dates that lie in the range between the DateRange.StartDate
             </summary>
             <value>A System.Windows.Forms.Orientation value.
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.RangeControl.PaintEx">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -11092,6 +11122,17 @@ Always equal to <b>true</b>.
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.GetBrick(DevExpress.XtraEditors.PrintCellHelperInfo)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="info">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.MaxExpandLines">
             <summary>
                 <para>Gets or sets the maximum number of lines this <see cref="T:DevExpress.XtraEditors.TokenEdit"/> can occupy. This property is ignored if the editor is used in-place.
@@ -17519,6 +17560,17 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.FilterControl.GetClauseSvgImageByType(System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="sType">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.FilterControl.GetDefaultColumn">
             <summary>
                 <para>Gets the default column used to create a new filter in the Filter Control.
@@ -19857,6 +19909,14 @@ scrolling using the keyboard arrow keys (and the mouse wheel, provided that <see
             </param>
             <returns>An image to be displayed.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.LabelControlAppearanceObject.GetImageForAnimation">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -25481,6 +25541,14 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
 
 
         </member>
+        <member name="E:DevExpress.XtraTab.XtraTabControl.SelectedPageChangeAnimationCompleted">
+            <summary>
+                <para>Fires when the tab change animation completes.
+</para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraTab.XtraTabControl.SelectedPageChanged">
             <summary>
                 <para>Fires after the selected tab page has been changed.
@@ -25619,10 +25687,10 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
         </member>
         <member name="P:DevExpress.XtraTab.XtraTabControl.Transition">
             <summary>
-                <para>Provides access to state animation parameters.
+                <para>Provides access to parameters of the tab switch animation.
 </para>
             </summary>
-            <value>An <see cref="XtraTabControlTransition"/> object that specifies state animation parameters.
+            <value>An <see cref="XtraTabControlTransition"/> object that specifies parameters of the tab switch animation.
 </value>
 
 
@@ -26257,6 +26325,14 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
             </summary>
             <value>The <b>12, 8, 12, 8</b> padding structure.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.TileControl.DesignerRegistrator">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -30380,6 +30456,13 @@ In standalone editors, because of the .NET binding mechanism, the <b>Ignore</b> 
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.TileItemElementCollection.UpdateElements">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.TileItemElement">
 
             <summary>
@@ -30601,6 +30684,14 @@ In standalone editors, because of the .NET binding mechanism, the <b>Ignore</b> 
             </summary>
             <value>A Point structure that is the glyph's position.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.TileItemElement.ImageOptions">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -35003,6 +35094,28 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.BaseImageListBoxControl.GetItemImageOptions(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.BaseImageListBoxControl.GetItemImageSize(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.BaseImageListBoxControl.GlyphAlignment">
             <summary>
                 <para>Specifies the alignment of the image displayed within the item.
@@ -35502,6 +35615,14 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
             </summary>
             <value>The '<b>PopupContainerEdit</b>' string always.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit.FocusPopupControl">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -37798,6 +37919,17 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.Controls.EditorButtonCollection.Remove(DevExpress.XtraEditors.Controls.EditorButton)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="button">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.Controls.EditorButtonCollection.ToString">
             <summary>
                 <para>Returns the text representation of the current object.
@@ -38142,7 +38274,7 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.NewValue">
             <summary>
-                <para>Gets or sets the value which is about to be assigned to the editor.
+                <para>Gets or sets the value which is about to be assigned to the editor. Setting the <b>NewValue</b> property is not supported if the editor uses masked input (<see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask"/>).
 </para>
             </summary>
             <value>An object representing the editor's potential value.
@@ -42511,6 +42643,13 @@ Return value: Name
 
 
         </member>
+        <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionColumnApplyTo">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionFormat">
             <summary>
                 <para>Returns "Format".
@@ -42523,6 +42662,13 @@ Return value: Name
             <summary>
                 <para>Returns "Rule".
 </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionStopIfTrue">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -45275,6 +45421,20 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <returns>A <b>PopupBaseForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.PopupBaseEdit.IsChildPopup(System.Windows.Forms.Form,System.Windows.Forms.Form)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="childForm">
+		 
+            </param>
+            <param name="parentForm">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -51422,7 +51582,7 @@ After an end-user enters and completes a specific portion of a date/time value t
 </para>
             </summary>
             <param name="point">
-		A System.Drawing.Point structure which specifies the test point coordinates relative to the owner control's top-left corner.
+		A System.Drawing.Point structure which specifies the test point coordinates relative to the control's top-left corner.
 
             </param>
             <returns>A <see cref="ContextItemHitInfo"/> object which comprises information about the context button elements located at the test point. 
@@ -51456,8 +51616,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="E:DevExpress.XtraEditors.PictureEdit.CustomContextButtonToolTip">
             <summary>
-                <para>Allows hints for context buttons displayed in the current PictureEdit to be customized. This event is only raised for <see cref="T:DevExpress.Utils.RatingContextButton"/> objects.
-
+                <para>Allows hints for grading scale points of rating context buttons to be customized.
 </para>
             </summary>
 
@@ -51613,6 +51772,13 @@ After an end-user enters and completes a specific portion of a date/time value t
 
 
         </member>
+        <member name="E:DevExpress.XtraEditors.PictureEdit.PaintEx">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.PictureEdit.PasteImage">
             <summary>
                 <para>Pastes the image stored in the clipboard to the PictureEdit.
@@ -51690,6 +51856,14 @@ After an end-user enters and completes a specific portion of a date/time value t
                 <para>Updates the position of the editor's scroll bars, taking into account relevant properties.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.PictureEdit.UseDirectXPaint">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -56605,6 +56779,14 @@ This property is in effect for standalone editors and for editors embedded in to
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit.UseTextEditorForAutoFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.Repository.RepositoryItem">
 
             <summary>
@@ -57738,6 +57920,14 @@ This property is in effect for standalone editors and for editors embedded in to
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItem.UseTextEditorForAutoFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -59072,7 +59262,7 @@ The Solid style is not supported in specific paint schemes.
 
             </param>
             <param name="imageUri">
-		The value to initialize the button's <see cref="P:DevExpress.XtraEditors.Controls.EditorButton.ImageUri"/> property.
+		The value to initialize the button's image.
 
             </param>
             <param name="shortcut">
@@ -59140,7 +59330,7 @@ The Solid style is not supported in specific paint schemes.
 
             </param>
             <param name="imageUri">
-		A <see cref="T:System.String"/> value that specifies the uniform resource identifier of the image in the DX Image Gallery to be displayed on the button's surface. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.EditorButton.ImageUri"/> property.
+		A <see cref="T:System.String"/> value that specifies the uniform resource identifier of the image in the DX Image Gallery to be displayed on the button's surface.
 
             </param>
             <param name="shortcut">
@@ -60038,12 +60228,9 @@ The Solid style is not supported in specific paint schemes.
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.EditorButton.ImageUri">
             <summary>
-                <para>Gets or sets the uniform resource identifier of the image in the DX Image Gallery to be displayed in the current EditorButton. 
-A specific version of the addressed image is automatically chosen based on the app context (the current skin and required image size).
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the uniform resource identifier of the image to be displayed in the current EditorButton.
-</value>
+            <value> </value>
 
 
         </member>
@@ -60116,18 +60303,6 @@ A specific version of the addressed image is automatically chosen based on the a
                 <para>Removes the <see cref="T:DevExpress.Utils.SuperToolTip"/> object that has been assigned to the editor button.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Controls.EditorButton.SetImageUri(DevExpress.Utils.DxImageUri)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="imageUri">
-		 
-
-            </param>
 
 
         </member>

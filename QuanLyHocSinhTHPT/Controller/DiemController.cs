@@ -15,7 +15,7 @@ namespace QuanLyHocSinhTHPT.Controller
     {
         public static List<Diem> getAllDataDiem()
         {
-            string query = "SELECT Diem.MaHS,MaMH,DiemMieng,Diem15p,Diem1h,DiemHK,HoTen,TenMon FROM (dbo.Diem INNER JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS)INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMH";
+            string query = "EXEC dbo.GetDiem";
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)

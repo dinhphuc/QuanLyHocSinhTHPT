@@ -190,7 +190,7 @@
         </member>
         <member name="P:DevExpress.XtraReports.Configuration.UserDesignerOptions.ConvertBindingsToExpressions">
             <summary>
-                <para>Specifies whether end-users are prompted to convert a legacy report to use binding expressions when opening it in the End-User Report Designer.
+                <para>Specifies whether end-users are prompted to convert a legacy report to use expression bindings when opening it in the End-User Report Designer.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraReports.UI.PromptBoolean"/> enumeration value.
@@ -1292,6 +1292,40 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Expressions.CustomFunctions">
+
+            <summary>
+                <para>Enables you to register custom functions in the End-User Report Designer's Expression Editor.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.CustomFunctions.Register(DevExpress.Data.Filtering.ICustomFunctionOperator[])">
+            <summary>
+                <para>Registers the specified custom functions in the Expression Editor in the End-User Report Designer.
+</para>
+            </summary>
+            <param name="functionOperators">
+		A collection of <see cref="T:DevExpress.Data.Filtering.ICustomFunctionOperator"/> objects specifying custom functions to register. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.CustomFunctions.Unregister(System.String)">
+            <summary>
+                <para>Unregisters a custom function with the specified name from the End-User Report Designer's Expression Editor.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> object that the name of a custom function to unregister.
+
+            </param>
+            <returns><b>true</b>, if a custom function with the specified name has successfully been removed from the Expression Editor; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Wizards.ColumnSummariesSet">
 
             <summary>
@@ -1592,58 +1626,6 @@
             <value><b>true</b>, to use the master-detail Report Wizard version; <b>false</b>, to use the standard Report Wizard version. 
 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator">
-
-            <summary>
-                <para>The class used to generate a UPC Supplemental 5 bar code.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator"/> class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator">
-
-            <summary>
-                <para>The class used to generate a UPC Supplemental 2 bar code.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator"/> class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator">
-
-            <summary>
-                <para>The class used to generate a <b>UPC-E1</b> bar code.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator"/> class with default settings.
-
-</para>
-            </summary>
 
 
         </member>
@@ -2886,9 +2868,11 @@
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRBarCode.TextFormatString">
             <summary>
-                <para> </para>
+                <para>Specifies the output format for the bar code's text.
+</para>
             </summary>
-            <value> </value>
+            <value>A string containing the output format for the bar code's text.
+</value>
 
 
         </member>
@@ -4029,7 +4013,7 @@
         </member>
         <member name="F:DevExpress.XtraReports.UI.PromptBoolean.False">
             <summary>
-                <para>Legacy reports are not converted to use binding expressions.
+                <para>Legacy reports are not converted to use expression bindings.
 </para>
             </summary>
 
@@ -4037,7 +4021,7 @@
         </member>
         <member name="F:DevExpress.XtraReports.UI.PromptBoolean.Prompt">
             <summary>
-                <para>Users are prompted to convert legacy reports to use binding expressions.
+                <para>Users are prompted to convert legacy reports to use expression bindings.
 </para>
             </summary>
 
@@ -4045,7 +4029,24 @@
         </member>
         <member name="F:DevExpress.XtraReports.UI.PromptBoolean.True">
             <summary>
-                <para>Legacy reports are automatically converted to use binding expressions.
+                <para>Legacy reports are automatically converted to use expression bindings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator">
+
+            <summary>
+                <para>The class used to generate a UPC Supplemental 5 bar code.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental5Generator"/> class with default settings.
+
 </para>
             </summary>
 
@@ -4409,17 +4410,21 @@
         </member>
         <member name="P:DevExpress.XtraReports.UserDesigner.FilterComponentPropertiesEventArgs.Component">
             <summary>
-                <para> </para>
+                <para>Gets a component for which an event has occurred.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing <see cref="T:System.ComponentModel.IComponent"/> interface.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.UserDesigner.FilterComponentPropertiesEventArgs.Properties">
             <summary>
-                <para> </para>
+                <para>Provides access to properties of the current component.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that implements the <see cref="T:System.Collections.IDictionary"/> interface.
+</value>
 
 
         </member>
@@ -4981,8 +4986,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.AfterPrint">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.AfterPrint"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -4990,8 +4994,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.BeforePrint">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.BeforePrint"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5039,8 +5042,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.Draw">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.Draw"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5119,8 +5121,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.HtmlItemCreated">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.HtmlItemCreated"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5136,8 +5137,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.LocationChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.LocationChanged"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5169,8 +5169,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.ParentChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.ParentChanged"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5178,7 +5177,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PreviewClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5186,7 +5185,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PreviewDoubleClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5194,7 +5193,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PreviewMouseDown">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5202,7 +5201,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PreviewMouseMove">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5210,7 +5209,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PreviewMouseUp">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5218,8 +5217,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.PrintOnPage">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.PrintOnPage"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5256,8 +5254,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.SizeChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.SizeChanged"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -5351,8 +5348,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRCrossBandControl.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event to hide it.
-
+                <para>This event is not available for the XRCrossBandControl class.
 </para>
             </summary>
 
@@ -6116,6 +6112,86 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Wizards.SummaryOptions">
+
+            <summary>
+                <para>Provides settings that are required to display summary functions on the Specify Summary Options (Multi-Query Version) page of the Report Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Wizards.SummaryOptions.#ctor(DevExpress.XtraReports.Wizards.SummaryOptionFlags)">
+            <summary>
+                <para>Initializes a new instance of the SummaryOptions class with the specified settings.
+</para>
+            </summary>
+            <param name="flags">
+		One or more <see cref="T:DevExpress.Data.XtraReports.Wizard.SummaryOptionFlags"/> enumeration values. This value is assigned to the <see cref="P:DevExpress.XtraReports.Wizards.SummaryOptions.Flags"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Avg">
+            <summary>
+                <para>Specifies whether or not the Average function should be calculated across the created report.
+</para>
+            </summary>
+            <value><b>true</b> if the Average function is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Count">
+            <summary>
+                <para>Specifies whether or not the Count function should be calculated across the created report.
+</para>
+            </summary>
+            <value><b>true</b> if the Count function is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Flags">
+            <summary>
+                <para>Specifies the summary functions to display on the Specify Summary Options (Multi-Query Version) page of the Report Wizard.
+</para>
+            </summary>
+            <value>One or more <see cref="T:DevExpress.Data.XtraReports.Wizard.SummaryOptionFlags"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Max">
+            <summary>
+                <para>Specifies whether or not the Max function should be calculated across the created report.
+</para>
+            </summary>
+            <value><b>true</b> if the Max function is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Min">
+            <summary>
+                <para>Specifies whether or not the Min function should be calculated across the created report.
+</para>
+            </summary>
+            <value><b>true</b> if the Min function is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Sum">
+            <summary>
+                <para>Specifies whether or not the Sum function should be calculated across the created report.
+</para>
+            </summary>
+            <value><b>true</b> if the Sum function is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.XRSubreport">
 
             <summary>
@@ -6424,7 +6500,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.Draw">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.Draw"/> event.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6448,7 +6524,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.HtmlItemCreated">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.HtmlItemCreated"/> event.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6506,7 +6582,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PreviewClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6514,7 +6590,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PreviewDoubleClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6522,7 +6598,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PreviewMouseDown">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6530,7 +6606,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PreviewMouseMove">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6538,7 +6614,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PreviewMouseUp">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6546,8 +6622,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.PrintOnPage">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.PrintOnPage"/> event to hide it.
-
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -6625,8 +6700,7 @@
         </member>
         <member name="E:DevExpress.XtraReports.UI.SubreportBase.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
-
+                <para>This event is not available for the SubreportBase class.
 </para>
             </summary>
 
@@ -7505,21 +7579,24 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.BindingsConverter_ComponentHasWrongDataMemberFormat">
             <summary>
-                <para> </para>
+                <para>"<b>{0} '{1}' has wrong DataMemer '{2}'.</b>"
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.BindingsConverter_CustomSummaryNotSupportedFormat">
             <summary>
-                <para> </para>
+                <para>"<b>Label '{0}' with a custom summary is not supported.</b>"
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.BindingsConverter_FormattingRuleHasWrongValueFormat">
             <summary>
-                <para> </para>
+                <para>"<b>FormattingRule '{0}' has Value '{1}' which can not be converted to the Expression.</b>"
+</para>
             </summary>
 
 
@@ -8230,7 +8307,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.ExpressionEditor_Description_Function_Argb">
             <summary>
-                <para> </para>
+                <para>"<b>Argb(Alpha, Red, Green, Blue)\r\n\r\nReturns a string defining a color using the Alpha, Red, Green, and Blue color channel values.</b>"
+</para>
             </summary>
 
 
@@ -8293,7 +8371,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.ExpressionEditor_Description_Function_Rgb">
             <summary>
-                <para> </para>
+                <para>"<b>Rgb(Red, Green, Blue)\r\n\r\nReturns a string defining a color using the Red, Green, and Blue color channel values.</b>"
+</para>
             </summary>
 
 
@@ -8524,7 +8603,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.ExpressionEditor_ItemInfo_Values">
             <summary>
-                <para> </para>
+                <para>"<b>Values</b>"
+</para>
             </summary>
 
 
@@ -9386,7 +9466,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.PrintableComponentContainerDesignMsg">
             <summary>
-                <para> </para>
+                <para>"<b>To print a Windows Forms control or a printing link, assign it to the PrintableComponent property in code.</b>"
+</para>
             </summary>
 
 
@@ -11307,14 +11388,16 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.STag_Name_HtmlDataBinding">
             <summary>
-                <para> </para>
+                <para>"<b>Html Data Binding</b>"
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.STag_Name_HtmlExpressionBinding">
             <summary>
-                <para> </para>
+                <para>"<b>Html Expression</b>"
+</para>
             </summary>
 
 
@@ -11337,14 +11420,16 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.STag_Name_RtfDataBinding">
             <summary>
-                <para> </para>
+                <para>"<b>Rtf Data Binding</b>"
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.STag_Name_RtfExpressionBinding">
             <summary>
-                <para> </para>
+                <para>"<b>Rtf Expression</b>"
+</para>
             </summary>
 
 
@@ -12399,14 +12484,16 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.UD_Msg_ConvertBindings_RememberMyChoice">
             <summary>
-                <para> </para>
+                <para>"<b>Remember my choice and don't ask me again.</b>"
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.UD_Msg_ConvertBindingsCaption">
             <summary>
-                <para> </para>
+                <para>"<b>Convert</b>"
+</para>
             </summary>
 
 
@@ -12980,7 +13067,8 @@
         </member>
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Verb_ConvertToExpressions">
             <summary>
-                <para> </para>
+                <para>"<b>Convert to Expressions</b>"
+</para>
             </summary>
 
 
@@ -14062,6 +14150,14 @@
                 <para>Enables you to overcome possible issues related to report generation after migrating to newer versions of XtraReports.
 </para>
             </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Native.ReportingSettings.ShouldFillDataSourceForHiddenParameters">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
 
         </member>
         <member name="P:DevExpress.XtraReports.Native.ReportingSettings.TreatNullValuesAsCheckBoxUncheckedStates">
@@ -15482,7 +15578,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRTable.AdjustSize">
             <summary>
-                <para>Adjusts the table size to accommodate the available rows and cells within them.
+                <para>Makes the table width equal to the total width of its cells and the height equal to the total height of its rows.
 </para>
             </summary>
 
@@ -17005,9 +17101,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPageInfo.TextFormatString">
             <summary>
-                <para> </para>
+                <para>Specifies the control's format.
+</para>
             </summary>
-            <value> </value>
+            <value>A string that specifies the control's format.
+</value>
 
 
         </member>
@@ -17175,7 +17273,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.Draw">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.Draw"/> event.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17231,7 +17329,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.HtmlItemCreated">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.HtmlItemCreated"/> event.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17271,7 +17369,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PreviewClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17279,7 +17377,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PreviewDoubleClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17287,7 +17385,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PreviewMouseDown">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17295,7 +17393,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PreviewMouseMove">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17303,7 +17401,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PreviewMouseUp">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17311,7 +17409,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.PrintOnPage">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.PrintOnPage"/> event to hide it.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17329,7 +17427,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.SizeChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.SizeChanged"/> event.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -17401,7 +17499,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRPageBreak.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
+                <para>This event is not available for the XRPageBreak class.
 </para>
             </summary>
 
@@ -18068,8 +18166,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.Draw">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.Draw"/> event.
-
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18112,7 +18209,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.HtmlItemCreated">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.HtmlItemCreated"/> event.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18139,7 +18236,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.LocationChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.LocationChanged"/> event.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18189,7 +18286,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.ParentChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.ParentChanged"/> event.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18197,7 +18294,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PreviewClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18205,7 +18302,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PreviewDoubleClick">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18213,7 +18310,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PreviewMouseDown">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18221,7 +18318,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PreviewMouseMove">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18229,7 +18326,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PreviewMouseUp">
             <summary>
-                <para>Hides the inappropriate <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> event of the parent <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18237,7 +18334,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.PrintOnPage">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.PrintOnPage"/> event to hide it.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18265,7 +18362,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.SizeChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.SizeChanged"/> event.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -18325,7 +18422,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.Band.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
+                <para>This event is not available for the Band class.
 </para>
             </summary>
 
@@ -19962,7 +20059,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XtraReport.HtmlItemCreated">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.HtmlItemCreated"/> property.
+                <para>This event is not available for the XtraReport class.
 </para>
             </summary>
 
@@ -20801,8 +20898,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRLine.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event to hide it.
-
+                <para>This event is not available for the XRLine class.
 </para>
             </summary>
 
@@ -21056,9 +21152,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRLabel.TextFormatString">
             <summary>
-                <para> </para>
+                <para>Specifies the output format for the label's text.
+</para>
             </summary>
-            <value> </value>
+            <value>A string containing the output format for the label's text.
+</value>
 
 
         </member>
@@ -21074,9 +21172,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRLabel.Value">
             <summary>
-                <para> </para>
+                <para>Specifies a label's actual value.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Object"/> specifying an actual control value.
+</value>
 
 
         </member>
@@ -21554,7 +21654,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRControl.ExpressionBindings">
             <summary>
-                <para>Provides access to a control's collection of binding expressions.
+                <para>Provides access to a control's collection of expression bindings.
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.XtraReports.UI.ExpressionBindingCollection"/> object.
@@ -22545,9 +22645,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRCheckBox.TextFormatString">
             <summary>
-                <para> </para>
+                <para>Specifies the output format for the check box's text.
+</para>
             </summary>
-            <value> </value>
+            <value>A string containing the output format for the check box's text.
+</value>
 
 
         </member>
@@ -22563,9 +22665,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRCheckBox.Value">
             <summary>
-                <para> </para>
+                <para>Specifies a check box's actual value.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Object"/> specifying an actual control value.
+</value>
 
 
         </member>
@@ -23609,6 +23713,126 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator">
+
+            <summary>
+                <para>The class used to generate a UPC Supplemental 2 bar code.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCSupplemental2Generator"/> class with default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor">
+
+            <summary>
+                <para>Allows you to manage properties in the Properties panel's Expressions tab in the End-User Report Designer.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor.GetPropertyDescriptions(System.Type)">
+            <summary>
+                <para>Returns all available property descriptions for the specified report control.
+
+</para>
+            </summary>
+            <param name="componentType">
+		A <see cref="T:System.Type"/> object that specifies the control type for which to return available properties.
+
+            </param>
+            <returns>A dictionary listing available property names along with their <see cref="T:DevExpress.XtraReports.Expressions.ExpressionBindingDescription"/> objects.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor.HidePropertyDescriptions(System.Type,System.String[])">
+            <summary>
+                <para>Hides the specified property for the specified control from the Properties panel's <b>Expressions</b> tab.
+</para>
+            </summary>
+            <param name="componentType">
+		A <see cref="T:System.Type"/> object that specifies the control type.
+
+            </param>
+            <param name="propertyNames">
+		An array of strings that specify property names to hide.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor.SetPropertyDescription(System.Type,System.String,DevExpress.XtraReports.Expressions.ExpressionBindingDescription)">
+            <summary>
+                <para>Adds a new specified property description for the specified control to the Properties panel's <b>Expresssions</b> tab.
+</para>
+            </summary>
+            <param name="componentType">
+		A <see cref="T:System.Type"/> object that specifies the control type for which to add the property.
+
+            </param>
+            <param name="propertyName">
+		A string that specifies the property name to add.
+
+            </param>
+            <param name="description">
+		A <see cref="T:DevExpress.XtraReports.Expressions.ExpressionBindingDescription"/> object that specifies the property description.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor.TryGetPropertyDescription(System.Type,System.String,DevExpress.XtraReports.Expressions.ExpressionBindingDescription@)">
+            <summary>
+                <para>Tries to return the specified property's description for the specified control.
+</para>
+            </summary>
+            <param name="componentType">
+		A <see cref="T:System.Type"/> object that specifies the control type.
+
+            </param>
+            <param name="propertyName">
+		A string that specifies the property name to find.
+
+            </param>
+            <param name="value">
+		An output object that specifies the property description.
+
+            </param>
+            <returns><b>true</b>, if the property description has been successfully found; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescriptor.TryGetSurrogateType(System.Type,System.String,System.Type@)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="componentType">
+		 
+
+            </param>
+            <param name="propertyName">
+		 
+
+            </param>
+            <param name="value">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.ReportUnitExtensions">
 
             <summary>
@@ -24042,13 +24266,16 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPrefilter.#ctor(DevExpress.PivotGrid.Filtering.IFilterOwnerBase,DevExpress.XtraPivotGrid.Data.PivotGridData)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="owner">
 		 
+
             </param>
             <param name="data">
 		 
+
             </param>
 
 
@@ -24710,7 +24937,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.String)">
             <summary>
-                <para>Loads the contents of the Rich Text Format (RTF) file into the XRRichText control.
+                <para>Loads the content of the specified file into the XRRichText control.
 
 </para>
             </summary>
@@ -25108,6 +25335,142 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Expressions.ExpressionBindingDescription">
+
+            <summary>
+                <para>Provides information about a property displayed in the Properties panel's Expressions tab in the End-User Report Designer.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.#ctor(System.String[],System.Int32,System.Type,System.String)">
+            <summary>
+                <para>Initializes a new instance of the ExpressionBindingDescription class with the specified settings.
+</para>
+            </summary>
+            <param name="eventNames">
+		An array of strings that specify events in which the property should be available. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.EventNames"/> property.
+
+            </param>
+            <param name="position">
+		An integer value that specifies a weighted position at which the property should be displayed. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.Position"/> property.
+
+            </param>
+            <param name="surrogateType">
+		A <see cref="T:System.Type"/> object that specifies the surrogate type used to change values of read-only complex properties. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.SurrogateType"/> property.
+
+            </param>
+            <param name="scopeName">
+		A string that specifies the property's category (the empty string indicates the root node). This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.ScopeName"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.#ctor(System.String[],System.Int32,System.String[],System.String)">
+            <summary>
+                <para>Initializes a new instance of the ExpressionBindingDescription class with the specified settings.
+</para>
+            </summary>
+            <param name="eventNames">
+		An array of strings that specify events in which the property should be available. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.EventNames"/> property.
+
+            </param>
+            <param name="position">
+		An integer value that specifies a weighted position at which the property should be displayed. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.Position"/> property.
+
+            </param>
+            <param name="bindableProperties">
+		An array of strings that specifies the property's inner properties. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.BindableProperties"/> property.
+
+            </param>
+            <param name="scopeName">
+		A string that specifies the property's category (the empty string indicates the root node). This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.ScopeName"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ExpressionBindingDescription class with the specified settings.
+</para>
+            </summary>
+            <param name="bindable">
+		<b>true</b>, to display the corresponding property in the <b>Expressions</b> tab; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.Bindable"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ExpressionBindingDescription class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.Bindable">
+            <summary>
+                <para>Returns whether a property is displayed in the <b>Expressions</b> tab.
+</para>
+            </summary>
+            <value><b>true</b>, if the property is available in the <b>Expressions</b> tab; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.BindableProperties">
+            <summary>
+                <para>Returns the collection of the property's inner properties.
+</para>
+            </summary>
+            <value>An array of strings that specify the property's inner properties.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.EventNames">
+            <summary>
+                <para>Returns the collection of events in which the property is available.
+</para>
+            </summary>
+            <value>An array of strings that specify events in which the property is available.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.Position">
+            <summary>
+                <para>Returns a weighted position at which the property is displayed.
+</para>
+            </summary>
+            <value>An integer value that specifies a weighted position at which the property is displayed. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.ScopeName">
+            <summary>
+                <para>Returns the name of the category in which the property is displayed.
+</para>
+            </summary>
+            <value>A string that specifies the category name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Expressions.ExpressionBindingDescription.SurrogateType">
+            <summary>
+                <para>Returns a surrogate type used to change values of read-only complex properties.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Type"/> object.
 </value>
 
 
@@ -27503,8 +27866,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="E:DevExpress.XtraReports.UI.XRChart.TextChanged">
             <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
-
+                <para>This event is not available for the XRChart class.
 </para>
             </summary>
 
@@ -27619,6 +27981,24 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="F:DevExpress.XtraReports.UserDesigner.DesignDockPanelType.ToolBox">
             <summary>
                 <para>Identifies the Toolbox dock panel.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator">
+
+            <summary>
+                <para>The class used to generate a <b>UPC-E1</b> bar code.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRUPCE1Generator"/> class with default settings.
 
 </para>
             </summary>
@@ -28258,6 +28638,34 @@ However, if the height of the entire group is more than the page height, this gr
             <param name="solutionTypesProvider">
 		An object implementing the <see cref="T:DevExpress.Entity.ProjectModel.ISolutionTypesProvider"/> interface.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Wizards.Presenters.ChooseReportTemplatePage`1.#ctor(DevExpress.XtraReports.Wizards.Views.IChooseReportTemplatePageView,DevExpress.XtraReports.Wizards.Templates.ITemplateStorage,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,System.Collections.Generic.IEnumerable`1,DevExpress.DataAccess.Wizard.Services.DataSourceTypes,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="view">
+		 
+            </param>
+            <param name="templateStorage">
+		 
+            </param>
+            <param name="connectionStorageService">
+		 
+            </param>
+            <param name="dataConnections">
+		 
+            </param>
+            <param name="dataSourceTypes">
+		 
+            </param>
+            <param name="context">
+		 
+            </param>
+            <param name="solutionTypesProvider">
+		 
             </param>
 
 
@@ -29072,7 +29480,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.ExpressionBinding">
 
             <summary>
-                <para>Provides functionality to binding expressions.
+                <para>Provides functionality to expression bindings.
 </para>
             </summary>
 
@@ -29124,7 +29532,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.ExpressionBinding.EventName">
             <summary>
-                <para>Specifies the name of the event in which the binding expression should be evaluated.
+                <para>Specifies the name of the event in which the expression binding should be evaluated.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the event name.
@@ -29134,7 +29542,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.ExpressionBinding.Expression">
             <summary>
-                <para>Specifies the binding expression to evaluate on generating the report document.
+                <para>Specifies the expression binding to evaluate on generating the report document.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the expression.
@@ -29144,7 +29552,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.ExpressionBinding.PropertyName">
             <summary>
-                <para>Specifies the property name to which the binding expression is assigned.
+                <para>Specifies the property name to which the expression binding is assigned.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the property name.
@@ -30991,86 +31399,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Wizards.SummaryOptions">
-
-            <summary>
-                <para>Provides settings that are required to display summary functions on the Specify Summary Options (Multi-Query Version) page of the Report Wizard.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Wizards.SummaryOptions.#ctor(DevExpress.XtraReports.Wizards.SummaryOptionFlags)">
-            <summary>
-                <para>Initializes a new instance of the SummaryOptions class with the specified settings.
-</para>
-            </summary>
-            <param name="flags">
-		One or more <see cref="T:DevExpress.Data.XtraReports.Wizard.SummaryOptionFlags"/> enumeration values. This value is assigned to the <see cref="P:DevExpress.XtraReports.Wizards.SummaryOptions.Flags"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Avg">
-            <summary>
-                <para>Specifies whether or not the Average function should be calculated across the created report.
-</para>
-            </summary>
-            <value><b>true</b> if the Average function is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Count">
-            <summary>
-                <para>Specifies whether or not the Count function should be calculated across the created report.
-</para>
-            </summary>
-            <value><b>true</b> if the Count function is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Flags">
-            <summary>
-                <para>Specifies the summary functions to display on the Specify Summary Options (Multi-Query Version) page of the Report Wizard.
-</para>
-            </summary>
-            <value>One or more <see cref="T:DevExpress.Data.XtraReports.Wizard.SummaryOptionFlags"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Max">
-            <summary>
-                <para>Specifies whether or not the Max function should be calculated across the created report.
-</para>
-            </summary>
-            <value><b>true</b> if the Max function is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Min">
-            <summary>
-                <para>Specifies whether or not the Min function should be calculated across the created report.
-</para>
-            </summary>
-            <value><b>true</b> if the Min function is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Wizards.SummaryOptions.Sum">
-            <summary>
-                <para>Specifies whether or not the Sum function should be calculated across the created report.
-</para>
-            </summary>
-            <value><b>true</b> if the Sum function is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Wizards.LabelReportBuilder">
 
             <summary>
@@ -31538,9 +31866,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.Wizards.ReportModel.TryUseExpressions">
             <summary>
-                <para> </para>
+                <para>Specifies whether the Report Wizard should try to create the report with the binding expressions mode.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to try to create a report with binding expressions; <b>false</b>, to use the legacy binding mode.
+</value>
 
 
         </member>
@@ -35213,6 +35543,31 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.Wizards.Presenters.ChooseReportTypePage`1.#ctor(DevExpress.XtraReports.Wizards.Views.IChooseReportTypePageView,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,System.Collections.Generic.IEnumerable`1,DevExpress.DataAccess.Wizard.Services.DataSourceTypes,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="view">
+		 
+            </param>
+            <param name="connectionStorageService">
+		 
+            </param>
+            <param name="dataConnections">
+		 
+            </param>
+            <param name="dataSourceTypes">
+		 
+            </param>
+            <param name="context">
+		 
+            </param>
+            <param name="solutionTypesProvider">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraReports.Wizards.Presenters.ChooseReportTypePage`1.Begin">
             <summary>
                 <para>Initializes controls of the current wizard page.
@@ -36493,7 +36848,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.ActualValue">
             <summary>
-                <para>Specifies a measure that provides data for calculating the actual Adding Gauges to a Report value.
+                <para>Specifies a measure that provides data for calculating the actual Gauge value.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
@@ -36554,7 +36909,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.Maximum">
             <summary>
-                <para>Specifies sets the maximum value of the Adding Gauges to a Report scale.
+                <para>Specifies sets the maximum value of the Gauge scale.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
@@ -36564,7 +36919,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.Minimum">
             <summary>
-                <para>Specifies the minimum value of the Adding Gauges to a Report scale.
+                <para>Specifies the minimum value of the Gauge scale.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
@@ -36574,7 +36929,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.TargetValue">
             <summary>
-                <para>Specifies a measure that provides data for calculating the target Adding Gauges to a Report value.
+                <para>Specifies a measure that provides data for calculating the target Gauge value.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
@@ -36608,15 +36963,17 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.TickmarkCount">
             <summary>
-                <para> </para>
+                <para>Specifies the number of tick marks displayed on a gauge scale
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the number of tick marks.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewStyle">
             <summary>
-                <para>Specifies the style of a Adding Gauges to a Report.
+                <para>Specifies the style of a Gauge.
 </para>
             </summary>
             <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeStyle enumeration value.
@@ -36626,7 +36983,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewTheme">
             <summary>
-                <para>Specifies the theme of a Adding Gauges to a Report.
+                <para>Specifies the theme of a Gauge.
 </para>
             </summary>
             <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeTheme enumeration value.
@@ -36636,7 +36993,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewType">
             <summary>
-                <para>Specifies the view type of a Adding Gauges to a Report.
+                <para>Specifies the view type of a Gauge.
 </para>
             </summary>
             <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeType enumeration value.

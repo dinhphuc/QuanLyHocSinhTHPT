@@ -15507,13 +15507,9 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="P:DevExpress.XtraScheduler.AppointmentDisplayOptions.AutoAdjustForeColor">
             <summary>
-                <para>An option that allows adjusting font colors to improve readability in dark themes.
-
-</para>
+                <para> </para>
             </summary>
-            <value><b>True</b> to automatically adjust foreground colors to improve readability; otherwise, <b>false</b>.
-
-</value>
+            <value> </value>
 
 
         </member>
@@ -25381,7 +25377,8 @@ See the How to: Split Appointments and Series article for more information.
         </member>
         <member name="P:DevExpress.XtraScheduler.ResourceMappingInfo.Color">
             <summary>
-                <para>Gets or sets the data field to which resource color is bound.
+                <para>Gets or sets the data field to which the resource color is bound.
+
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value that specifies the name of the bound data field.

@@ -2866,6 +2866,14 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
+        <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreGroupEnabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreGroupPadding">
             <summary>
                 <para>Gets or sets whether layout groups' padding settings (<see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Padding"/>) are restored when restoring the control's layout from a data store.
@@ -2903,6 +2911,14 @@ This property indicates when changes to the bound editor property are propagated
             </summary>
             <value><b>true</b> to restore the corresponding settings; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreLayoutItemEnabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

@@ -36,28 +36,28 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTenHS = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDiemMieng = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDiemHK = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDiem1h = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgIDemHS = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtDiem1h = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDiemHK = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDiemMieng = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,7 +76,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1359, 582);
+            this.panelControl1.Size = new System.Drawing.Size(1354, 582);
             this.panelControl1.TabIndex = 6;
             // 
             // txtDiem15p
@@ -139,6 +139,54 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điểm HS";
             // 
+            // txtDiemMieng
+            // 
+            this.txtDiemMieng.Location = new System.Drawing.Point(99, 94);
+            this.txtDiemMieng.Name = "txtDiemMieng";
+            this.txtDiemMieng.Size = new System.Drawing.Size(210, 20);
+            this.txtDiemMieng.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Điểm Miệng:";
+            // 
+            // txtDiemHK
+            // 
+            this.txtDiemHK.Location = new System.Drawing.Point(99, 212);
+            this.txtDiemHK.Name = "txtDiemHK";
+            this.txtDiemHK.Size = new System.Drawing.Size(210, 20);
+            this.txtDiemHK.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Điểm Học Kì :";
+            // 
+            // txtDiem1h
+            // 
+            this.txtDiem1h.Location = new System.Drawing.Point(99, 173);
+            this.txtDiem1h.Name = "txtDiem1h";
+            this.txtDiem1h.Size = new System.Drawing.Size(210, 20);
+            this.txtDiem1h.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Điểm 1h:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -156,7 +204,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 582);
+            this.groupBox1.Size = new System.Drawing.Size(382, 582);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -173,102 +221,6 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "thao tác dữ liệu";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Theo Tên",
-            "Theo Lơp",
-            "Theo địa chỉ",
-            "Theo Mã lớp",
-            ""});
-            this.comboBox1.Location = new System.Drawing.Point(238, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(6, 31);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(226, 20);
-            this.textBox8.TabIndex = 0;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox5);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
-            this.splitContainer1.Size = new System.Drawing.Size(1359, 582);
-            this.splitContainer1.SplitterDistance = 384;
-            this.splitContainer1.TabIndex = 7;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Controls.Add(this.button2);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(0, 504);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(971, 78);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "15",
-            "20",
-            "25"});
-            this.comboBox2.Location = new System.Drawing.Point(588, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 21);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(445, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Số lượng bản ghi trên trang:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dtgIDemHS);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(971, 509);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Danh Sách Điểm Học Sinh";
-            // 
-            // dtgIDemHS
-            // 
-            this.dtgIDemHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIDemHS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgIDemHS.Location = new System.Drawing.Point(3, 16);
-            this.dtgIDemHS.Name = "dtgIDemHS";
-            this.dtgIDemHS.Size = new System.Drawing.Size(965, 486);
-            this.dtgIDemHS.TabIndex = 0;
-            this.dtgIDemHS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgIDemHS_CellClick);
             // 
             // btnThem
             // 
@@ -307,6 +259,58 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Theo Tên",
+            "Theo Lơp",
+            "Theo địa chỉ",
+            "Theo Mã lớp",
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(238, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(6, 31);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(226, 20);
+            this.textBox8.TabIndex = 0;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox5);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
+            this.splitContainer1.Size = new System.Drawing.Size(1354, 582);
+            this.splitContainer1.SplitterDistance = 382;
+            this.splitContainer1.TabIndex = 7;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Location = new System.Drawing.Point(0, 504);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(968, 78);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            // 
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
@@ -325,59 +329,55 @@
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // txtDiem1h
+            // comboBox2
             // 
-            this.txtDiem1h.Location = new System.Drawing.Point(99, 173);
-            this.txtDiem1h.Name = "txtDiem1h";
-            this.txtDiem1h.Size = new System.Drawing.Size(210, 20);
-            this.txtDiem1h.TabIndex = 6;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"});
+            this.comboBox2.Location = new System.Drawing.Point(588, 32);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(92, 21);
+            this.comboBox2.TabIndex = 2;
             // 
-            // label2
+            // label10
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Điểm 1h:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(445, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Số lượng bản ghi trên trang:";
             // 
-            // txtDiemHK
+            // groupBox4
             // 
-            this.txtDiemHK.Location = new System.Drawing.Point(99, 212);
-            this.txtDiemHK.Name = "txtDiemHK";
-            this.txtDiemHK.Size = new System.Drawing.Size(210, 20);
-            this.txtDiemHK.TabIndex = 8;
+            this.groupBox4.Controls.Add(this.dtgIDemHS);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(968, 509);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Danh Sách Điểm Học Sinh";
             // 
-            // label3
+            // dtgIDemHS
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Điểm Học Kì :";
-            // 
-            // txtDiemMieng
-            // 
-            this.txtDiemMieng.Location = new System.Drawing.Point(99, 94);
-            this.txtDiemMieng.Name = "txtDiemMieng";
-            this.txtDiemMieng.Size = new System.Drawing.Size(210, 20);
-            this.txtDiemMieng.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Điểm Miệng:";
+            this.dtgIDemHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgIDemHS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtgIDemHS.Location = new System.Drawing.Point(3, 16);
+            this.dtgIDemHS.Name = "dtgIDemHS";
+            this.dtgIDemHS.Size = new System.Drawing.Size(962, 486);
+            this.dtgIDemHS.TabIndex = 0;
+            this.dtgIDemHS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgIDemHS_CellClick);
             // 
             // frmDiemHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 582);
+            this.ClientSize = new System.Drawing.Size(1354, 582);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmDiemHS";

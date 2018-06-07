@@ -9847,9 +9847,33 @@
 
 
         </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageCannotCreateSelectStatement">
+            <summary>
+                <para><b>Default value</b>: "Select statement creation failed."
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageCannotLoadCustomAssembly">
             <summary>
                 <para><b>Default value</b>: "Unable to load the {0} assembly for the {1} context. Please choose an existing external assembly and/or existing context."
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageCannotOpenDatabase">
+            <summary>
+                <para><b>Default value</b>: "Unable to open a database."
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageCannotRebuildSchema">
+            <summary>
+                <para><b>Default value</b>: "An error occurred while rebuilding a data source schema."
 </para>
             </summary>
 
@@ -11583,6 +11607,31 @@
 
 
         </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,System.Collections.Generic.IEnumerable`1,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="view">
+		 
+            </param>
+            <param name="context">
+		 
+            </param>
+            <param name="connectionStorageService">
+		 
+            </param>
+            <param name="dataConnections">
+		 
+            </param>
+            <param name="solutionTypesProvider">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.Begin">
             <summary>
                 <para>Initializes controls of the current wizard page.
@@ -12128,6 +12177,30 @@
             </summary>
             <returns>A <see cref="T:System.Xml.Linq.XElement"/> object.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ItemUpdated"/> and <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ExpandNode"/> events.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventHandler.Invoke(System.Object,DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ItemUpdated"/> and <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ExpandNode"/> events.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender.
+
+            </param>
+            <param name="args">
+		A <see cref="T:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventArgs"/> object that contains data related to the event.
+
+            </param>
 
 
         </member>
@@ -14232,7 +14305,7 @@
 		A <see cref="T:System.String"/> that specifies the display caption of the data source. This value is assigned to the <see cref="P:DevExpress.DataAccess.CustomFilterExpressionEventArgs.DataSourceName"/> property.
 
             </param>
-            <param name="tableName">
+            <param name="queryName">
 		A <see cref="T:System.String"/> value, specifying the table name. This value is assigned to the <see cref="P:DevExpress.DataAccess.CustomFilterExpressionEventArgs.TableName"/> property.
 
             </param>
@@ -14269,6 +14342,14 @@
             </summary>
             <value>A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant that specifies the filter expression that defines a WHERE clause included in the SQL query.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.CustomFilterExpressionEventArgs.QueryName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -14391,99 +14472,122 @@
         <member name="T:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel">
 
             <summary>
-                <para> </para>
+                <para>A View Model that provides information about an Entity Framework data source's filters.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.#ctor(DevExpress.DataAccess.EntityFramework.DBSetFilter[],System.Collections.Generic.IDictionary`2,DevExpress.DataAccess.Wizard.Services.IParameterService,System.IServiceProvider,DevExpress.DataAccess.UI.IParameterEditorService)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the EFFiltersViewModel class with the specified settings.
+</para>
             </summary>
             <param name="filters">
-		 
+		An array of <see cref="T:DevExpress.DataAccess.EntityFramework.DBSetFilter"/> objects that specify filters applied to an Entity Framework <b>DBSet</b>. 
+
             </param>
             <param name="dbTables">
-		 
+		A dictionary that specifies a value pair that includes the <b>DBSet</b>'s name and the <see cref="T:DevExpress.Xpo.DB.DBTable"/>. 
+
             </param>
             <param name="parameterService">
-		 
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface.
+
             </param>
             <param name="propertyGridServices">
-		 
+		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
+
             </param>
             <param name="parameterEditorService">
-		 
+		An object implementing the <see cref="T:DevExpress.DataAccess.UI.IParameterEditorService"/> interface.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.AvailableDBSets">
             <summary>
-                <para> </para>
+                <para>Provides access to the available Entity Framework <b>DBSets</b>.
+</para>
             </summary>
-            <value> </value>
+            <value>A collection of strings that specify available Entity Framework <b>DBSets</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.DBSets">
             <summary>
-                <para> </para>
+                <para>Provides access to the Entity Framework <b>DBSets</b> to which filters are applied.
+</para>
             </summary>
-            <value> </value>
+            <value>A collection of strings that specify the Entity Framework <b>DBSets</b> to which filters are applied.
+</value>
 
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.DeleteFilter(System.Int32)">
             <summary>
-                <para> </para>
+                <para>Removes the Entity Framework data source filter with the specified index.
+</para>
             </summary>
             <param name="index">
-		 
+		A zero-based index that specifies the filter to remove.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.EditFilter(System.Func`1,DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="createView">
 		 
+
             </param>
             <param name="filter">
 		 
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.ExternalParameterExpressions">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of external parameters' expressions.
+</para>
             </summary>
-            <value> </value>
+            <value>An array of objects that specify expressions of external parameters.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.Filters">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of Entity Framework data source filters.
+</para>
             </summary>
-            <value> </value>
+            <value>A collection of <see cref="T:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel"/> objects.
+</value>
 
 
         </member>
         <member name="E:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.PropertyChanged">
             <summary>
-                <para> </para>
+                <para>Occurs every time any of the EFFiltersViewModel class properties has changed its value.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.EFFiltersViewModel.Types">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of available parameter types.
+</para>
             </summary>
-            <value> </value>
+            <value>An array of objects that specify parameter types.
+</value>
 
 
         </member>
@@ -14937,30 +15041,6 @@
                 <para>Initializes a new instance of the NoTablesValidationException class with the default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ItemUpdated"/> and <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ExpandNode"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventHandler.Invoke(System.Object,DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ItemUpdated"/> and <see cref="E:DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView.ExpandNode"/> events.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender.
-
-            </param>
-            <param name="args">
-		A <see cref="T:DevExpress.DataAccess.Wizard.Views.ItemUpdatedEventArgs"/> object that contains data related to the event.
-
-            </param>
 
 
         </member>
@@ -15659,6 +15739,60 @@
                 <para>Identifies the <b>XML File</b> data provider.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.UI.IParameterViewModel">
+
+            <summary>
+                <para>If implemented, specifies a View Model that provides information about a parameter.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.UI.IParameterViewModel.ApplyParameter(DevExpress.Data.IParameter,System.Boolean)">
+            <summary>
+                <para>Binds a current parameter to the corresponding external (report) parameter.
+</para>
+            </summary>
+            <param name="parameter">
+		An object implementing the <see cref="T:DevExpress.Data.IParameter"/> interface that specifies the report parameter.
+
+            </param>
+            <param name="applyType">
+		<b>true</b>, if the report parameter type should be applied to the current parameter; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.UI.IParameterViewModel.Expression">
+            <summary>
+                <para>Specifies a parameter's expression.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.DataAccess.Expression"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.UI.IParameterViewModel.IsExpression">
+            <summary>
+                <para>Specifies whether a parameter has the <b>Expression</b> type.
+</para>
+            </summary>
+            <value><b>true</b>, if the parameter has the <b>Expression</b> type; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.UI.IParameterViewModel.QueryName">
+            <summary>
+                <para>Specifies the name of the query to which a parameter is assigned.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the query name.
+</value>
 
 
         </member>
@@ -16928,6 +17062,46 @@
             </summary>
             <value>A <see cref="T:DevExpress.DataAccess.Wizard.Services.DataSourceTypes"/> object.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.UI.IParameterEditorService">
+
+            <summary>
+                <para>If implemented by a class, provides a service for managing parameter types.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.UI.IParameterEditorService.GetDisplayNameByParameterType(System.String,System.Type)">
+            <summary>
+                <para>Returns the display name for the specified parameter type.
+</para>
+            </summary>
+            <param name="contextName">
+		A <see cref="T:System.String"/> that specifies the current context.
+
+            </param>
+            <param name="type">
+		A <see cref="T:System.Type"/> object that specifies parameter type.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> that specifies the type's display name.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.UI.IParameterEditorService.GetParameterTypes(System.String)">
+            <summary>
+                <para>Returns available parameter types.
+</para>
+            </summary>
+            <param name="contextName">
+		A <see cref="T:System.String"/> that specifies the current context.
+
+            </param>
+            <returns>A dictionary that specifies available parameter types along with their display names.
+</returns>
 
 
         </member>
@@ -21856,6 +22030,31 @@
 
 
         </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior,System.Collections.Generic.List`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="view">
+		 
+            </param>
+            <param name="context">
+		 
+            </param>
+            <param name="connectionStorageService">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+            <param name="databaseCredentialsSavingBehavior">
+		 
+            </param>
+            <param name="dataProviders">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.Begin">
             <summary>
                 <para>Initializes controls of the current wizard page.
@@ -21962,6 +22161,28 @@
             <param name="databaseCredentialsSavingBehavior">
 		A <see cref="T:DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior"/> enumeration value.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="view">
+		 
+            </param>
+            <param name="context">
+		 
+            </param>
+            <param name="connectionStorageService">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+            <param name="databaseCredentialsSavingBehavior">
+		 
             </param>
 
 
@@ -22727,99 +22948,122 @@
         <member name="T:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel">
 
             <summary>
-                <para> </para>
+                <para>A View Model that provides information about an Entity Framework DBSet's filter.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DBSetFilterViewModel class with the default settings.
+</para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.#ctor(DevExpress.DataAccess.EntityFramework.DBSetFilter,DevExpress.DataAccess.Wizard.Services.IParameterService,System.IServiceProvider,DevExpress.DataAccess.UI.IParameterEditorService)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DBSetFilterViewModel class with the specified settings.
+</para>
             </summary>
             <param name="filter">
-		 
+		An <see cref="T:DevExpress.DataAccess.EntityFramework.DBSetFilter"/> object that specifies the filter applied to an Entity Framework <b>DBSet</b>.
+
             </param>
             <param name="parameterService">
-		 
+		An object implementing <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface.
+
             </param>
             <param name="propertyGridServices">
-		 
+		An object implementing <see cref="T:System.IServiceProvider"/> interface.
+
             </param>
             <param name="parameterEditorService">
-		 
+		An object implementing the <see cref="T:DevExpress.DataAccess.UI.IParameterEditorService"/> interface.
+
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.DBSetName">
             <summary>
-                <para> </para>
+                <para>Specifies the name of a DBSet, to which the filter applies.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> identifying the DBSet. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.Filter">
             <summary>
-                <para> </para>
+                <para>Returns a filter applied to an Entity Framework DBSet.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DataAccess.EntityFramework.DBSetFilter"/> object.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.FilterString">
             <summary>
-                <para> </para>
+                <para>Specifies the filter string for the Entity Framework DBSet.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> specifying the filter string. 
+</value>
 
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.OnRenameParameter(System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>This method is called when the parameter name is changed.
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> that specifies the old parameter name.
+
             </param>
             <param name="newName">
-		 
+		A <see cref="T:System.String"/> that specifies the new parameter name.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.Parameters">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of parameters associated with the current filter.
+</para>
             </summary>
-            <value> </value>
+            <value>A collection of <see cref="T:DevExpress.DataAccess.UI.IParameterViewModel"/> objects.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.ParametersViewModel">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="E:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.PropertyChanged">
             <summary>
-                <para> </para>
+                <para>Occurs every time any of the DBSetFilterViewModel class properties has changed its value.
+</para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.DataAccess.UI.EntityFramework.DBSetFilterViewModel.RefreshParameters">
             <summary>
-                <para> </para>
+                <para>Updates parameters associated with the current filter.
+</para>
             </summary>
 
 
