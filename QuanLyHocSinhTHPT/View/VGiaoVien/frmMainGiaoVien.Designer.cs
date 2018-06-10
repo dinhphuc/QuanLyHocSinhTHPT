@@ -130,6 +130,7 @@
             // radNu
             // 
             this.radNu.AutoSize = true;
+            this.radNu.Enabled = false;
             this.radNu.Location = new System.Drawing.Point(163, 214);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
@@ -141,6 +142,7 @@
             // radNam
             // 
             this.radNam.AutoSize = true;
+            this.radNam.Enabled = false;
             this.radNam.Location = new System.Drawing.Point(100, 214);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(47, 17);
@@ -151,6 +153,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Enabled = false;
             this.txtSDT.Location = new System.Drawing.Point(100, 240);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(210, 20);
@@ -158,6 +161,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(100, 184);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(210, 20);
@@ -192,6 +196,7 @@
             // 
             // dtpNgaySinh
             // 
+            this.dtpNgaySinh.Enabled = false;
             this.dtpNgaySinh.Location = new System.Drawing.Point(100, 147);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(210, 20);
@@ -208,6 +213,7 @@
             // 
             // txtMon
             // 
+            this.txtMon.Enabled = false;
             this.txtMon.Location = new System.Drawing.Point(100, 111);
             this.txtMon.Name = "txtMon";
             this.txtMon.Size = new System.Drawing.Size(210, 20);
@@ -224,6 +230,7 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Enabled = false;
             this.txtHoTen.Location = new System.Drawing.Point(100, 71);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(210, 20);
@@ -240,6 +247,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(100, 34);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 20);

@@ -277,6 +277,7 @@
             // 
             // txtNamHoc
             // 
+            this.txtNamHoc.Enabled = false;
             this.txtNamHoc.Location = new System.Drawing.Point(100, 130);
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Size = new System.Drawing.Size(210, 20);
@@ -290,15 +291,22 @@
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Năm học:";
+            //
+            // txtTenLop
             // 
-            // label9
+            this.txtTenLop.Enabled = false;
+            this.txtTenLop.Location = new System.Drawing.Point(100, 82);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(210, 20);
+            this.txtTenLop.TabIndex = 2;
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Tên Lớp:";
+            // txtTenGV
+            // 
+            this.txtTenGV.Enabled = false;
+            this.txtTenGV.Location = new System.Drawing.Point(100, 41);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Size = new System.Drawing.Size(210, 20);
+            this.txtTenGV.TabIndex = 0;
             // 
             // label1
             // 

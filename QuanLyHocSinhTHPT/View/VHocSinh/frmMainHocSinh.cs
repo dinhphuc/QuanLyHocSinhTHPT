@@ -79,7 +79,7 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
         {
             if (IDmember == null)
             {
-                MessageBox.Show("No Select!!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn 1 Bản ghi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -93,6 +93,48 @@ namespace QuanLyHocSinhTHPT.View.VHocSinh
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             file.ExportToExcel(dtgHocSinh);
+        }
+
+        private void btnXemDiem_Click(object sender, EventArgs e)
+        {
+            if (IDmember == null)
+            {
+                MessageBox.Show("Vui lòng chọn 1 Bản ghi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                View.VDiemHS.frmDiemHS frmdiem = new VDiemHS.frmDiemHS(IDmember,1);
+                frmdiem.ShowDialog();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (IDmember != null)
+            {
+                if (IDmember == "HSDEL")
+                {
+                    MessageBox.Show("Không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (MessageBox.Show("Bạn có muốn xóa dữ liệu đã chọn", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (HocSinhController.XoaHS(IDmember))
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); Hienthi();
+                        IDmember = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa Không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 Bản ghi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void Hienthi()

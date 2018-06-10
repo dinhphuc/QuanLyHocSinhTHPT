@@ -271,6 +271,7 @@
             // 
             // txtKhoi
             // 
+            this.txtKhoi.Enabled = false;
             this.txtKhoi.Location = new System.Drawing.Point(106, 130);
             this.txtKhoi.Name = "txtKhoi";
             this.txtKhoi.Size = new System.Drawing.Size(210, 20);
@@ -287,6 +288,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.Enabled = false;
             this.txtTen.Location = new System.Drawing.Point(106, 90);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(210, 20);
@@ -303,6 +305,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(106, 53);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 20);

@@ -123,6 +123,7 @@
     <Compile Include="Controller\HocSinhController.cs" />
     <Compile Include="Controller\LopController.cs" />
     <Compile Include="Controller\MonHocController.cs" />
+    <Compile Include="Controller\PhongLopController.cs" />
     <Compile Include="Controller\PhongHocController.cs" />
     <Compile Include="Controller\TaiKhoanController.cs" />
     <Compile Include="Controller\ThongKeController.cs" />
@@ -148,11 +149,19 @@
     <Compile Include="Models\PhongLop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.Designer.cs">
       <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+=======
+    <Compile Include="View\VDiemHS\frmThaoTacDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VDiemHS\frmThaoTacDiem.Designer.cs">
+      <DependentUpon>frmThaoTacDiem.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="View\VMain\frmLogin.cs">
       <SubType>Form</SubType>
@@ -262,11 +271,23 @@
     <Compile Include="View\VHocSinh\frmThaoTacHS.Designer.cs">
       <DependentUpon>frmThaoTacHS.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VPhongHoc\frmPhongLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VPhongHoc\frmPhongLop.Designer.cs">
+      <DependentUpon>frmPhongLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VPhongHoc\frmMainPhongHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\VPhongHoc\frmMainPhongHoc.Designer.cs">
       <DependentUpon>frmMainPhongHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VPhongHoc\frmThaoTacPhongLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VPhongHoc\frmThaoTacPhongLop.Designer.cs">
+      <DependentUpon>frmThaoTacPhongLop.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -279,8 +300,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="View\VChuNhiem\frmThaoTacChuNhiem.resx">
       <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="View\VDiemHS\frmThaoTacDiem.resx">
+      <DependentUpon>frmThaoTacDiem.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="View\VMain\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -336,8 +362,14 @@
     <EmbeddedResource Include="View\VHocSinh\frmThaoTacHS.resx">
       <DependentUpon>frmThaoTacHS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\VPhongHoc\frmPhongLop.resx">
+      <DependentUpon>frmPhongLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\VPhongHoc\frmMainPhongHoc.resx">
       <DependentUpon>frmMainPhongHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VPhongHoc\frmThaoTacPhongLop.resx">
+      <DependentUpon>frmThaoTacPhongLop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -356,6 +388,7 @@
   <ItemGroup>
     <Content Include="icons8-school-50.ico" />
     <None Include="Resources\folder-downloads.png" />
+    <None Include="Resources\calculator.png" />
     <Content Include="Resources\icons8-data-backup-50.png" />
     <Content Include="Resources\user1600.png" />
     <None Include="Resources\nanny-icon.png" />

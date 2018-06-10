@@ -11,8 +11,7 @@ namespace QuanLyHocSinhTHPT.Models
     {
         [DisplayName("Mã HS")]
         public string MaHS { get; set; }
-
-        public string MaLop { get; set; }
+        public string TenLop { get; set; }
 
         [DisplayName("Tên HS")]
         public string HoTen { get; set; }

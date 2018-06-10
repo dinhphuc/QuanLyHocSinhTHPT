@@ -1,44 +1,32 @@
-﻿using Dapper;
-using QuanLyHocSinhTHPT.Helper;
-using QuanLyHocSinhTHPT.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
+using QuanLyHocSinhTHPT.Models;
+using QuanLyHocSinhTHPT.Helper;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyHocSinhTHPT.Controller
 {
-    public class DiemController
+    public class PhongLopController
     {
-        public static List<Diem> getAllDataDiem(string MaHS)
+        public static List<PhongLop> GetAllDataRoomClass()
         {
-            string query = string.Format("EXEC dbo.GetPointByID @MaHS = '{0}' ", MaHS);
             using (var db = setupConection.ConnectionFactory())
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<Diem>(query).ToList();
+                return db.Query<PhongLop>("EXEC dbo.GetDataRoomClass").ToList();
             }
         }
-        public static List<Diem> getAllDataDiem()
+        public static bool InsertRoomClass(string _ID, string _MaPhong, string _MaLop, string _KipHoc, string _HocKyNamHoc)
         {
-            string query = "EXEC dbo.GetPoint";
-            using (var db = setupConection.ConnectionFactory())
+            if (checkInputRoomClass(_ID, _KipHoc, _HocKyNamHoc))
             {
-                if (db.State == ConnectionState.Closed)
-                    db.Open();
-                return db.Query<Diem>(query).ToList();
-            }
-        }
-
-        public static bool ThemDiem(string _MaMH, string _MaHS, double _DiemMieng, double _Diem15p, double _Diem1h, double _DiemHK)
-        {
-            if (checkInputGV(_DiemMieng, _Diem15p, _Diem1h, _DiemHK))
-            {
-                int kt = -1;
+                int InsRoomClass = -1;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -47,15 +35,14 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                             kt = db.Execute("InsDiem",
+                             InsRoomClass = db.Execute("InsertRoomClass",
                                 new
                                 {
-                                    MaHS = _MaHS,
-                                    MaMH=_MaMH,
-                                    DiemMieng = _DiemMieng,
-                                    Diem15p = _Diem15p,
-                                    Diem1h = _Diem1h,
-                                    DiemHK = _DiemHK
+                                    @ID = _ID,
+                                    @MaPhong = _MaPhong,
+                                    @MaLop = _MaLop,
+                                    @KipHoc = _KipHoc,
+                                    @HocKyNamHoc = _HocKyNamHoc
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -67,17 +54,17 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                if (kt >= 1) return true;
+                if (InsRoomClass >= 1) return true;
                 else return false;
             }
             return false;
         }
 
-        public static bool SuaDiem(string _MaMH, string _MaHS, double _DiemMieng, double _Diem15p, double _Diem1h, double _DiemHK)
+        public static bool EditRoomClass(string _ID, string _MaPhong, string _MaLop, string _KipHoc, string _HocKyNamHoc)
         {
-            if (checkInputGV(_DiemMieng, _Diem15p, _Diem1h, _DiemHK))
+            if (checkInputRoomClass(_ID, _KipHoc, _HocKyNamHoc))
             {
-                int kt = -1;
+                int EditRoom = -1;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -86,15 +73,14 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            kt = db.Execute("EditDiem",
+                             EditRoom = db.Execute("EditRoomClass",
                                 new
                                 {
-                                    MaHS = _MaHS,
-                                    MaMH = _MaMH,
-                                    DiemMieng = _DiemMieng,
-                                    Diem15p = _Diem15p,
-                                    Diem1h = _Diem1h,
-                                    DiemHK = _DiemHK
+                                    @ID = _ID,
+                                    @MaPhong = _MaPhong,
+                                    @MaLop = _MaLop,
+                                    @KipHoc = _KipHoc,
+                                    @HocKyNamHoc = _HocKyNamHoc
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -106,17 +92,17 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                if (kt >= 1) return true;
+                if (EditRoom >= 1) return true;
                 else return false;
             }
             return false;
         }
 
-        public static bool XoaDiem(string _MaHS,string _MaMH)
+        public static bool DelRoomClass(string _ID)
         {
-            if (_MaHS != ""&& _MaMH!="")
+            if (_ID != "")
             {
-                int del = -1;
+                int delRoomClass = -1;
                 using (var db = setupConection.ConnectionFactory())
                 {
                     try
@@ -125,11 +111,10 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            del = db.Execute("DelDiem",
+                            delRoomClass = db.Execute("DelRoomClass",
                                 new
                                 {
-                                    MaHS =_MaHS,
-                                    MaMH=_MaMH
+                                    @ID = _ID
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -141,20 +126,18 @@ namespace QuanLyHocSinhTHPT.Controller
                         MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
                     }
                 }
-                if (del >= 1) return true;
+                if (delRoomClass >= 1) return true;
                 else return false;
             }
             return false;
         }
 
-        public static bool checkInputGV(double _DiemMieng, double _Diem15p, double _Diem1h, double _DiemHK)
+        public static bool checkInputRoomClass(string _ID, string _KipHoc, string _KyHoc)
         {
             string errMS = "";
-            if (_DiemMieng > 10 || _DiemMieng < 0) { errMS = "Sai Điểm miệng"; }
-            if (_Diem15p > 10 || _Diem15p < 0) { errMS = "Sai Điểm 15p"; }
-            if (_Diem1h > 10 || _Diem1h < 0) { errMS = "Sai Điểm 1 tiết"; }
-            if (_DiemHK > 10 || _DiemHK < 0) { errMS = "Sai Điểm Học kỳ"; }
-
+            if (_ID.Trim() == "") { errMS = "Trống Mã"; }
+            if (_KipHoc.Trim() == "") { errMS = "Trống kíp học"; }
+            if (_KyHoc.Trim() == "") { errMS += "\nTrống kỳ học"; }
             if (errMS != "")
             {
                 MessageBox.Show(errMS, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -52,6 +52,11 @@ namespace QuanLyHocSinhTHPT.View.VPhongHoc
         {
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void Hienthi()
         {
             lstPhong = PhongHocController.getAllDataRoom();

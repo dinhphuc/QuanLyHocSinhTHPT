@@ -174,7 +174,7 @@
             // 
             // btnXuat
             // 
-            this.btnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.ImageOptions.Image")));
             this.btnXuat.Location = new System.Drawing.Point(133, 480);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(112, 49);
@@ -272,6 +272,7 @@
             // 
             // txtNiemKhoa
             // 
+            this.txtNiemKhoa.Enabled = false;
             this.txtNiemKhoa.Location = new System.Drawing.Point(100, 131);
             this.txtNiemKhoa.Name = "txtNiemKhoa";
             this.txtNiemKhoa.Size = new System.Drawing.Size(210, 20);
@@ -288,6 +289,7 @@
             // 
             // txtTenMon
             // 
+            this.txtTenMon.Enabled = false;
             this.txtTenMon.Location = new System.Drawing.Point(100, 84);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(210, 20);
@@ -304,6 +306,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(100, 37);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 20);

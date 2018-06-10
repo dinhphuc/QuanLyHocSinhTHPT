@@ -1,6 +1,6 @@
 ﻿namespace QuanLyHocSinhTHPT.View.VPhongHoc
 {
-    partial class frmMainPhongHoc
+    partial class frmPhongLop
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainPhongHoc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhongLop));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgPhongHoc = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSoChoToiDa = new System.Windows.Forms.TextBox();
+            this.txtKyHoc = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtKip = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenlop = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSoPhong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPhongHoc)).BeginInit();
@@ -78,24 +84,6 @@
             this.groupBox5.Size = new System.Drawing.Size(964, 78);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(20, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 44);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(84, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 44);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -172,15 +160,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(118, 489);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(112, 49);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Xuất ra File";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnThem);
@@ -190,10 +169,172 @@
             this.groupBox3.Controls.Add(this.textBox8);
             this.groupBox3.Location = new System.Drawing.Point(13, 301);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(336, 175);
+            this.groupBox3.Size = new System.Drawing.Size(336, 160);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "thao tác dữ liệu";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Theo Tên",
+            "Theo Lơp",
+            "Theo địa chỉ",
+            "Theo Mã lớp",
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(238, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(6, 31);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(226, 20);
+            this.textBox8.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtKyHoc);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtKip);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtTenlop);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtMaLop);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtSoPhong);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txtMaPhong);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(337, 262);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin phòng học";
+            // 
+            // txtKyHoc
+            // 
+            this.txtKyHoc.Enabled = false;
+            this.txtKyHoc.Location = new System.Drawing.Point(96, 211);
+            this.txtKyHoc.Name = "txtKyHoc";
+            this.txtKyHoc.Size = new System.Drawing.Size(210, 20);
+            this.txtKyHoc.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Học Kì:";
+            // 
+            // txtKip
+            // 
+            this.txtKip.Enabled = false;
+            this.txtKip.Location = new System.Drawing.Point(96, 172);
+            this.txtKip.Name = "txtKip";
+            this.txtKip.Size = new System.Drawing.Size(210, 20);
+            this.txtKip.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Kíp:";
+            // 
+            // txtTenlop
+            // 
+            this.txtTenlop.Enabled = false;
+            this.txtTenlop.Location = new System.Drawing.Point(96, 133);
+            this.txtTenlop.Name = "txtTenlop";
+            this.txtTenlop.Size = new System.Drawing.Size(210, 20);
+            this.txtTenlop.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tên Lóp:";
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.Enabled = false;
+            this.txtMaLop.Location = new System.Drawing.Point(96, 94);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(210, 20);
+            this.txtMaLop.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Mã lớp:";
+            // 
+            // txtSoPhong
+            // 
+            this.txtSoPhong.Enabled = false;
+            this.txtSoPhong.Location = new System.Drawing.Point(96, 55);
+            this.txtSoPhong.Name = "txtSoPhong";
+            this.txtSoPhong.Size = new System.Drawing.Size(210, 20);
+            this.txtSoPhong.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Số Phòng:";
+            // 
+            // txtMaPhong
+            // 
+            this.txtMaPhong.Enabled = false;
+            this.txtMaPhong.Location = new System.Drawing.Point(96, 16);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(210, 20);
+            this.txtMaPhong.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mã Phòng:";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1350, 554);
+            this.panelControl1.TabIndex = 4;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(118, 477);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(112, 49);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Text = "Xuất ra File";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnThem
             // 
@@ -232,110 +373,34 @@
             this.btnXoa.Text = "Delete";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // comboBox1
+            // button3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Theo Tên",
-            "Theo Lơp",
-            "Theo địa chỉ",
-            "Theo Mã lớp",
-            ""});
-            this.comboBox1.Location = new System.Drawing.Point(238, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 1;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(20, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 44);
+            this.button3.TabIndex = 0;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // button2
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 31);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(226, 20);
-            this.textBox8.TabIndex = 0;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(84, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 44);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtSoChoToiDa);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtSoPhong);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtMaPhong);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(337, 262);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin phòng học";
-            // 
-            // txtSoChoToiDa
-            // 
-            this.txtSoChoToiDa.Enabled = false;
-            this.txtSoChoToiDa.Location = new System.Drawing.Point(100, 177);
-            this.txtSoChoToiDa.Name = "txtSoChoToiDa";
-            this.txtSoChoToiDa.Size = new System.Drawing.Size(210, 20);
-            this.txtSoChoToiDa.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Số chỗ tối đa:";
-            // 
-            // txtSoPhong
-            // 
-            this.txtSoPhong.Enabled = false;
-            this.txtSoPhong.Location = new System.Drawing.Point(100, 119);
-            this.txtSoPhong.Name = "txtSoPhong";
-            this.txtSoPhong.Size = new System.Drawing.Size(210, 20);
-            this.txtSoPhong.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Số Phòng:";
-            // 
-            // txtMaPhong
-            // 
-            this.txtMaPhong.Enabled = false;
-            this.txtMaPhong.Location = new System.Drawing.Point(100, 63);
-            this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(210, 20);
-            this.txtMaPhong.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã Phòng:";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1350, 554);
-            this.panelControl1.TabIndex = 4;
-            // 
-            // frmMainPhongHoc
+            // frmPhongLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 554);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frmMainPhongHoc";
+            this.Name = "frmPhongLop";
             this.Text = "Quản lý phòng học";
             this.Load += new System.EventHandler(this.frmMainPhongHoc_Load);
             this.groupBox5.ResumeLayout(false);
@@ -373,7 +438,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtSoChoToiDa;
+        private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSoPhong;
         private System.Windows.Forms.Label label9;
@@ -381,5 +446,11 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtKyHoc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtKip;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTenlop;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -76,7 +76,7 @@
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(516, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(516, 146);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -85,7 +85,6 @@
             this.bbiSave.Id = 2;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
-           
             // 
             // bbiSaveAndClose
             // 
@@ -93,7 +92,6 @@
             this.bbiSaveAndClose.Id = 3;
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
             this.bbiSaveAndClose.Name = "bbiSaveAndClose";
-            
             // 
             // bbiSaveAndNew
             // 
@@ -122,7 +120,6 @@
             this.bbiClose.Id = 7;
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
-            
             // 
             // mainRibbonPage
             // 
@@ -149,9 +146,9 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.picAvtat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 143);
+            this.panel1.Location = new System.Drawing.Point(0, 146);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 311);
+            this.panel1.Size = new System.Drawing.Size(191, 308);
             this.panel1.TabIndex = 2;
             // 
             // groupBox1
@@ -212,9 +209,9 @@
             this.panel2.Controls.Add(this.cbMaHS);
             this.panel2.Controls.Add(this.cbMaMon);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(191, 143);
+            this.panel2.Location = new System.Drawing.Point(191, 146);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 311);
+            this.panel2.Size = new System.Drawing.Size(325, 308);
             this.panel2.TabIndex = 3;
             // 
             // label3
