@@ -32,6 +32,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -104,6 +105,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnXemDiem);
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.btnXoa);
@@ -116,13 +118,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "thao tác dữ liệu";
             // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.ImageOptions.Image")));
+            this.btnXemDiem.Location = new System.Drawing.Point(230, 66);
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.Size = new System.Drawing.Size(91, 59);
+            this.btnXemDiem.TabIndex = 5;
+            this.btnXemDiem.Text = "Xem Điểm";
+            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
+            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(47, 63);
+            this.btnThem.Location = new System.Drawing.Point(16, 65);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(68, 63);
+            this.btnThem.Size = new System.Drawing.Size(52, 60);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -133,9 +145,9 @@
             // 
             this.btnSua.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(137, 63);
+            this.btnSua.Location = new System.Drawing.Point(89, 65);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(68, 63);
+            this.btnSua.Size = new System.Drawing.Size(52, 60);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -146,13 +158,14 @@
             // 
             this.btnXoa.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(227, 63);
+            this.btnXoa.Location = new System.Drawing.Point(161, 66);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(68, 63);
+            this.btnXoa.Size = new System.Drawing.Size(52, 60);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Delete";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // comboBox1
             // 
@@ -206,6 +219,7 @@
             // radNu
             // 
             this.radNu.AutoSize = true;
+            this.radNu.Enabled = false;
             this.radNu.Location = new System.Drawing.Point(163, 170);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
@@ -217,6 +231,7 @@
             // radNam
             // 
             this.radNam.AutoSize = true;
+            this.radNam.Enabled = false;
             this.radNam.Location = new System.Drawing.Point(100, 170);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(47, 17);
@@ -227,6 +242,7 @@
             // 
             // dateNgaySinh
             // 
+            this.dateNgaySinh.Enabled = false;
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgaySinh.Location = new System.Drawing.Point(100, 114);
             this.dateNgaySinh.Name = "dateNgaySinh";
@@ -244,6 +260,7 @@
             // 
             // txtSDTphuHuynh
             // 
+            this.txtSDTphuHuynh.Enabled = false;
             this.txtSDTphuHuynh.Location = new System.Drawing.Point(100, 250);
             this.txtSDTphuHuynh.Name = "txtSDTphuHuynh";
             this.txtSDTphuHuynh.Size = new System.Drawing.Size(210, 20);
@@ -251,6 +268,7 @@
             // 
             // txtTenPhuHuynh
             // 
+            this.txtTenPhuHuynh.Enabled = false;
             this.txtTenPhuHuynh.Location = new System.Drawing.Point(100, 224);
             this.txtTenPhuHuynh.Name = "txtTenPhuHuynh";
             this.txtTenPhuHuynh.Size = new System.Drawing.Size(210, 20);
@@ -267,6 +285,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Enabled = false;
             this.txtSDT.Location = new System.Drawing.Point(100, 196);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(210, 20);
@@ -283,6 +302,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(100, 140);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(210, 20);
@@ -317,6 +337,7 @@
             // 
             // txtMaLop
             // 
+            this.txtMaLop.Enabled = false;
             this.txtMaLop.Location = new System.Drawing.Point(100, 89);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Size = new System.Drawing.Size(210, 20);
@@ -333,6 +354,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.Enabled = false;
             this.txtTen.Location = new System.Drawing.Point(100, 63);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(210, 20);
@@ -349,6 +371,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(100, 37);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 20);
@@ -531,5 +554,6 @@
         private System.Windows.Forms.DataGridView dtgHocSinh;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnXemDiem;
     }
 }

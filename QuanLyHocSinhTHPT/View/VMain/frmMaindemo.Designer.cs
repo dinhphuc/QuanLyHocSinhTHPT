@@ -62,6 +62,7 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.btnThongkeDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnThongKeGV = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPhanlop = new DevExpress.XtraBars.BarButtonItem();
             this.menuHethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -162,9 +163,10 @@
             this.barDiemHS,
             this.barButtonItem7,
             this.btnThongkeDiem,
-            this.btnThongKeGV});
+            this.btnThongKeGV,
+            this.btnPhanlop});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 25;
+            this.ribbon.MaxItemId = 26;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.menuHethong,
@@ -358,6 +360,15 @@
             this.btnThongKeGV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongKeGV.ImageOptions.LargeImage")));
             this.btnThongKeGV.Name = "btnThongKeGV";
             // 
+            // btnPhanlop
+            // 
+            this.btnPhanlop.Caption = "Phân lớp";
+            this.btnPhanlop.Id = 25;
+            this.btnPhanlop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanlop.ImageOptions.Image")));
+            this.btnPhanlop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanlop.ImageOptions.LargeImage")));
+            this.btnPhanlop.Name = "btnPhanlop";
+            this.btnPhanlop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanlop_ItemClick);
+            // 
             // menuHethong
             // 
             this.menuHethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -393,6 +404,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barMonHoc);
             this.ribbonPageGroup1.ItemLinks.Add(this.barChuNhiem);
             this.ribbonPageGroup1.ItemLinks.Add(this.barDiemHS);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnPhanlop);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Quản lí nhà trường";
             // 
@@ -541,5 +553,6 @@
         private DevExpress.XtraBars.BarButtonItem btnThongKeGV;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem btnPhanlop;
     }
 }

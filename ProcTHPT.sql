@@ -331,3 +331,188 @@ BEGIN
 	UPDATE dbo.LogUser SET TenTaiKhoan=@TenTaiKhoan WHERE TenTaiKhoan=@TenTaiKhoan
 END
 --loguser
+ALTER PROC GetPointByID(@MaHS VARCHAR(10))
+AS
+	BEGIN
+	SELECT Diem.MaHS,TenLop,HoTen,MaMH,TenMon,DiemMieng,Diem15p,Diem1h,DiemHK FROM dbo.Diem INNER JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS
+					    INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMH
+						INNER JOIN dbo.Lop ON Lop.Malop = HocSinh.MaLop 
+						WHERE Diem.MaHS =@MaHS
+	END
+GO
+EXEC dbo.GetPointByID @MaHS = '' -- varchar(10)
+GO
+CREATE PROC GetDataRoomClass
+AS
+	SELECT PhongHoc.MaPhong,SoPhong,Lop.Malop,TenLop,KipHoc,HocKyNamHoc FROM dbo.PhongLop INNER JOIN dbo.Lop ON Lop.Malop = PhongLop.MaLop
+								INNER JOIN dbo.PhongHoc ON PhongHoc.MaPhong = PhongLop.MaPhong
+GO
+ALTER PROC InsertRoomClass
+(
+	@ID VARCHAR(9) ,
+	@MaPhong VARCHAR(9) ,
+	@MaLop VARCHAR(9) ,
+	@KipHoc NVARCHAR(20),
+	@HocKyNamHoc NVARCHAR(20) 
+
+)
+as
+	BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.PhongHoc WHERE MaPhong=@MaPhong
+	DECLARE @CheckID2 INT
+	SELECT  @CheckID2 = COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	DECLARE @CheckID3 INT
+	SELECT  @CheckID3 = COUNT(*) FROM dbo.PhongLop WHERE ID=@ID
+	IF(@CheckID3=0 AND @CheckID=1 AND @CheckID2=1)
+		INSERT INTO dbo.PhongLop
+		        (ID, MaPhong, MaLop, KipHoc, HocKyNamHoc )
+		VALUES  ( @ID,
+				  @MaPhong, -- MaPhong - varchar(9)
+		          @MaLop, -- MaLop - varchar(9)
+		          @KipHoc, -- KipHoc - nvarchar(20)
+		          @HocKyNamHoc  -- HocKyNamHoc - nvarchar(20)
+		          )
+	ELSE
+		RAISERROR('Trùng mã hoặc mã không tồn tại',12,1)
+END			
+go				
+ALTER PROC EditRoomClass
+(
+	@ID VARCHAR(9) ,
+	@MaPhong VARCHAR(9) ,
+	@MaLop VARCHAR(9) ,
+	@KipHoc NVARCHAR(20),
+	@HocKyNamHoc NVARCHAR(20) 
+
+)
+as
+	BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.PhongHoc WHERE MaPhong=@MaPhong
+	DECLARE @CheckID2 INT
+	SELECT  @CheckID2 = COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	DECLARE @CheckID3 INT
+	SELECT  @CheckID3 = COUNT(*) FROM dbo.PhongLop WHERE ID=@ID
+	IF(@CheckID3=1 AND @CheckID=1 AND @CheckID2=1)
+		UPDATE dbo.PhongLop SET MaPhong=@MaPhong,MaLop=@MaLop,KipHoc=@KipHoc,HocKyNamHoc=@HocKyNamHoc WHERE ID=@ID
+	ELSE
+		RAISERROR('Trùng mã hoặc mã không tồn tại',12,1)
+END							
+GO
+CREATE PROC DelRoomClass(@ID VARCHAR(9))
+AS
+	BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.PhongLop WHERE ID=@ID
+	IF @CheckID=1
+		DELETE dbo.PhongLop WHERE ID=@ID
+	ELSE
+		RAISERROR('Mã không tồn tại',12,1)
+	End
+
+
+
+CREATE PROC DelHS(@MaHS VARCHAR(9))
+AS
+ BEGIN
+ DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
+	IF @CheckID=1
+		BEGIN
+	    UPDATE dbo.Diem SET MaHS='HSDEL' WHERE MaHS=@MaHS
+		DELETE dbo.HocSinh WHERE MaHS=@MaHS
+		END
+	ELSE
+		RAISERROR('Mã không tồn tại',12,1)
+
+ END
+
+GO
+CREATE PROC InsDiem(
+	@MaHS VARCHAR(9),
+	@MaMH VARCHAR(9),
+	@DiemMieng FLOAT ,
+	@Diem15p FLOAT ,
+	@Diem1h FLOAT ,
+	@DiemHK FLOAT 
+)
+AS
+BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
+	DECLARE @CheckID2 INT
+	SELECT  @CheckID2 = COUNT(*) FROM dbo.MonHoc WHERE MaMon=@MaMH
+	IF (@CheckID=1 AND @CheckID2=1)
+		BEGIN
+			INSERT INTO dbo.Diem
+			        ( MaHS ,
+			          MaMH ,
+			          DiemMieng ,
+			          Diem15p ,
+			          Diem1h ,
+			          DiemHK
+			        )
+			VALUES  ( @MaHS , -- MaHS - varchar(9)
+			          @MaMH , -- MaMH - varchar(9)
+			          @DiemMieng , -- DiemMieng - float
+			          @Diem15p , -- Diem15p - float
+			          @Diem1h , -- Diem1h - float
+			          @DiemHK  -- DiemHK - float
+			        )
+		END
+	ELSE
+		RAISERROR('Mã không tồn tại',12,1)
+
+ END
+
+ GO
+ 
+ CREATE PROC EditDiem(
+	@MaHS VARCHAR(9),
+	@MaMH VARCHAR(9),
+	@DiemMieng FLOAT ,
+	@Diem15p FLOAT ,
+	@Diem1h FLOAT ,
+	@DiemHK FLOAT 
+)
+AS
+BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
+	DECLARE @CheckID2 INT
+	SELECT  @CheckID2 = COUNT(*) FROM dbo.MonHoc WHERE MaMon=@MaMH
+	IF (@CheckID=1 AND @CheckID2=1)
+		BEGIN
+			UPDATE Diem SET 
+			          DiemMieng = @DiemMieng,
+			          Diem15p = @Diem15p,
+			          Diem1h = @Diem1h,
+			          DiemHK= @DiemHK
+			       WHERE MaHS=@MaHS AND MaMH=@MaMH
+		END
+	ELSE
+		RAISERROR('Mã không tồn tại',12,1)
+
+ END
+
+GO
+
+CREATE PROC DelDiem(
+	@MaHS VARCHAR(9),
+	@MaMH VARCHAR(9)
+)
+AS
+BEGIN
+	DECLARE @CheckID INT
+	SELECT  @CheckID = COUNT(*) FROM dbo.HocSinh WHERE MaHS=@MaHS
+	DECLARE @CheckID2 INT
+	SELECT  @CheckID2 = COUNT(*) FROM dbo.MonHoc WHERE MaMon=@MaMH
+	IF (@CheckID=1 AND @CheckID2=1)
+		BEGIN
+			DELETE dbo.Diem WHERE MaHS=@MaHS AND MaMH =@MaMH
+		END
+	ELSE
+		RAISERROR('Mã không tồn tại',12,1)
+
+ END

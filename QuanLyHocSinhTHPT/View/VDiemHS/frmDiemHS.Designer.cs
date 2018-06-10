@@ -58,6 +58,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgIDemHS = new System.Windows.Forms.DataGridView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             // txtDiem15p
             // 
+            this.txtDiem15p.Enabled = false;
             this.txtDiem15p.Location = new System.Drawing.Point(99, 134);
             this.txtDiem15p.Name = "txtDiem15p";
             this.txtDiem15p.Size = new System.Drawing.Size(210, 20);
@@ -97,6 +99,7 @@
             // 
             // txtTenMon
             // 
+            this.txtTenMon.Enabled = false;
             this.txtTenMon.Location = new System.Drawing.Point(99, 59);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(210, 20);
@@ -113,6 +116,7 @@
             // 
             // txtTenHS
             // 
+            this.txtTenHS.Enabled = false;
             this.txtTenHS.Location = new System.Drawing.Point(99, 26);
             this.txtTenHS.Name = "txtTenHS";
             this.txtTenHS.Size = new System.Drawing.Size(210, 20);
@@ -141,6 +145,7 @@
             // 
             // txtDiemMieng
             // 
+            this.txtDiemMieng.Enabled = false;
             this.txtDiemMieng.Location = new System.Drawing.Point(99, 94);
             this.txtDiemMieng.Name = "txtDiemMieng";
             this.txtDiemMieng.Size = new System.Drawing.Size(210, 20);
@@ -157,6 +162,7 @@
             // 
             // txtDiemHK
             // 
+            this.txtDiemHK.Enabled = false;
             this.txtDiemHK.Location = new System.Drawing.Point(99, 212);
             this.txtDiemHK.Name = "txtDiemHK";
             this.txtDiemHK.Size = new System.Drawing.Size(210, 20);
@@ -173,6 +179,7 @@
             // 
             // txtDiem1h
             // 
+            this.txtDiem1h.Enabled = false;
             this.txtDiem1h.Location = new System.Drawing.Point(99, 173);
             this.txtDiem1h.Name = "txtDiem1h";
             this.txtDiem1h.Size = new System.Drawing.Size(210, 20);
@@ -199,6 +206,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.simpleButton1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -246,6 +254,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -258,6 +267,7 @@
             this.btnXoa.Text = "Delete";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // comboBox1
             // 
@@ -373,6 +383,16 @@
             this.dtgIDemHS.TabIndex = 0;
             this.dtgIDemHS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgIDemHS_CellClick);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(111, 460);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(112, 49);
+            this.simpleButton1.TabIndex = 7;
+            this.simpleButton1.Text = "Xuất ra File";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // frmDiemHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,5 +452,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDiemMieng;
         private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

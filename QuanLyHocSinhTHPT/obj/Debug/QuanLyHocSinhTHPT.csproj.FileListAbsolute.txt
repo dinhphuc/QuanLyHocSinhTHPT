@@ -815,6 +815,9 @@ E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\es\
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\ja\DevExpress.Diagram.v17.2.Core.resources.dll
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\bin\Debug\ru\DevExpress.Diagram.v17.2.Core.resources.dll
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.Properties.Resources.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.frmLogin.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.GioiThieu.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.LoadDataBase.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.Support.frmBanQuyen.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VChuNhiem.frmMainChuNhiem.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VDiemHS.frmDiemHS.resources
@@ -828,13 +831,13 @@ E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\Qua
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmMainMonHoc.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMonHoc.frmThaoTacmMH.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VGiaoVien.frmThaoTacGV.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.frmMaindemo.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VHocSinh.frmThaoTacHS.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VPhongHoc.frmPhongLop.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VPhongHoc.frmMainPhongHoc.resources
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.csproj.GenerateResource.Cache
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.exe.licenses
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.exe
 E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.pdb
-E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.frmLogin.resources
-E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.GioiThieu.resources
-E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.LoadDataBase.resources
-E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VMain.frmMaindemo.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VPhongHoc.frmThaoTacPhongLop.resources
+E:\_Document\ThucTapNhom\[Code]QuanLyHocSinhTHPT\QuanLyHocSinhTHPT\obj\Debug\QuanLyHocSinhTHPT.View.VDiemHS.frmThaoTacDiem.resources

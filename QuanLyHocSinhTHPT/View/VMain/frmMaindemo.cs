@@ -117,7 +117,7 @@ namespace QuanLyHocSinhTHPT.View.VMain
 
         private void barDiemHS_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var frmDiemHS = new VDiemHS.frmDiemHS();
+            var frmDiemHS = new VDiemHS.frmDiemHS(null, 2);
             if (ExitsForm(frmDiemHS)) return;
             frmDiemHS.MdiParent = this;
             frmDiemHS.Show();
@@ -135,6 +135,14 @@ namespace QuanLyHocSinhTHPT.View.VMain
 
         private void btnThongkeDiem_ItemClick(object sender, ItemClickEventArgs e)
         {
+        }
+
+        private void btnPhanlop_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frmPhanLop = new VPhongHoc.frmPhongLop();
+            if (ExitsForm(frmPhanLop)) return;
+            frmPhanLop.MdiParent = this;
+            frmPhanLop.Show();
         }
     }
 }

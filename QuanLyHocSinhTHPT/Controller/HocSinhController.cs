@@ -126,10 +126,10 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Xoa_HS = db.Execute("Name proceduce",
+                            int Xoa_HS = db.Execute("DelHS",
                                 new
                                 {
-                                    //para
+                                    MaHS=_MaHS
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);

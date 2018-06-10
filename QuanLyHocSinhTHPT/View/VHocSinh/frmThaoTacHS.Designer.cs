@@ -145,10 +145,13 @@
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
-            this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(908, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(916, 146);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2016 Colorful";
             // 
             // erPr
             // 
@@ -339,9 +342,9 @@
             this.panel2.Controls.Add(this.cbClass);
             this.panel2.Controls.Add(this.lblmalopac);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 143);
+            this.panel2.Location = new System.Drawing.Point(0, 146);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(908, 267);
+            this.panel2.Size = new System.Drawing.Size(916, 268);
             this.panel2.TabIndex = 6;
             // 
             // lblID
@@ -357,7 +360,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 410);
+            this.ClientSize = new System.Drawing.Size(916, 414);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.mainRibbonControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

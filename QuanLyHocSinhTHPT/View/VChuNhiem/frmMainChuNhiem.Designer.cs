@@ -260,6 +260,7 @@
             // 
             // txtNamHoc
             // 
+            this.txtNamHoc.Enabled = false;
             this.txtNamHoc.Location = new System.Drawing.Point(100, 130);
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Size = new System.Drawing.Size(210, 20);
@@ -276,6 +277,7 @@
             // 
             // txtTenLop
             // 
+            this.txtTenLop.Enabled = false;
             this.txtTenLop.Location = new System.Drawing.Point(100, 82);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(210, 20);
@@ -292,6 +294,7 @@
             // 
             // txtTenGV
             // 
+            this.txtTenGV.Enabled = false;
             this.txtTenGV.Location = new System.Drawing.Point(100, 41);
             this.txtTenGV.Name = "txtTenGV";
             this.txtTenGV.Size = new System.Drawing.Size(210, 20);
