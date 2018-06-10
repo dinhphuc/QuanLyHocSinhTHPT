@@ -148,6 +148,12 @@
     <Compile Include="Models\PhongLop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.Designer.cs">
+      <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VMain\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\VChuNhiem\frmThaoTacChuNhiem.resx">
+      <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\VMain\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

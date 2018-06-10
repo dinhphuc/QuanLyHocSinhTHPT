@@ -28,9 +28,9 @@ namespace QuanLyHocSinhTHPT.Controller
         {
         }
 
-        public bool ThemCN(string _MaGV, string _MaLop, string _NamHoc)
+        public static  bool ThemCN(string _MaGV, string _MaLop, string _NamHoc)
         {
-            if (checkInputCN(_MaGV, _MaLop, _NamHoc))
+            if (checkInputCN(_NamHoc))
             {
                 using (var db = setupConection.ConnectionFactory())
                 {
@@ -40,10 +40,12 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Insert_CN = db.Execute("Name proceduce",
+                            int Insert_CN = db.Execute("sp_insChuNhiem",
                                 new
                                 {
-                                    //para
+                                    MaGV=_MaGV,
+                                    MaLop=_MaLop,
+                                    NamHoc=_NamHoc
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -60,9 +62,9 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public bool SuaCN(string _MaGV, string _MaLop, string _NamHoc)
+        public  static bool SuaCN(string _MaGV, string _MaLop, string _NamHoc)
         {
-            if (checkInputCN(_MaGV, _MaLop, _NamHoc))
+            if (checkInputCN( _NamHoc))
             {
                 using (var db = setupConection.ConnectionFactory())
                 {
@@ -72,10 +74,12 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int Edit_CN = db.Execute("Name proceduce",
+                            int Edit_CN = db.Execute("sp_UpdateChuNhiem",
                                 new
                                 {
-                                    //para
+                                    MaGV = _MaGV,
+                                    MaLop = _MaLop,
+                                    NamHoc = _NamHoc
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -92,7 +96,7 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public bool XoaCN(string _MaGV, string _MaLop)
+        public static  bool XoaCN(string _MaGV, string _MaLop)
         {
             if (_MaGV != "")
             {
@@ -104,10 +108,11 @@ namespace QuanLyHocSinhTHPT.Controller
                             db.Open();
                         using (var transaction = db.BeginTransaction())
                         {
-                            int del_CN = db.Execute("Name proceduce",
+                            int del_CN = db.Execute("sp_DelChuNhiem",
                                 new
                                 {
-                                    //para
+                                    MaGV = _MaGV,
+                                    MaLop = _MaLop,
                                 },
                                 commandType: CommandType.StoredProcedure,
                                 transaction: transaction);
@@ -124,11 +129,9 @@ namespace QuanLyHocSinhTHPT.Controller
             return false;
         }
 
-        public static bool checkInputCN(string _MaGV, string _MaLop, string _NamHoc)
+        public static bool checkInputCN(string _NamHoc)
         {
             string errMS = "";
-            if (_MaGV.Trim() == "") { errMS = "Trống mã giáo viên"; }
-            if (_MaLop.Trim() == "") { errMS += "\nTrống Mã Lớp"; }
             if (_NamHoc.Trim() == "") { errMS += "\nTrống năm học"; }
             if (errMS != "")
             {
