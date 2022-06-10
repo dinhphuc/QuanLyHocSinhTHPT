@@ -516,3 +516,75 @@ BEGIN
 		RAISERROR('Mã không tồn tại',12,1)
 
  END
+USE [QuanLyHSGVTHPT]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_insChuNhiem]    Script Date: 06/10/2018 2:45:46 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[sp_insChuNhiem](
+@MaGV varchar(9),
+@MaLop varchar(9),
+@NamHoc varchar(10)
+)
+AS 
+BEGIN 
+	DECLARE @CheckID INT 
+	DECLARE @CheckID1 INT 
+	SELECT @CheckID =count (*) FROM dbo.GiaoVien WHERE MaGV=@MaGV
+	SELECT @CheckID1=COUNT(*) FROM lop WHERE Malop=@MaLop
+	IF (@CheckID=1 AND @CheckID1=1)
+	INSERT INTO dbo.ChuNhiem
+	        ( MaGV, MaLop, NamHoc )
+	VALUES  ( @MaGV, -- MaGV - varchar(9)
+	          @MaLop, -- MaLop - varchar(9)
+	          @NamHoc  -- NamHoc - varchar(10)
+	          )
+END
+GO
+USE [QuanLyHSGVTHPT]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_UpdateChuNhiem]    Script Date: 06/10/2018 2:46:14 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[sp_UpdateChuNhiem](
+@MaGV varchar(9),
+@MaLop varchar(9),
+@NamHoc varchar(10))
+AS 
+BEGIN 
+	DECLARE @CheckID INT 
+	DECLARE @CheckID1 INT 
+	SELECT @CheckID =count (*) FROM dbo.GiaoVien WHERE MaGV=@MaGV
+	SELECT @CheckID1=COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	IF (@CheckID=1 AND @CheckID1=1)
+	UPDATE dbo.ChuNhiem 
+	SET MaGV=@MaGV, MaLop=@MaLop,NamHoc=@NamHoc
+	WHERE  MaGV=@MaGV AND  MaLop=@MaLop
+END 
+GO
+USE [QuanLyHSGVTHPT]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_DelChuNhiem]    Script Date: 06/10/2018 2:44:58 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[sp_DelChuNhiem]
+(
+@MaGV varchar(9),
+@MaLop varchar(9)
+)
+AS 
+BEGIN
+	DECLARE @CheckID INT 
+	DECLARE @CheckID1 INT 
+	SELECT @CheckID =count (*) FROM dbo.GiaoVien WHERE MaGV=@MaGV
+	SELECT @CheckID1=COUNT(*) FROM dbo.Lop WHERE Malop=@MaLop
+	IF (@CheckID=1 AND @CheckID1=1)
+	DELETE dbo.ChuNhiem 
+	WHERE MaGV=@MaGV AND MaLop=@MaLop
+END 

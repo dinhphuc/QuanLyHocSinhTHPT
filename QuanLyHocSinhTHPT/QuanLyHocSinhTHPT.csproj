@@ -149,11 +149,19 @@
     <Compile Include="Models\PhongLop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VChuNhiem\frmThaoTacChuNhiem.Designer.cs">
+      <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+=======
     <Compile Include="View\VDiemHS\frmThaoTacDiem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\VDiemHS\frmThaoTacDiem.Designer.cs">
       <DependentUpon>frmThaoTacDiem.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="View\VMain\frmLogin.cs">
       <SubType>Form</SubType>
@@ -292,8 +300,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
+    <EmbeddedResource Include="View\VChuNhiem\frmThaoTacChuNhiem.resx">
+      <DependentUpon>frmThaoTacChuNhiem.cs</DependentUpon>
+=======
     <EmbeddedResource Include="View\VDiemHS\frmThaoTacDiem.resx">
       <DependentUpon>frmThaoTacDiem.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="View\VMain\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

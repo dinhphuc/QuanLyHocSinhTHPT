@@ -70,14 +70,24 @@ namespace QuanLyHocSinhTHPT.View.VChuNhiem
             CurR = dtgChuNhiem.CurrentCell.RowIndex;
             i = CurR;
             // show data
-            txtTenGV.Text = MaGV = lstCN[i].MaGV;
-            txtTenLop.Text = TenLop = lstCN[i].HoTen;
+            cbTenGV.Text = MaGV = lstCN[i].MaGV;
+            cbTenLop.Text = TenLop = lstCN[i].HoTen;
             txtNamHoc.Text = NiemKhoa = lstCN[i].NiemKhoa;
             MaLop = lstCN[i].MaLop;
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            frmThaoTacChuNhiem frmSua = new frmThaoTacChuNhiem(MaGV, MaLop, txtNamHoc.Text, 1);
+            frmSua.ShowDialog();
+            Hienthi();
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
+            frmThaoTacChuNhiem frmThem = new frmThaoTacChuNhiem(null, null, null, 0);
+            frmThem.ShowDialog();
+            Hienthi();
         }
     }
 }

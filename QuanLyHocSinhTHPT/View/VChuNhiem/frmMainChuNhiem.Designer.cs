@@ -45,11 +45,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbTenLop = new System.Windows.Forms.ComboBox();
+            this.cbTenGV = new System.Windows.Forms.ComboBox();
             this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTenGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupBox5.SuspendLayout();
@@ -209,6 +209,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -245,11 +246,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbTenLop);
+            this.groupBox2.Controls.Add(this.cbTenGV);
             this.groupBox2.Controls.Add(this.txtNamHoc);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtTenLop);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtTenGV);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 19);
             this.groupBox2.Name = "groupBox2";
@@ -257,6 +258,22 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chủ nhiệm";
+            // 
+            // cbTenLop
+            // 
+            this.cbTenLop.FormattingEnabled = true;
+            this.cbTenLop.Location = new System.Drawing.Point(100, 79);
+            this.cbTenLop.Name = "cbTenLop";
+            this.cbTenLop.Size = new System.Drawing.Size(210, 21);
+            this.cbTenLop.TabIndex = 6;
+            // 
+            // cbTenGV
+            // 
+            this.cbTenGV.FormattingEnabled = true;
+            this.cbTenGV.Location = new System.Drawing.Point(100, 35);
+            this.cbTenGV.Name = "cbTenGV";
+            this.cbTenGV.Size = new System.Drawing.Size(210, 21);
+            this.cbTenGV.TabIndex = 5;
             // 
             // txtNamHoc
             // 
@@ -274,7 +291,7 @@
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Năm học:";
-            // 
+            //
             // txtTenLop
             // 
             this.txtTenLop.Enabled = false;
@@ -282,15 +299,6 @@
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(210, 20);
             this.txtTenLop.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Tên Lớp:";
             // 
             // txtTenGV
             // 
@@ -364,10 +372,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtNamHoc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTenGV;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.ComboBox cbTenLop;
+        private System.Windows.Forms.ComboBox cbTenGV;
     }
 }
